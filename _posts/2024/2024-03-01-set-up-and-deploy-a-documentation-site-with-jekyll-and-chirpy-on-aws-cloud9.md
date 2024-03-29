@@ -1,32 +1,37 @@
 ---
-title: "Set Up and Deploy a Documentation Site with Jekyll & Chirpy on AWS Cloud9"
+title: "Set Up and Deploy a Documentation Site With Jekyll & Chirpy on AWS Cloud9"
 date: 2023-03-01 08:00:00 - 0500
 categories: [Web Development, Jekyll]
 tags: [aws, cloud9, jekyll, chirpy, ruby, git, route53, cname]
-image: /assets/img/jekyll.webp
-alt: "Image alt text"
+image: 
+  path: /assets/img/jekyll.webp
+  lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAAilBMVEWrq6uxsbF1dHVYV1pVVllXV1paWlyJiYrv7+/6+vqvr69SUVYeISguLjMrKzAZHSZZWVvt7e2wsLBNTU0eISdfTTZPQzIXHCZbW13u7u5QUFAfHyErKiooJygbGx1fX2B9fX1hYmFgYWBdXl6BgoHi4uKsrKyqqqqur6+wsbGxsrKys7PKy8v4+PiSJDQPAAAARElEQVQIHWNgYGRiZmFlY+fgZGDg4ubh5eMXEAQyhYRFRMXEJSSBTEYpaRlZOXmQAkYFRUUlZRVVIFNNXU1DU0tbRxcAZiwEgRfNpoYAAAAASUVORK5CYII=
 ---
 
-This documentation outlines the steps for setting up and deploying a Jekyll site, a static site generator, with the Chirpy theme on AWS Cloud9. It includes configuring a custom subdomain, such as docs, through AWS Route 53 with GitHub Pages.
+ This documentation outlines the steps for setting up and deploying a documentation site using Jekyll, a popular static site generator, and the Chirpy theme using GitHub Actions on AWS Cloud9 IDE. It includes instructions for configuring a custom subdomain, such as `https://docs.example.com`, through AWS Route 53 and integrating it with GitHub Pages.
+ 
+## Objectives
 
- -  Prepare the AWS Cloud9 environment, install Ruby and development tools, and configuring Ruby Gems. 
- -  Configure Git and SSH for GitHub integration.
- -  Clone the Chirpy theme with a starter template, and install Jekyll & dependencies for local development. 
- -  Create a start script to run the site on Cloud9 and deploy the site to GitHub Pages using GitHub Actions.
- -  Update the About Me page, and write new posts in Markdown.
- -  Configure deployment settings, establish a subdomain (docs.example.com) for custom domain setup, and tailor the site's appearance and functionality through the _config.yml file.
+- Launch and prepare the AWS Cloud9 environment
+- Set up the development environment for Jekyll with Chirpy on Cloud9
+- Configure Git and SSH for GitHub integration
+- Set up the Chirpy theme with the Chirpy starter template
+- Create and run a start script to preview your site in Cloud9
+- Deploy the site to GitHub Pages using GitHub Actions
+- Personalize the Jekyll site configuration and the about me page
+- Write your first post with Chirpy using Markdown syntax
+- (Optional) Map a custom domain to your GitHub Pages site
+
+By the end of this post, you will have your own documentation site hosted on GitHub Pages, a free hosting solution. The site will be set up with the Chirpy theme, which provides a beautifully structured layout and various features automatically. You can then focus on writing your content in Markdown, committing it to a Git repository, and let Chirpy and GitHub Actions handle the rest.
 
 ## Prerequisites
 - AWS Account
 - GitHub Account
-- Registered Domain on Amazon Route 53 (Optional)
-
-
+- (Optional) Registered domain on Amazon Route 53 (if you want to use a custom domain like docs)
 
 ## Launch and Prepare the AWS Cloud9 Environment
 
 > This documentation will utilize AWS Cloud9 running on Amazon Linux to set up Jekyll and the Chirpy theme. The Git panel extension for AWS Cloud9 will be used to provide convenient user interface access to core Git commands.
-{: .prompt-info }
 
 #### **a) Benefits of Using Cloud9**
 
@@ -37,11 +42,7 @@ This documentation outlines the steps for setting up and deploying a Jekyll site
    Using Cloud9 ensures that everyone, especially for tutorial purposes, begins with a blank Linux instance, allowing learners to follow along precisely without environment discrepancies.
 
    - **Version Control Integration:**  
-   Git integration with Cloud9 simplifies version control, useful for managing updates, and theme modifications on your Jekyll/Chirpy website.
-
-   - **Previews and Testing:**  
-   Cloud9 enables in-IDE previews of your Jekyll site, facilitating immediate feedback on changes.
-
+   Git integration with Cloud9 simplifies version control, useful for managing updates, and theme modifications.
 
 > The AWS Free Tier provides 750 monthly hours of EC2 t2.micro usage and 5GB EBS storage for one year. This demo, run on a t2.micro instance using less than 1GB storage, incurs no additional costs under the Free Tier. Without it, the cost is approximately $0.11 per hour.
 {: .prompt-warning }
@@ -55,7 +56,7 @@ This documentation outlines the steps for setting up and deploying a Jekyll site
    - Update your package manager to ensure you have the latest packages.
 
    ```bash
-   sudo yum update -y
+sudo yum update -y
    ```
    {: .nolineno }
    
@@ -72,8 +73,8 @@ To set up your development environment for Jekyll with Chirpy on AWS Cloud9, you
 Execute the following commands in the Cloud9 terminal:
    
    ```bash
-   sudo yum install -y ruby ruby-devel
-   sudo yum groupinstall -y "Development Tools"
+sudo yum install -y ruby ruby-devel
+sudo yum groupinstall -y "Development Tools"
    ```
    {: .nolineno }
 
@@ -86,10 +87,10 @@ Set up a specific directory for RubyGems to streamline gem management. This setu
    - Enhances the portability of the development environment across different machines.
    
    ```bash
-   echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
-   echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
-   echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-   source ~/.bashrc
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
    ```
    {: .nolineno }
 
@@ -97,14 +98,14 @@ Set up a specific directory for RubyGems to streamline gem management. This setu
 With the RubyGems environment now configured, proceed to install Jekyll and Bundler:
 
    ```bash
-   gem install jekyll bundler
+gem install jekyll bundler
    ```
    {: .nolineno }
 
 #### **d) Update RubyGems if Necessary**  
 Should there be a new release of RubyGems available, update to the latest version:
    ```bash
-   gem update --system 3.5.6
+gem update --system 3.5.6
    ```
    {: .nolineno }
 
@@ -112,7 +113,7 @@ Should there be a new release of RubyGems available, update to the latest versio
 Ensure Jekyll is correctly installed by checking its version:
 
    ```bash
-   jekyll -v
+jekyll -v
    ```
    {: .nolineno }
 
@@ -123,8 +124,8 @@ Before you start using Git, configure it with your personal information which wi
 
 #### **a) Configure Git with Your User Information**
    ```bash
-   git config --global user.name "Your Name"
-   git config --global user.email "youremail@example.com"
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
    ```
    {: .nolineno }
 
@@ -137,7 +138,7 @@ Before you start using Git, configure it with your personal information which wi
 SSH key pairs facilitate secure, passwordless authentication with GitHub, linking commits to your account and ensuring only authorized users can access repositories:
 
    ```bash
-   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
    ```
    {: .nolineno }
 
@@ -146,15 +147,15 @@ SSH key pairs facilitate secure, passwordless authentication with GitHub, linkin
 
 #### **c) Start the ssh-agent & Add Your SSH Key**
    ```bash
-   eval "$(ssh-agent -s)"
-   ssh-add ~/.ssh/id_rsa
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
    ```
    {: .nolineno }
 
 #### **d) Display and Copy your SSH public key**
    
    ```bash
-   cat ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa.pub
    ```
    {: .nolineno }
 
@@ -163,7 +164,7 @@ SSH key pairs facilitate secure, passwordless authentication with GitHub, linkin
 
 #### **f) Verify SSH Connection to GitHub**
    ```bash
-   ssh -T git@github.com
+ssh -T git@github.com
    ```
    {: .nolineno }
 
@@ -194,7 +195,7 @@ Creating a new site with the Chirpy theme is straightforward using the Chirpy St
 
 #### **c) Install Jekyll and Other Dependencies:**
    ```bash
-   bundle install
+bundle install
    ```
    {: .nolineno }
 
@@ -211,10 +212,10 @@ Instead, Cloud9 requires using its environment URL and supports web traffic on p
 
 The adjusted command to run Jekyll in Cloud9, accommodating its supported ports and making your site accessible, would be:
 
-   ```bash
-   bundle exec jekyll serve --host 0.0.0.0 --port 8080 --baseurl ''
-   ```
-   {: .nolineno }
+``` bash
+bundle exec jekyll serve --host 0.0.0.0 --port 8080 --baseurl ''
+```
+{: .nolineno }
 
 ### **a) Create and Run a Start Script to preview the site in Cloud9**
 Entering the command bundle exec `jekyll serve --host 0.0.0.0 --port 8080 --baseurl ''` every time you want to preview your site can be time-consuming. Instead, creating a start script in Cloud9 can automate the server launch process. Here's how to set it up:
@@ -301,7 +302,7 @@ Before pushing your Jekyll site to GitHub, configure the `_config.yml` file to s
    For example, if your GitHub   username is digitalden3, your url would be:
 
    ```yaml
-   url: "https://digitalden3.github.io"
+url: "https://digitalden3.github.io"
    ```
    {: .nolineno }
 
@@ -334,7 +335,7 @@ With the URL set, continue to personalize your site by updating these important 
      - Reference your avatar in the avatar field:
 
    ```yaml
-   avatar: "/assets/images/your-image.jpg"
+avatar: "/assets/images/your-image.jpg"
    ```
    {: .nolineno }
 
@@ -383,7 +384,7 @@ Update your About Me page on your Jekyll site to reflect your personality, profe
     - Add the following line of markdown to `_tabs/about.md` to include an image. Ensure to replace `profileimage.jpg` with the actual name of your uploaded image file.
 
     ```markdown
-    ![About](/assets/img/profileimage.jpg)
+![About](/assets/img/profileimage.jpg)
     ```
     {: .nolineno }
 
@@ -406,7 +407,7 @@ Creating a new post in Jekyll using the Chirpy theme is straightforward. Chirpy 
 For better management, organize posts within the `_posts` folder by year (2023, 2024...). This helps keep your directory structured without affecting post processing.
 
 -  **File Naming:**
-   - Place your post in the correct year folder within `_posts`, naming it `YYYY-MM-DD-TITLE.MD`.
+   - Place your post in the correct year folder within `_posts`, naming it `YYYY-MM-DD-TITLE.MD`
 
 -  **Front Matter**
    - Use the following template at the start of your post:
@@ -437,38 +438,38 @@ Following these initial steps sets up an empty post scaffold. To fill your post 
 {: .prompt-tip }
 
 **Workflow:** 
-`Write Post` → `Preview` → `Stage New Post` → `Commit` → `Push to GitHub` → `Deployment`
+: `Write Post` → `Preview` → `Stage New Post` → `Commit` → `Push to GitHub` → `Deployment`
 
 ## Map a Custom Domain to GitHub Pages (Optional)
 
 GitHub Pages offers free hosting for websites, allowing the use of custom domains to improve brand identity, SEO, and more. This guide explains the process of mapping a custom domain to GitHub Pages, taking advantage of GitHub's secure hosting.
 
-When opting for a subdomain, such as `docs.example.com`, over the primary domain (`example.com`), you strategically organize and differentiate content. A subdomain like `docs` specifically earmarks this section for documentation, facilitating centralized content management.
+When opting for a subdomain, such as `docs.example.com`, over the primary domain (example.com), you strategically organize and differentiate content. A subdomain like docs specifically earmarks this section for documentation, facilitating centralized content management.
  - For implementation, replace example.com with your own domain.
 
-#### a) **Create a CNAME File in Cloud9:**
+### a) Create a CNAME File in Cloud9
    - In Cloud9, go to your repository's root directory.
    - Right-click, choose New File, and name it `CNAME`—no file extension.
-   - Open `CNAME`, input `docs.example.com`, and save.
+   - Open CNAME, input `docs.example.com`, and save.
 
-#### b) **Push the CNAME File to GitHub:**
+### b) Push the CNAME File to GitHub
    - Follow the sequence: `Stage CNAME` → `Commit` → `Push to GitHub` → `Deployment`.
 
-#### c) **Set Custom Domain in GitHub Pages Settings:**
-   - In your GitHub repository settings, select `Pages`.
-   - Under `Custom domain`, enter `docs.example.com` and save.
+### c) Set Custom Domain in GitHub Pages Settings
+   - In your GitHub repository settings, select `Pages`
+   - Under Custom domain, enter `docs.example.com` and save.
 
    > A DNS record error may initially appear—this resolves after proper DNS setup.
    {: .prompt-warning }
 
-#### d) **Create a CNAME Record in AWS Route 53:**
-   - Access Route 53 in the AWS Management Console.
-   - In `example.com` hosted zone, add a CNAME record:
-     - **Record Name:** `docs`
-     - **Type:** `CNAME`
-     - **Value:** `USERNAME.github.io` (replace `USERNAME`).
+### d) Create a CNAME Record in AWS Route 53
+   - Access `Route 53` in the AWS Management Console.
+   - In your hosted zone, add a CNAME record:
+     - **Record Name:** docs
+     - **Type:** CNAME
+     - **Value:** `USERNAME.github.io` (replace USERNAME).
 
-#### e) **Verify DNS Configuration:**
+### e) Verify DNS Configuration
    - Confirm DNS setup with:
      ```
      dig docs.example.com +nostats +nocomments +nocmd
@@ -478,4 +479,27 @@ When opting for a subdomain, such as `docs.example.com`, over the primary domain
       - Post-DNS verification, enable `Enforce HTTPS` in GitHub Pages settings.
       - GitHub automatically secures your site with an SSL certificate, a process that may take up to 24 hours.
 
+### f) Update URL in _config.yml to Custom Subdomain
+   - Open your Jekyll project in your Cloud9.
+   - Open the `_config.yml` file in the root directory of your Jekyll project.
+   - Find the `url` field in the _config.yml file. It might look something like this:
+     ```yaml
+url: "https://USERNAME.github.io"
+     ```
+     {: .nolineno }
+   - Update the url field to use your custom subdomain. Replace `https://USERNAME.github.io` with `https://docs.example.com` 
+     ```yaml
+url: "https://docs.example.com"
+     ```
+     {: .nolineno }
+   - Save the changes to the _config.yml file.
+   
+   > By updating the urL field in your _config.yml file to `https://docs.example.com`, you ensure that all internal links, metadata, and references within your Jekyll site point to the correct custom subdomain. This step is crucial for maintaining consistency and accuracy across your site, especially when using a custom domain. 
+   {: .prompt-tip }
+
+   - After making this change, push the updated `_config.yml` file to your GitHub repository.
+
 Your GitHub Pages site will be accessible via your custom domain `docs.example.com`, leveraging GitHub's secure and reliable hosting.
+
+## Video Tutorial
+{% include embed/youtube.html id='7cLkDE8_tCI' %}
