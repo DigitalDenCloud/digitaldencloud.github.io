@@ -6,7 +6,7 @@ order: 4
 
 # Merhaba!
 
-![About](/assets/img/awscommunitybuilder.webp)
+![About](/assets/img/headers/awscommunitybuilder.webp)
 
 I'm Deniz, `AWS Community Builder` and `AWS Content Creator` from London.
 
