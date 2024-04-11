@@ -2,7 +2,7 @@
 title: "Set Up and Deploy a Documentation Site With Jekyll & Chirpy on AWS Cloud9"
 date: 2024-03-26 08:00:00 - 0500
 categories: [Web Development, Jekyll]
-tags: [aws, cloud9, jekyll, chirpy, ruby, git, route53, cname]
+tags: [aws, cloud9, jekyll, chirpy, ruby, git, route 53, cname]
 image: 
   path: /assets/img/headers/jekyll.webp
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAAilBMVEWrq6uxsbF1dHVYV1pVVllXV1paWlyJiYrv7+/6+vqvr69SUVYeISguLjMrKzAZHSZZWVvt7e2wsLBNTU0eISdfTTZPQzIXHCZbW13u7u5QUFAfHyErKiooJygbGx1fX2B9fX1hYmFgYWBdXl6BgoHi4uKsrKyqqqqur6+wsbGxsrKys7PKy8v4+PiSJDQPAAAARElEQVQIHWNgYGRiZmFlY+fgZGDg4ubh5eMXEAQyhYRFRMXEJSSBTEYpaRlZOXmQAkYFRUUlZRVVIFNNXU1DU0tbRxcAZiwEgRfNpoYAAAAASUVORK5CYII=
