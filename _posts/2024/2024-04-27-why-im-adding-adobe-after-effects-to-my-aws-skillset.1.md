@@ -3,16 +3,14 @@ title: "Why I'm Adding Adobe After Effects to My AWS Skillset"
 date: 2024-04-11 08:00:00 - 0500
 categories: [Adobe Creative Cloud, After Effects]
 tags: [adobe, after effects, animation, creative cloud, illustrator, premiere pro]
-pin: true
 image:
   path: /assets/img/headers/aftereffects.webp
   lqip: data:image/webp;base64 iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFBAMAAACOSmBbAAAAHlBMVEUAAFsAAFoBAVsICGEGBl8BAVwvMIwtLooAAVoKCmODQ3rkAAAAIElEQVQIHWNgYBBgAAImkwAgyZjeACRZLRWAJIMgAwMAHP0B7kNteIIAAAAASUVORK5CYII=
 ---
 
-## Introduction
 I’ve always been intrigued by the creative side of technology, particularly the animation capabilities of `Adobe After Effects`, a digital visual effects and motion graphics application widely used in the post-production process of film making, video games, and television production. 
 
-Despite my interest, there wasn't a compelling reason to learn it until I began working with AWS. My experience in cloud computing grew as I built solutions and shared them on my YouTube channel, [Hands On with Digital Den](https://www.youtube.com/channel/UCHoxUz0IfdhOieSXox_mwSw). 
+Despite my interest, there wasn't a compelling reason to learn it until I began working with AWS. My experience in cloud computing grew as I built solutions and shared them on my YouTube channel, [Hands On with Digital Den](https://www.youtube.com/channel/UCHoxUz0IfdhOieSXox_mwSw){:target="_blank"}. 
 
 Recently, I was faced with the choice of either pursuing another AWS certification or diversifying my skills with Adobe After Effects, I opted for the latter. This decision is driven by a desire to develop a unique skill set that combines creative tools with cloud computing functionalities.
 
@@ -40,7 +38,7 @@ At Cloud Academy lessons and courses created by content creators like me are tra
 
 The high-quality animations at Cloud Academy motivated me to start learning Adobe After Effects to add similar animations to my videos. While my primary focus remains on producing high-quality AWS content, I aim to integrate animation clips throughout my hands-on demos to clarify complex cloud concept.
 
-Fortunately, Cloud Academy provides a free subscription to Skillshare — an online learning community with thousands of classes for creative and curious people, on topics including illustration, design, photography, and video. It was there I found [The Beginner's Guide to Adobe After Effects](https://www.skillshare.com/en/classes/the-beginners-guide-to-adobe-after-effects/1758053045) by Jake Bartlett. This class was my starting block for animation.
+Fortunately, Cloud Academy provides a free subscription to Skillshare — an online learning community with thousands of classes for creative and curious people, on topics including illustration, design, photography, and video. It was there I found [The Beginner's Guide to Adobe After Effects](https://www.skillshare.com/en/classes/the-beginners-guide-to-adobe-after-effects/1758053045){:target="_blank"} by Jake Bartlett. This class was my starting block for animation.
 
 ## Adobe After Effects The Beginners Guide
 Jake Bartlett's class, proved to be an invaluable resource. This comprehensive 6-hour class covered a wide range of essential topics, including:
