@@ -5,7 +5,7 @@ categories: [Cloud Academy]
 tags: [aws, aws well-architected, security, best practices]
 image: 
   path: /assets/img/headers/aws-well-architected.webp
-  lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFBAMAAACOSmBbAAAAKlBMVEUEXdsCXNwDXdwIX9kma8gSYtMDXdsOYdZ2iptYfqsGXtoxccMYZtEDXNyjR4oPAAAAHklEQVQIHWNgYBBiAAJmVxCZ3rkAxN4DYjPIMjAAACY3AseHtyRvAAAAAElFTkSuQmCC
+  lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFBAMAAACOSmBbAAAALVBMVEUEXdsCXNwLYNc9dLkgZskFXdoDXdsQYtR9jZVnhKEMYNYJX9gycsMWZtIDXNzFzHkAAAAAIElEQVQIHWNgYBBkAAImkwAgmd65DEhynwUSDAxyDAwALCEDJHDovdoAAAAASUVORK5CYII=
 ---
 
 Welcome to Cloud Academy's lesson where you'll learn the industry standard best practices for developers, as stated by the Well Architected framework.
