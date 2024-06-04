@@ -8,16 +8,6 @@ image:
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAAtFBMVEUQIEAQI08XKVAXKlEWLEoVLFAVLFIVLFMPJlENI0IRKTMNLEAILj4IKz4MLDQVMUMVMUYWMUUXM0caNDgoPj8tSUglREQlRkYnQEIwLSouLCgqKCQnJCElJiaqrK3f5ujW29/0+vyztLYwLzE3ODozMzYsLC8jJCa4uLP49/Dk4Nv///u6ubMiIhwvLignJyEkJB0fHxlVV3pwc55kaJF4eaRWWIIEBTIMDjsLDTkLDToKDDbGR/XUAAAASElEQVQIHQXBgwHAAAwAsM62bdv6/68lAAiK4QRJ0QywHC+IkqyoGuiGadmO6/kBhFGcpFlelBXUTdv1wzjNC6zbfpzX/bzfD5dLButtq3LQAAAAAElFTkSuQmCC
 ---
 
-**April 2024 New Lesson:**
-: <a href="https://cloudacademy.com/course/high-performance-text-analysis-huggingface-gpt-2-aws-neuron-aws-inferentia-5935/introduction-28032024101057/" target="_blank">High-Performance Text Analysis with HuggingFace GPT-2 on AWS Neuron with AWS Inferentia</a>
-
-**Content Type:**
-: Lesson
-
-**Domain:**
-: AWS
-
-## Lesson Description
 Welcome to Cloud Academy's lesson where you’ll learn how to utilize the AWS deep learning AMI with the Neuron SDK and PyTorch on AWS Inferentia to compile and execute the HuggingFace GPT-2 model. 
 
 This model, built within the PyTorch framework, excels in generating relevant and coherent text.  You'll see how feature extraction on Inf2 instances, powered by AWS Inferentia, accelerates deep learning inference with greater speed and efficiency compared to traditional CPU and GPU setups.
@@ -41,3 +31,6 @@ This lesson has been created for data scientists, machine learning engineers, an
 
 ## Prerequisites
 To get the most out of this lesson you should have a familiarity with basic machine learning terms.
+
+## Get Started
+[High-Performance Text Analysis with HuggingFace GPT-2 on AWS Neuron with AWS Inferentia](https://cloudacademy.com/course/high-performance-text-analysis-huggingface-gpt-2-aws-neuron-aws-inferentia-5935/){:target="_blank"}
