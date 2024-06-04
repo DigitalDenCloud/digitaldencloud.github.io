@@ -4,8 +4,8 @@ date: 2024-02-21 08:00:00 - 0500
 categories: [Cloud Academy]
 tags: [aws, sam, serverless]
 image: 
-  path: /assets/img/headers/cloud-academy.webp
-  lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFBAMAAACOSmBbAAAAG1BMVEUEXNwBWdsSauMFXNwAWdxPk+lQk+kSZdwBWtzJGCWRAAAAHElEQVQIHWNgYBBkAAElEGES5gyiykEEQwcDAwAWbgIAaLKegQAAAABJRU5ErkJggg==
+  path: /assets/img/headers/aws-sam.webp
+  lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAMAAABLuo1aAAAAM1BMVEUEXdsJXtcHXtkFXdldeJVPcp4EXNoDXdsLXtSWm55thKQGW9QFXdo7d8wobc8CXNsFXtzR8cgiAAAAKElEQVQIHWNgAAJGJhAJAswsrGwQFjsHJxc3hMnAw8vHD2UyCAiAWAAMgwCZhAYZUgAAAABJRU5ErkJggg==
 ---
 
 ## Lesson Description
