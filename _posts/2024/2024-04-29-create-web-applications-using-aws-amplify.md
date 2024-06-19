@@ -1,14 +1,14 @@
 ---
 title: "Create Web Applications Using AWS Amplify"
 date: 2024-04-29 08:00:00 - 0500
-categories: [Cloud Academy]
+categories: [QA Lessons]
 tags: [aws, amplify, javascript, react, full-stack app]
 image: 
   path: /assets/img/headers/aws-amplify.webp
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFBAMAAACOSmBbAAAALVBMVEUEXdsCXNwlaMArabsDXdwTY898in2HiXQSYdAVZdBDeLE8c7YTY9IBXN4BXN32BPqEAAAAIElEQVQIHWNgYBBkAAJGZQEg6ZreAiQ9Vx8Bkiz3HBgAKdYEUCStpF8AAAAASUVORK5CYII=
 ---
 
-Welcome to Cloud Academy's lesson where we’ll explore what AWS Amplify is and the key services and features it provides to help you build and deploy your web applications. We will specifically walk through creating a `Note Keeper` app using React, demonstrating how Amplify simplifies the setup of essential services like authentication, data storage, and backend integration. 
+Welcome to QA's lesson where we’ll explore what AWS Amplify is and the key services and features it provides to help you build and deploy your web applications. We will specifically walk through creating a `Note Keeper` app using React, demonstrating how Amplify simplifies the setup of essential services like authentication, data storage, and backend integration. 
 
 By the end of this lesson, you will have a clear understanding of AWS Amplify, including:
 - The purpose and benefits of AWS Amplify

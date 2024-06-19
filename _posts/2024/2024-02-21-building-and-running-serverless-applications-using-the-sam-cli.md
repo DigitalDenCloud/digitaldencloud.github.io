@@ -1,7 +1,7 @@
 ---
 title: "Building and Running Serverless Applications Using the SAM CLI"
 date: 2024-02-21 08:00:00 - 0500
-categories: [Cloud Academy]
+categories: [QA Lessons]
 tags: [aws, sam, serverless]
 image: 
   path: /assets/img/headers/aws-sam.webp
@@ -9,7 +9,7 @@ image:
 ---
 
 ## Lesson Description
-Welcome to Cloud Academy's lesson which will give you an understanding of building and running serverless application using the SAM CLI.
+Welcome to QA's lesson which will give you an understanding of building and running serverless application using the SAM CLI.
 
 During this lesson, you'll cover the following:
 - What is a serverless application

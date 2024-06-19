@@ -1,14 +1,14 @@
 ---
 title: "AWS Security Best Practices For Developers"
 date: 2024-05-22 08:00:00 - 0500
-categories: [Cloud Academy]
+categories: [QA Lessons]
 tags: [aws, aws well-architected, security, best practices]
 image: 
   path: /assets/img/headers/aws-well-architected.webp
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFBAMAAACOSmBbAAAALVBMVEUEXdsCXNwLYNc9dLkgZskFXdoDXdsQYtR9jZVnhKEMYNYJX9gycsMWZtIDXNzFzHkAAAAAIElEQVQIHWNgYBBkAAImkwAgmd65DEhynwUSDAxyDAwALCEDJHDovdoAAAAASUVORK5CYII=
 ---
 
-Welcome to Cloud Academy's lesson where you'll learn the industry standard best practices for developers, as stated by the Well Architected framework.
+Welcome to QA's lesson where you'll learn the industry standard best practices for developers, as stated by the Well Architected framework.
 
 By the end of this lesson, you will have an understanding of:
 
