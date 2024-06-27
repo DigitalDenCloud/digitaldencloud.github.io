@@ -2,33 +2,30 @@
 title: "Static Web Hosting on AWS Series: Terraform Modules & GitHub Actions"
 date: 2024-02-06 08:00:00 - 0500
 categories: [AWS, Terraform]
-tags: [terraform, aws, s3, dynamodb, state management, acm, route 53, cloudfront, github actions, devops]
+tags: [terraform, aws, s3, dynamodb, state management, acm, route 53, cloudfront, github actions, devops, cloud resume challenge]
 image:
   path: /assets/img/headers/static-web-hosting.webp
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAArlBMVEX6+Pz5+Pv19Pb6+fv7+/zt7/j39/f6+/z39/j9+vv5+fn9/Pzi1fH18Ob29vD49/329vzy9vXs8env6vfX0eHs5+H08vH4+Pr49/r09/fy9fL08vju7fP17+D28er35ebr6+T08/Ds7Pbc3N/38tz17937/P789PX15OT9/f38/P3g4eP18uv49O37+/zr5/Pq4vHq7Ovx8+3m5+j38+n6+PT9/v749vv3+Pf5+fgfQaB1AAAADHRSTlPrueu567nrueu567kHUO/PAAAASUlEQVQIHQXBAwKAQBAAwM027rJt1/8/1gyArKiabpgWAaTtuAh7fkABHUYxStIsZ4Atyqpu2q7ngB/GaV7WbRdAPM7rxs/7ST+sOQals5rUoAAAAABJRU5ErkJggg==
 ---
 
-## Introduction
+If you’re looking to tackle the Cloud Resume Challenge and want to Terraform your entire infrastructure, you’ve come to the right place. Today, I’ll guide you through everything you need to know to automate your static website deployment using Terraform, GitHub Actions, and AWS.
 
-Immerse yourself in a detailed, six-part tutorial series that simplifies the process of automating cloud infrastructure deployment and website hosting with Terraform, GitHub Actions, and AWS. The series is designed to walk you through a progressive build-up of your web hosting environment, showcasing advanced DevOps techniques for setting up a secure, scalable, and efficient web hosting environment.
+> This article provides a comprehensive overview of the necessary steps. For a detailed, step-by-step walkthrough, please refer to my six-part YouTube Playlist.
+{: .prompt-info }
 
-In six parts, you'll learn how to write efficient Terraform code, exploring variables, outputs, and modules. Each of the four key modules builds on the fundamentals of web infrastructure management and demonstrates their interconnectedness to boost your infrastructure. Modules include:
+Immerse yourself in a detailed, six-part tutorial series that simplifies the process of automating cloud infrastructure deployment and website hosting with Terraform, GitHub Actions, and AWS. This series is designed to walk you through a progressive build-up of your web hosting environment, showcasing advanced DevOps techniques for setting up a secure, scalable, and efficient web hosting environment. Learn to:
+- Code infrastructure with Terraform
+- Automate deployment and updates with GitHub Actions CI/CD
+- Utilize AWS for a robust web hosting solution
+- The CI/CD pipeline covers infrastructure deployment, S3 file syncing, and CloudFront cache invalidation. 
 
+Throughout the series, you’ll adopt a modular approach, where you’ll be hands-on in creating Terraform modules for:
 - S3 Remote Backend
 - DNS settings with Route 53 & AWS ACM
 - S3 Website Hosting
 - CloudFront distribution
 
-You'll learn how to implement a CI/CD pipeline using GitHub Actions. You'll create a workflow with the following jobs:
-
-- Deploying your infrastructure with Terraform
-- Syncing your files to an S3 bucket
-- Invalidating your CloudFront cache
-
-> Whenever you make changes to your website, simply update your content and commit the changes to your repository. The CI/CD pipeline, integrated into this Terraform-managed infrastructure, automatically kicks in. It syncs the new content to the S3 bucket and triggers a CloudFront cache invalidation, ensuring that your website reflects the latest updates promptly.
-{: .prompt-info }
-
-## Project Steps Overview
+## Objectives
 
 1. **Initialize GitHub Repository and Local Setup:**
 
@@ -79,18 +76,6 @@ This project aligns with the AWS Well-Architected Framework, ensuring best pract
 - **Cost Optimization:** Precise resource provisioning through Terraform minimizes costs.
 - **Sustainability:** Automation and efficient AWS services reduce the environmental impact.
 
-## Tech Stack
-
-- Terraform
-- GitHub Actions
-- AWS
-  - IAM 
-  - S3 
-  - DynamoDB
-  - ACM 
-  - Route 53 
-  - CloudFront
-  
 ## The Series
 - Watch The Intro & Framework Overview
 {% include embed/youtube.html id='sBPo_60Mzxc' %}
@@ -102,3 +87,7 @@ This project aligns with the AWS Well-Architected Framework, ensuring best pract
   -  The central hub for all Terraform module templates and GitHub Action YAML files needed to complete this extensive six-part project.
 - [GitHub](https://github.com/digitalden3/Static-Web-Hosting-on-AWS-Terraform-Modules-GitHub-Actions)
   - The Complete GitHub Repository for the full project and all the complete code for the series.
+  - 
+  
+> Whenever you make changes to your website, simply update your content and commit the changes to your repository. The CI/CD pipeline, integrated into this Terraform-managed infrastructure, automatically kicks in. It syncs the new content to the S3 bucket and triggers a CloudFront cache invalidation, ensuring that your website reflects the latest updates promptly.
+{: .prompt-info }
