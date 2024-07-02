@@ -5,7 +5,7 @@ categories: [QA Lessons]
 tags: [aws, amplify, javascript, react, full-stack app]
 image: 
   path: /assets/img/headers/aws-amplify.webp
-  lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFBAMAAACOSmBbAAAALVBMVEUEXdsCXNwlaMArabsDXdwTY898in2HiXQSYdAVZdBDeLE8c7YTY9IBXN4BXN32BPqEAAAAIElEQVQIHWNgYBBkAAJGZQEg6ZreAiQ9Vx8Bkiz3HBgAKdYEUCStpF8AAAAASUVORK5CYII=
+  lqip: data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAwCdASoUAAwAPzmEuVOvKKWisAgB4CcJZgC7ABbAVNPFhBG/IADQWBVR9bSY6/uv1roUDE86BxJWj1jPOsuLa+NYP8q9CYjIAA==
 ---
 
 Welcome to QA's lesson where we’ll explore what AWS Amplify is and the key services and features it provides to help you build and deploy your web applications. We will specifically walk through creating a `Note Keeper` app using React, demonstrating how Amplify simplifies the setup of essential services like authentication, data storage, and backend integration. 

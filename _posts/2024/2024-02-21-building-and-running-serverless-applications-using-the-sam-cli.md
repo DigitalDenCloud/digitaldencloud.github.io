@@ -5,7 +5,7 @@ categories: [QA Lessons]
 tags: [aws, sam, serverless]
 image: 
   path: /assets/img/headers/aws-sam.webp
-  lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAMAAABLuo1aAAAAM1BMVEUEXdsJXtcHXtkFXdldeJVPcp4EXNoDXdsLXtSWm55thKQGW9QFXdo7d8wobc8CXNsFXtzR8cgiAAAAKElEQVQIHWNgAAJGJhAJAswsrGwQFjsHJxc3hMnAw8vHD2UyCAiAWAAMgwCZhAYZUgAAAABJRU5ErkJggg==
+  lqip: data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAwCdASoUAAwAPzmGuVOvKSWisAgB4CcJZACdACHRgaJS3VRIAAD+DxwiRdcNF4Ft8B+MJW8geTLkjktTnJ7HerSHIDOC0npRAAAA
 ---
 
 ## Lesson Description

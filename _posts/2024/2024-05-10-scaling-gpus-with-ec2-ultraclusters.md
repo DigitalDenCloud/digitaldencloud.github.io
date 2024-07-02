@@ -5,7 +5,7 @@ categories: [QA Lessons]
 tags: [aws, ec2, ultraclusters, gpu, tranium, inferentia]
 image: 
   path: /assets/img/headers/ec2-ultraclusters.webp
-  lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAMAAABLuo1aAAAAllBMVEWQdF6DbWBhV1xJRlY4OUo0Lz1OODVMMCt7TytcNieaelxnVlhWTFdcUVKQcE1kSzw4Ji5WNimLWSxPKiV2WlBeTFFDPU57YkzPl1G+hUI9JitAIiRfNiY/GyFlSUdyVktKP0ZNP0CLZT6dbDZiPSozFiJDHiNGICFwTUF9WkN/XkFZQThFMC9LLilSLiU8GiFOJiNmOCUuLu9FAAAAP0lEQVQIHWNgYGRiZmFlY+fgZODi5uHl4xcQFBJmEBEVE5eQlJKWkWWQk1dQVFJWUVVTZ9DQ1NLW0dXTNzAEAFc6BMpHDqCPAAAAAElFTkSuQmCC
+  lqip: data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoUAAsAPzmEuVOvKKWisAgB4CcJQBdgBAsHqthgKVAccAD6/wY4pDiU6cROKI1Z9dgHi9GMX7K09OQbTSLPzucgeVJc/jHdI9ZwfYuvoPU53/VeayDtJ7q9x4Sv8wFCo1+s1USCgAAAAA==
 ---
 
 Welcome to QA's lesson where you’re going to learn about High-Performance Cloud computing with Amazon's `EC2 UltraClusters.` 

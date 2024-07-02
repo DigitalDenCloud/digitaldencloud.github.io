@@ -9,7 +9,6 @@ image:
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAAclBMVEULACYLACULACcIACwJACsKACUbIFUVGkUQFDwMD0EfHnUVFWILDzkPFDwVGUQdH1MjPn0aNGITLFQOIlMhI3oaIG0MJE0SK1QaM2ApO3oNDDIMCzIMCzELCjEIBjMJBzILCzAMDDILAiELASELAiALASA6TukKAAAAQUlEQVQIHWNgAAJGEAGkGBmZmFmANCsDGzsHJxc3Dy8fP4OAoJCwiKiYuIQkg5S0jKycvIKMjCKDkrKysgqIUAUAQ0ADzcJuxewAAAAASUVORK5CYII=
 ---
 
-## Introduction
 I’ve always been intrigued by the creative side of technology, particularly the animation capabilities of `Adobe After Effects`, a digital visual effects and motion graphics application widely used in the post-production process of film making, video games, and television production. 
 
 Despite my interest, there wasn't a compelling reason to learn it until I began working with AWS. My experience in cloud computing grew as I built solutions and shared them on my YouTube channel, [Hands On with Digital Den](https://www.youtube.com/channel/UCHoxUz0IfdhOieSXox_mwSw){:target="_blank"}. 

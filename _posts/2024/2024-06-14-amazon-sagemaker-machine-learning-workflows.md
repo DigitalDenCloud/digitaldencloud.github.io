@@ -5,7 +5,7 @@ categories: [QA Lessons]
 tags: [aws, aws well-architected, security, best practices]
 image: 
   path: /assets/img/headers/sagemaker.webp
-  lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAAY1BMVEUjYo4yapFFcY8kY443bJBZepAlZI8jY445bZBbfZIkY48scow7hpQnaY8fUXosWn5MdI4tbntIlY0kW3sgUXohVn8mWoA+aYchV38hWn8jYIEhWH8VKkweMlI0Q14WKk0WK02O/uwGAAAAQUlEQVQIHWNgYGRihgAGBhZWNmYGEIeBnYOTi5uHF8Tk4xfgExQS5hMRYRAVE5eQlJIWFZVgkJGVk5GXl1dQUAAAPuIDR4YfZjcAAAAASUVORK5CYII=
+  lqip: data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACQAwCdASoUAAwAPzmGulOvKKWisAgB4CcJZgCdABtBHifiX9O0AP4U7XjO5TJ38u6RfbuSAVrym3FXjCTtOD0c9i7RI+07JAOpD/43AAA=
 ---
 
 Welcome to QA's lesson where you’re going to learn about Machine Learning Operations or MLOPs with Amazon SageMaker's fully managed workflow service.

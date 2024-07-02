@@ -5,7 +5,7 @@ categories: [QA Lessons]
 tags: [aws, aws well-architected, security, best practices]
 image: 
   path: /assets/img/headers/aws-well-architected.webp
-  lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFBAMAAACOSmBbAAAALVBMVEUEXdsCXNwLYNc9dLkgZskFXdoDXdsQYtR9jZVnhKEMYNYJX9gycsMWZtIDXNzFzHkAAAAAIElEQVQIHWNgYBBkAAImkwAgmd65DEhynwUSDAxyDAwALCEDJHDovdoAAAAASUVORK5CYII=
+  lqip: data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoUAAwAPzmMu1SvKaYjMAgB4CcJQBUeg8fSkb+pYAD+u/GyckmCUnlbOsUTfUhCViJRgbK2/29f6xQYBB75ygKpeDkwAA==
 ---
 
 Welcome to QA's lesson where you'll learn the industry standard best practices for developers, as stated by the Well Architected framework.
