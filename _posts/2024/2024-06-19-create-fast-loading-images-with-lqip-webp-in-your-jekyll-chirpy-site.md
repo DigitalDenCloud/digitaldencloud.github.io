@@ -280,3 +280,9 @@ To verify that the LQIP implementation is working correctly, follow these steps:
 >
 The Chirpy theme natively supports LQIP implementation. If you're not seeing the LQIP effect, double-check your front matter syntax to ensure it matches the format shown in Task 6. If issues persist, verify that you're using the latest version of the Chirpy theme and that no custom modifications are interfering with the LQIP functionality.
 {: .prompt-tip }
+
+## Video Tutorial
+
+For a visual walkthrough of this process, check out my video tutorial:
+
+{% include embed/youtube.html id='SdS5noMsaUw' %}
