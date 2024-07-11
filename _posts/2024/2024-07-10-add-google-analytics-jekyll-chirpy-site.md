@@ -105,7 +105,8 @@ Integrate Google Analytics into your Jekyll Chirpy site to gain insights into yo
    ```
     {: .nolineno }
 
-   > This placement ensures that the Google Analytics code is included within the **<head>** section of your HTML document, which is the recommended location for such scripts. Placing it just before the closing **</head>** tag, ensures it's one of the last things loaded in the head, which can help with page load performance.
+   This placement ensures that the Google Analytics code is included within the **<head>** section of your HTML document, which is the recommended location for such scripts. Placing it just before the closing **</head>** tag, ensures it's one of the last things loaded in the head, which can help with page load performance.
+   - To see an example of how this looks in a real `default.html` file, you can check out [my default.html on GitHub](https://github.com/DigitalDenCloud/digitaldencloud.github.io/blob/main/_layouts/default.html){:target="_blank"}.
 
 ## Build and Deploy Your Site
 
@@ -148,7 +149,7 @@ Integrate Google Analytics into your Jekyll Chirpy site to gain insights into yo
 
    - Open your live website in any browser.
    - Right-click and select `View Page Source`
-   - Search for the Google Analytics tracking code in the `<head>` section. It should look similar to this:
+   - Search for the Google Analytics tracking code in the **<head>** section. It should look similar to this:
 
      ```html
      <!-- Global site tag (gtag.js) - Google Analytics -->
