@@ -11,12 +11,16 @@
 - type: github
   icon: "fab fa-github"
 
+- title: "Contact"
+  url: "https://digitalden.cloud/#contact"
+  icon: "fas fa-envelope"
+
 #- type: twitter
 #  icon: "fa-brands fa-x-twitter"
 
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+# - type: email
+#   icon: "fas fa-envelope"
+#   noblank: true # open link in current tab
 
 - type: rss
   icon: "fas fa-rss"
