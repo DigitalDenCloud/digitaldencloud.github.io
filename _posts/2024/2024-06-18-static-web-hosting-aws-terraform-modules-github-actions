@@ -2,7 +2,7 @@
 title: "Static Web Hosting on AWS Series: Terraform Modules & GitHub Actions"
 date: 2024-02-06 08:00:00 - 0500
 categories: [AWS, Terraform]
-tags: [terraform, aws, s3, dynamodb, state management, acm, route 53, cloudfront, github actions, devops, cloud resume challenge]
+tags: [terraform, aws, s3, static website, html dynamodb, state management, acm, route 53, cloudfront, github actions, devops, cloud resume challenge]
 image:
   path: /assets/img/headers/static-web-hosting.webp
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAArlBMVEX6+Pz5+Pv19Pb6+fv7+/zt7/j39/f6+/z39/j9+vv5+fn9/Pzi1fH18Ob29vD49/329vzy9vXs8env6vfX0eHs5+H08vH4+Pr49/r09/fy9fL08vju7fP17+D28er35ebr6+T08/Ds7Pbc3N/38tz17937/P789PX15OT9/f38/P3g4eP18uv49O37+/zr5/Pq4vHq7Ovx8+3m5+j38+n6+PT9/v749vv3+Pf5+fgfQaB1AAAADHRSTlPrueu567nrueu567kHUO/PAAAASUlEQVQIHQXBAwKAQBAAwM027rJt1/8/1gyArKiabpgWAaTtuAh7fkABHUYxStIsZ4Atyqpu2q7ngB/GaV7WbRdAPM7rxs/7ST+sOQals5rUoAAAAABJRU5ErkJggg==
