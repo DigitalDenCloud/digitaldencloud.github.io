@@ -4,8 +4,9 @@ date: 2024-09-07 08:00:00 - 0500
 categories: [QA Lessons]
 tags: [aws, amazon rekognition, machine learning, serverless, aws lambda, amazon s3, amazon comprehend, amazon sns]
 image: 
-  path: /assets/img/headers/rekognition.webp
-  lqip: data:image/webp;base64,
+  path: /assets/img/headers/rekognition2.webp
+  lqip: data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABwAwCdASoUAAoAPzmGvFQvKSYjMAgB4CcJYgAAXGoqRf1i0gAA/uvtLl5V4hFGViyMWqENy64KGYKM85fzPGxHEZGO3QkgsU2mpJ1OfTShIMAA
+
 ---
 
 This lesson looks at Amazon Rekognition, a service that uses generative AI to analyze images and videos enabling developers to add advanced visual analysis capabilities to their applications.
@@ -22,8 +23,8 @@ This lesson looks at Amazon Rekognition, a service that uses generative AI to an
 Learn how to build a serverless solution for image analysis and sentiment detection using Amazon S3, AWS Lambda, Amazon Rekognition, Amazon Comprehend, Amazon DynamoDB, and Amazon SNS. The solution performs object detection, text extraction, and sentiment analysis on uploaded images.
 
 ## GitHub
-The Python scripts for the demo are available in the GitHub Repository:
-<a href="https://github.com/DigitalDenCloud/serverless-image-analysis-amazon-rekognition-comprehend" target="_blank">Repo</a>
+The Python scripts for the demo are available in the
+<a href="https://github.com/DigitalDenCloud/serverless-image-analysis-amazon-rekognition-comprehend" target="_blank">GitHub Repository</a>
 
 ## Intended Audience
 This lesson is designed for software developers, data scientists, and IT professionals looking to implement advanced image and video analysis capabilities in their applications using Amazon Rekognition.
