@@ -10,7 +10,7 @@ image:
 ---
  Build a serverless backend with generative AI capabilities for handling contact forms on static websites. This documentation covers the complete end-to-end solution, covering backend development with AWS services like API Gateway, Lambda, Bedrock, and Simple Email Service, as well as frontend integration with the contact form of a static website. 
 
-## Introduction
+## 1. Introduction
 Static websites have gained popularity due to their speed, security, and cost-effectiveness. They can be hosted on various platforms like:
 
 1.	AWS
@@ -121,7 +121,7 @@ Each section builds on the previous one, guiding you through the setup and confi
 
 Lets build it!
 
-## Amazon Simple Email Service (SES)
+## 2. Amazon Simple Email Service (SES)
 
 ```mermaid
 flowchart LR
@@ -240,7 +240,7 @@ Once in production, the following capabilities become available:
 
 ### Hands-On With SES
 
-To configure Amazon SES for your serverless contact form solution, you will perform the following steps:
+To configure Amazon SES for your serverless contact form solution, you will perform the following tasks:
 
 1. Create and verify an individual email identity
 2. Set up domain verification
@@ -252,7 +252,7 @@ To configure Amazon SES for your serverless contact form solution, you will perf
    Amazon SES is a regional service, so start by logging into the AWS Management Console and selecting the AWS Region where you plan to use SES.
 
 2. **Access the Amazon SES Console**  
-   Go to the [Amazon SES console](https://console.aws.amazon.com/ses/) to begin setting up your email identity.
+   Go to the [Amazon SES console](https://console.aws.amazon.com/ses/){:target="_blank"} to begin setting up your email identity.
 
 3. **Create an Email Identity**  
    In the SES console, under **Email Addresses**, click **Create Identity**. Choose **Email Address** as the identity type, enter the email address you want to verify, and click **Create Identity**.
@@ -306,7 +306,7 @@ To use Amazon SES in a live environment and send emails to unverified recipients
    AWS typically processes these requests within one business day. Once approved, your account will move out of sandbox mode, allowing you to send emails to unverified recipients.
   {: .prompt-info }
 
-## AWS Lambda
+## 3. AWS Lambda
 
 ```mermaid
 flowchart LR
@@ -427,7 +427,7 @@ Now that we've covered the critical aspects of implementing Lambda for this solu
 
 ### Hands-On With Lambda
 
-To configure AWS Lambda for your serverless contact form solution, you will follow these steps:
+To configure AWS Lambda for your serverless contact form solution, you will follow these tasks:
 
 1. Create and configure a Lambda function
 2. Set up function settings
@@ -826,7 +826,7 @@ To ensure that your Lambda function operates correctly, test it with a simulated
    
 To implement the intended AI functionality, you will address the Bedrock model access issue by requesting appropriate permissions.
 
-## Amazon Bedrock
+## 4. Amazon Bedrock
 
 ```mermaid
 flowchart LR
@@ -904,29 +904,360 @@ Amazon Bedrock also provides built-in responsible AI features, known as guardrai
 
 ### Hands-On With Bedrock
 
-To use Amazon Bedrock foundation models, you must ensure you have the appropriate access. An IAM user with sufficient permissions must request access to these models through the console. Once access is granted, it is available for all users in the account for the specified region.
+To integrate Amazon Bedrock's generative AI capabilities into your serverless contact form solution, follow these tasks:
 
-**Steps to Request Access:**
+1. Set Up Model Access
+2. Test Bedrock Integration
 
-1. Go to the **Model Access** page in the Amazon Bedrock console.
-2. Choose to enable all models or enable specific models by selecting the checkboxes next to the models you want access to.
-3. Save the changes, which may take several minutes to complete.
-4. If your request is successful, the access status will change to **Access Granted**.
-
-
-### Testing Bedrock Integration
-
-Now that you’ve explored these Bedrock concepts and gained model access, it's time to test the integration with your Lambda function.
-
-With the model access in place, your function should now generate unique AI quotes using Amazon Bedrock instead of the pre-written fallback quote.
-
-1. **Run the Test**  
-   Go back to your Lambda function and initiate the test event. The function will execute with the newly granted permissions, invoking Amazon Bedrock to generate an AI quote.
-
-2. **Check the Output**  
-   After running the test, check your email for the confirmation message. The email should now contain an AI-generated inspirational quote instead of the static fallback text.
-
-> This test confirms that your function can successfully use the Anthropic models to dynamically create inspirational quotes, enhancing the interactivity and personalization of your contact form solution.  
+> To use Amazon Bedrock foundation models, you must ensure you have the appropriate access. An IAM user with sufficient permissions must request access to these models through the console. Once access is granted, it is available for all users in the account for the specified region.
 {: .prompt-info }
 
-## Amazon API Gateway
+#### Task 1: Set Up Model Access
+
+1. **Access the Bedrock Console**  
+   Go to the **Model Access** page in the [Amazon Bedrock console](https://console.aws.amazon.com/bedrock){:target="_blank"} to manage access to foundation models.
+
+2. **Enable Model Access**  
+   Choose to enable specific models by selecting the checkbox next to the Anthropic Claude v2.1 model, which will be used to generate AI content like inspirational quotes.
+
+3. **Save Changes**  
+   Click **Save changes**. This process may take a few minutes to complete.
+
+4. **Verify Access Status**  
+   Once your request is approved, the access status will change to **Access Granted**. This grants all users in the account access to the specified models in the chosen region.
+
+#### Task 2: Test Bedrock Integration
+
+Now that you have enabled access to the Claude models, it's time to test the integration with your Lambda function to ensure it generates AI quotes dynamically.
+
+1. **Initiate the Lambda Function Test**  
+   Return to your **Lambda function** and initiate the test event. The function should execute with the newly granted permissions, invoking Amazon Bedrock to generate an AI-generated quote.
+
+2. **Verify the Output**  
+   After the test, check your email for a confirmation message. The email should now contain a unique AI-generated inspirational quote, replacing the static fallback text.
+
+> This test confirms that your Lambda function is correctly leveraging the Anthropic models via Amazon Bedrock to dynamically generate content, thereby enhancing the personalization and effectiveness of your serverless contact form solution.  
+{: .prompt-info }
+
+## 5. Amazon API Gateway
+
+```mermaid
+flowchart LR
+    APIGateway[Amazon API Gateway] -->|POST Request| Lambda[AWS Lambda]
+```
+
+This section describes how to use Amazon API Gateway to create a RESTful API that will serve as the entry point for form submissions from your static website. The API Gateway connects the frontend to your AI-integrated serverless backend, completing the core infrastructure of your contact form system.
+
+Configuring Amazon API Gateway allows you to:
+- Handle form submissions from your static website efficiently.
+- Integrate seamlessly with AWS Lambda for backend processing.
+- Secure your API with authentication and authorization features.
+- Monitor and optimize performance with detailed metrics and logging.
+
+If you want to start building right away, you can skip to the [Hands-On With API Gateway](#hands-on-with-api-gateway) section below. Otherwise, continue reading to learn more about the benefits, context, and setup details of using Amazon API Gateway in your serverless architecture.
+
+### Understanding APIs
+
+An **API** (Application Programming Interface) is a set of rules and protocols that enable different software applications to communicate with each other. 
+
+```mermaid
+flowchart LR
+    Client["Client"] -->|Request| API["API (Waiter)"]
+    API -->|Forward to| Backend["Backend (Kitchen)"]
+    Backend -->|Response| API
+    API -->|Deliver Response| Client
+```
+
+Think of an API like a **waiter in a restaurant**:
+- **Request**: You place an order with the waiter (API).
+- **Backend System**: The waiter takes your order to the kitchen (backend system).
+- **Response**: The waiter brings your food back to you (response).
+
+> In web development, APIs typically operate over **HTTP**, allowing clients (such as web browsers or mobile apps) to send requests to servers and receive responses.
+{: .prompt-info }
+
+Common HTTP methods in APIs include:
+
+- **GET**: Retrieves data from the server (fetching a list of blog posts).
+- **POST**: Sends data to the server to create a new resource (submitting a contact form).
+- **PUT**: Updates an existing resource on the server (updating user profile information).
+- **DELETE**: Removes a resource from the server (deleting a user account).
+
+In your serverless contact form handler, you'll use the **POST** method. When a user submits the form, their browser will send a **POST** request to your API, including all the contact form data in the request body.
+
+### What is Amazon API Gateway?
+
+Amazon API Gateway is a fully managed service that allows you to create, publish, maintain, monitor, and secure APIs at any scale. In serverless architectures, API Gateway acts as the front door for applications accessing backend services, such as AWS Lambda.
+
+For your solution, API Gateway will receive form submissions from your static website, route them to your Lambda function for processing, and return the responses back to the static website. The static website will then display the responses to the user.
+
+```mermaid
+flowchart LR
+    User["User"] -->|Interacts| StaticWebsite["Static Website"]
+    StaticWebsite -->|Form Submission| APIGateway["API Gateway"]
+    APIGateway -->|Invoke Lambda| LambdaFunction["Lambda Function"]
+    LambdaFunction -->|Process Data and Return Result| APIGateway
+    APIGateway -->|Return Response| StaticWebsite
+    StaticWebsite -->|Display Response| User
+```
+
+#### Benefits of Using API Gateway in Your Serverless Contact Form Solution
+
+1. **Scalability**: API Gateway automatically scales to handle varying levels of traffic without the need for infrastructure management. If your contact form receives a surge in submissions, API Gateway will automatically scale to manage the increased load.
+
+2. **Security**: API Gateway provides built-in authentication and authorization features to secure your API endpoints. You can implement API keys, AWS IAM roles, or other methods to control access to your backend resources.
+
+3. **Performance**: API Gateway includes caching capabilities to improve response times and reduce backend load, enhancing performance. For example, frequently accessed endpoints can be cached to serve responses quickly without repeatedly invoking the backend services.
+
+4. **Monitoring and Analytics**: API Gateway integrates with Amazon CloudWatch, providing detailed metrics and logging. This allows you to monitor API usage, track error rates, and troubleshoot issues, giving you insights into the number of form submissions and other vital statistics.
+
+5. **Cost-Effectiveness**: With API Gateway, you only pay for the API calls you receive and the data transferred, making it a cost-effective option for applications with varying usage patterns.
+
+6. **Seamless Integration with AWS Lambda**:
+   - **Direct Routing**: API Gateway can directly route HTTP requests to your Lambda function, eliminating the need for intermediate servers.
+   - **Automatic Scaling**: As API Gateway scales with traffic, it automatically triggers more concurrent executions of your Lambda function.
+   - **Simplified Development**: You can set up API Gateway with Lambda integration quickly using the AWS Console or AWS SAM, reducing development time and complexity.
+   - **End-to-End Serverless Architecture**: This integration enables a complete serverless solution, including API endpoints, backend processing and AI content generation.
+
+7. **API Versioning**: API Gateway supports multiple API versions, allowing you to make updates without disrupting existing users.
+
+Now that you understand the key benefits of using API Gateway, let's get hands-on, where you will create and configure an API.
+
+Yes, there are some sections that can be combined to streamline the content while maintaining clarity and flow. Here's a revised structure where some steps have been grouped together:
+
+### Hands-On With API Gateway
+
+To configure Amazon API Gateway for your serverless contact form solution, follow these tasks:
+
+1. Create and Configure a New REST API
+2. Set Up Resources and Methods
+3. Integrate the API with Your Lambda Function
+4. Test and Deploy the API
+
+#### Task 1: Create and Configure a New REST API
+
+1. **Access the API Gateway Service**  
+   - Go to the [API Gateway service](https://console.aws.amazon.com/apigateway){:target="_blank"} in the AWS Management Console.  
+   - Click **Create API** and select **REST API**. Name the API **ContactFormAPI**.
+
+2. **Choose the Appropriate Endpoint Type**  
+   - You will see three endpoint types: **Regional, Edge-optimized,** and **Private**.
+   - Choose **Edge-optimized** to route requests through Amazon CloudFront's global points of presence, ensuring low latency for users worldwide.
+
+> - Regional deploys the API in the current AWS Region, suitable for local services. 
+- Private restricts API access to specified VPCs for internal applications. 
+- Edge-optimized routes requests through CloudFront’s global network, reducing latency for globally distributed users, ideal for your contact form.
+{: .prompt-info }
+
+#### Task 2: Set Up Resources and Methods
+
+1. **Create a Resource for Handling Form Submissions**  
+   - Create a **`/contact`** resource at the root level of your API, which will serve as the endpoint for form submissions.
+   - Enable **CORS** (Cross-Origin Resource Sharing) to allow your static website to communicate with the API. This automatically adds an **OPTIONS** method to your resource to handle preflight requests from browsers.
+
+2. **Create a POST Method to Receive Form Data**  
+   - To handle form submissions, create a **POST** method for the `/contact` resource:
+     - Select the `/contact` resource.
+     - Click **Create Method** and choose **POST**.
+
+#### Task 3: Integrate the API with Your Lambda Function
+
+1. **Integrate with Lambda Function**  
+   - Configure the POST method to connect with your Lambda function to ensure that API Gateway can directly invoke the function whenever a client sends a request:
+     - Set the **Integration type** to **Lambda Function**.
+     - Enable **Lambda Proxy Integration**.
+     - Choose the AWS Region where your Lambda function is deployed.
+     - Enter the Lambda function name.
+
+2. **Configure Timeout**  
+   - Keep the default timeout of **29 seconds** to ensure that the API Gateway connection terminates if the request processing exceeds this duration.
+
+3. **Understand the Request Flow**  
+   - Review the request flow to understand how the API handles a request:
+
+```mermaid
+flowchart TD
+    A[Client] -->|Form Submission| B[Method Request: API Gateway receives the form data]
+    B -->|Receive Form Data| C[Integration Request: API Gateway prepares the data for Lambda]
+    C -->|Prepare Data| D[Lambda Integration: Lambda processes the data, generates AI quote, and prepares emails]
+    D -->|Process Data, Generate AI Quote, Prepare Emails| E[Integration Response: Adjust responses from Lambda]
+    E -->|Adjust Responses| F[Method Response: API Gateway packages the final response]
+    F -->|Package Final Response| G[Client: User receives confirmation email with AI-generated quote]
+```
+
+#### Task 4: Test and Deploy the API
+
+Testing the API ensures that it receives form data correctly and that the Lambda function processes it as expected.
+
+1. **Test the API Using API Gateway's Built-In Tools**  
+   - Go to the **POST** method page and click the **Test** button.
+   - Enter the JSON object representing a form submission in the **Request Body**:
+
+   ```json
+   {
+     "name": "Test User",
+     "email": "test@example.com",
+     "message": "This is a test message."
+   }
+   ```
+
+2. **Verify Results**  
+   - Click **Test** to send the test request to your Lambda function. Verify that the API receives the form data correctly and that the Lambda function processes it as expected. You should see a successful response and receive a confirmation email with the AI-generated quote.
+
+3. **Deploy the API**  
+   - Click **Deploy API** and create a new deployment stage named **prod** (production).
+   - After deployment, API Gateway provides an **Invoke URL**. This URL is the endpoint you will integrate into your static website’s code for form submissions.
+
+   > Your API is now deployed and ready for use, concluding the setup of your serverless contact form API in API Gateway.
+   {: .prompt-info }
+
+ Next, you will integrate your API with your static website, bringing all the components of your contact form system together to complete your serverless solution.
+
+## 6. Frontend Integration
+
+To integrate the contact form from your static site template with your serverless backend, follow these tasks:
+
+1. Customize the contact form in the HTML5 UP Dimensions template.
+2. Add JavaScript code for form submissions and API interaction.
+3. Connect the form to the serverless backend via API Gateway.
+4. Integrate the form with the template's navigation.
+5. Test the solution
+
+### Task 1: Customize the Contact Form
+
+1. **Download and Prepare the Template**  
+   - Download the **HTML5 UP Dimensions** template files from the [HTML5 UP website](https://html5up.net/dimension){:target="_blank"}
+   - Open the downloaded files in **Visual Studio Code** and install the **Live Server** extension to enable local testing.
+
+2. **Modify the HTML Form**  
+   - Open the **index.html** file in VS Code and locate the contact section `<article id="contact">`.
+   - Replace the entire `<article id="contact">` element with the following updated code:
+
+    ```html
+    <!-- Contact -->
+    <article id="contact">
+        <h2 class="major">Contact</h2>
+        <form method="post" action="#">
+            <div class="fields">
+                <div class="field half">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required />
+                </div>
+                <div class="field half">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required />
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="4" required></textarea>
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Send Message" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+            </ul>
+        </form>
+        <ul class="icons">
+            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+    </article>
+    ```
+    {: .nolineno }
+
+> This updated code incorporates the **required** attributes for all input fields to leverage HTML5 form validation, sets the **email** input type to **email** for email validation, and uses a **textarea** for the **message** input to allow longer messages.
+{: .prompt-info }
+
+### Task 2: Add JavaScript for Form Submission
+
+To enable the contact form on your static website to interact with the serverless backend, you need to add JavaScript, which captures form submissions, sends the data to your API Gateway endpoint, and provides feedback to the user based on the server's response.
+
+1. **Open the `main.js` File**  
+   - In Visual Studio Code, go to the **assets > javascript** directory and open the **main.js** file.
+
+2. **Add the JavaScript Code for Form Handling**  
+   - Scroll to the end of the **main.js** file, and just before the `})(jQuery);` line, copy the following code and paste it there:
+
+    ```javascript
+    // Contact form handling
+    var $contact = $('#contact');
+    var $form = $contact.find('form');
+    var $submit = $form.find('input[type="submit"]');
+
+    $form.submit(function(event) {
+        event.preventDefault();
+
+        // Disable submit button (using template's existing disabled class)
+        $submit.addClass('disabled');
+
+        // Send data asynchronously
+        $.ajax({
+            url: "YOUR_API_ENDPOINT_HERE",
+            type: "POST",
+            data: JSON.stringify(Object.fromEntries(new FormData($form[0]))),
+            contentType: "application/json",
+            success: function(result) {
+                $form.find('.response').remove();
+                $form.append('<div class="response success">Message sent successfully!</div>');
+                $form[0].reset();
+
+                // Close the form after 3 seconds using template's hash navigation
+                setTimeout(function() {
+                    location.hash = '';
+                }, 3000);
+            },
+            error: function(error) {
+                $form.find('.response').remove();
+                $form.append('<div class="response error">There was an error sending your message. Please try again.</div>');
+            },
+            complete: function() {
+                // Re-enable submit button
+                $submit.removeClass('disabled');
+            }
+        });
+    });
+    ```
+    {: .nolineno }
+
+3. **Save Your Changes** 
+
+> Key Functions of the JavaScript Code
+- Captures form submissions by listening for events and preventing default browser behavior
+- Sends form data to your API asynchronously using AJAX
+- Provides real-time user feedback with success or error messages
+- Manages form state by disabling the submit button during submission
+- Integrates with template navigation for seamless user experience
+{: .prompt-info }
+
+### Task 3: Connect the Form to the Serverless Backend via API Gateway
+
+To connect the contact form on your static website to your serverless backend, you need to ensure that the form data is correctly sent to the API Gateway endpoint you've created.
+
+1. **Replace the API Endpoint**  
+   In the `main.js` file, replace the placeholder `'YOUR_API_ENDPOINT_HERE'` with the actual API Gateway **Invoke URL** for your contact form endpoint. 
+
+   To find the full invoke URL for your endpoint, go to the **Stages** section in the API Gateway console, select the **prod stage**, go to the **'contact'** resource, and click on the **POST** method. 
+   - Copy the full URL and paste it in the JavaScript code where the API endpoint is specified.
+
+2. **Test the Integration**  
+   Save all changes and use the **Live Server** extension in Visual Studio Code to test the form submission. Fill in the contact form with test data and click **Send Message**. Verify that the form data is sent to your serverless backend, processed by Lambda, and that you receive the confirmation email with the AI-generated quote.
+
+> The integration you’ve completed allows users to submit forms that trigger your Lambda function, interact with your API Gateway, and receive Bedrock generated inspirational quotes via email, all while maintaining a responsive user interface.
+{: .prompt-info }
+
+```mermaid
+flowchart TD
+    A[Visitor] -->|Submits Form| B[Contact Form on Static Website]
+    B -->|JavaScript Captures Data| C[API Gateway Endpoint]
+    C -->|Routes Request| D[Lambda Function]
+    D -->|Invokes Bedrock| E[Bedrock AI Integration]
+    E -->|Generates AI Quote| D
+    D -->|Sends Data to| F[Amazon SES]
+    F -->|Sends Emails| G[Visitor and Website Owner]
+    G -->|Receives Confirmation| H[Visitor's Inbox]
+    F -->|Receives Notification| I[Website Owner's Inbox]
+```
+
+
