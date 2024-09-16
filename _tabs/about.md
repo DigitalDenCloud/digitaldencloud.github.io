@@ -19,13 +19,13 @@ My channel features:
 My content is dedicated to teaching practical implementations of AWS services and showcasing creative cloud solutions. You will find step-by-step guides on topics on a range of services including emerging technologies like Generative AI.
 
 ### Professional Role  
-As an AWS Content Creator at `DigitalDenCloud` and `QA` (Formerly Cloud Academy), I design, develop, and refine AWS content. My work covers a broad spectrum of AWS technologies, helping learners effectively implement and configure these services. All my QA lessons are tagged and can be found [QA Lessons](https://docs.digitalden.cloud/categories/qa-lessons/){:target="_blank"}.
+As an AWS Content Creator at `QA` (Formerly Cloud Academy) I design, develop, and refine AWS content. My work covers a broad spectrum of AWS technologies, helping learners effectively implement and configure these services. All my [QA Lessons](https://docs.digitalden.cloud/categories/qa-lessons/){:target="_blank"} are tagged.
 
 ### Outside the Cloud  
 
 When I'm not in the cloud, I enjoy maintaining an active lifestyle — playing football for a Sunday League team, playing tennis, and cycling.
 
- I also enjoy learning about quantum physics and attend lectures on the topic at the [Royal Institution](https://www.rigb.org){:target="_blank"}.
+I also enjoy learning about quantum physics and attend lectures on the topic at the [Royal Institution](https://www.rigb.org){:target="_blank"}.
 
 > AWS offers **Amazon Braket**, a service that lets you experiment with quantum computing in the cloud. With access to multiple quantum hardware providers, you can explore quantum algorithms and applications without needing specialized equipment.   
 {: .prompt-tip }
