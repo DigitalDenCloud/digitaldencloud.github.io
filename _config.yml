@@ -16,7 +16,7 @@ timezone: Europe/London
 
 title: Deniz Yilmaz # the main title
 
-tagline: AWS Community Builder & AWS Content Creator # it will display as the sub-title
+tagline: AWS Community Builder & Content Creator  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
  AWS Documentation and More
