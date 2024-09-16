@@ -10,6 +10,9 @@ image:
 ---
  Build a serverless backend with generative AI capabilities for handling contact forms on static websites. This documentation covers the complete end-to-end solution, covering backend development with AWS services like API Gateway, Lambda, Bedrock, and Simple Email Service, as well as frontend integration with the contact form of a static website. 
 
+ > Submit a message using the [Contact Form](https://digitalden.cloud/#contact){:target="_blank"} at digitalden.cloud to see the solution in action.
+{: .prompt-tip }
+
 ## 1. Introduction
 Static websites have gained popularity due to their speed, security, and cost-effectiveness. They can be hosted on various platforms like:
 
@@ -61,7 +64,8 @@ Before starting, ensure you have the following:
 4. [HTML5 UP Dimensions Template](https://html5up.net/dimension){:target="_blank"} to provide the static website's contact form layout and design.
 
 > 
-Amazon Route 53 is recommended for easier DNS configuration. While you can use any domain registrar, domains not managed by Route 53 will require additional steps for SES verification.
+- Amazon Route 53 is recommended for easier DNS configuration. 
+- While you can use any domain registrar, domains not managed by Route 53 will require additional steps for SES verification.
 {: .prompt-tip }
 
 ### Solution Architecture
@@ -95,7 +99,9 @@ This backend architecture leverages AWS's scalable and reliable services to seam
 
 #### Frontend Integration
 
-To integrate the static website frontend with the serverless backend, we will use the **HTML5 UP Dimensions Template**, which offers a modern design and is straightforward to set up and customize. The following modifications will be made to the template's contact form to facilitate communication with the backend services:
+To integrate the static website frontend with the serverless backend, you will use the **HTML5 UP Dimensions Template**, which offers a modern design and is straightforward to set up and customize. 
+
+The following modifications will be made to the template's contact form to facilitate communication with the backend services:
 
 1. **Update Form Action**: Modify the form's action attribute to point to the Amazon API Gateway endpoint URL.
 
@@ -111,11 +117,14 @@ To test the modified frontend, you will use the **Live Server extension** in Vis
 
 This documentation is structured as a progressive build-up, with each section dedicated to an AWS service required to create the solution:
 
-- **Amazon SES**
-- **AWS Lambda**
-- **Amazon Bedrock**
-- **API Gateway**
-- **Frontend Integration**
+```mermaid
+graph TD
+    A[Introduction] --> B[Amazon SES]
+    B --> C[AWS Lambda]
+    C --> D[Amazon Bedrock]
+    D --> E[API Gateway]
+    E --> F[Frontend Integration]
+```
 
 Each section builds on the previous one, guiding you through the setup and configuration needed to create a fully functional, serverless contact form solution.
 
@@ -193,12 +202,12 @@ To overcome sandbox restrictions, Amazon SES provides two methods for verifying 
 
    - **Process**:
 
-      ```mermaid
-      flowchart LR
-          A[Enter email address in SES console] --> B[SES sends verification email]
-          B --> C[Click verification link in email]
-          C --> D[Email address verified in SES]
-      ```
+```mermaid
+flowchart LR
+      A[Enter email address in SES console] --> B[SES sends verification email]
+      B --> C[Click verification link in email]
+      C --> D[Email address verified in SES]
+```
 
    - **Limitations**:
      - Emails can only be sent to verified addresses in sandbox mode, making it impractical for public-facing contact forms, as visitors' email addresses cannot be pre-verified.
@@ -208,12 +217,12 @@ To overcome sandbox restrictions, Amazon SES provides two methods for verifying 
 
    - **Process**:
 
-      ```mermaid
-      flowchart LR
-          A[Verify ownership of entire domain] --> B[Send emails from any address within that domain]
-          B --> C[contact@example.com]
-          B --> D[support@example.com]
-        ```
+```mermaid
+flowchart LR
+   A[Verify ownership of entire domain] --> B[Send emails from any address within that domain]
+   B --> C[contact@example.com]
+   B --> D[support@example.com]
+```
 
    - **Advantages**:
      - More scalable for growing solutions.
@@ -830,8 +839,10 @@ To implement the intended AI functionality, you will address the Bedrock model a
 
 ```mermaid
 flowchart LR
-    Bedrock[Amazon Bedrock] -->|Generate Inspirational Quotes| Lambda[AWS Lambda]
-    Lambda -->|Invoke Bedrock API| Bedrock
+    Lambda[AWS Lambda] -->|Invoke Bedrock API| Bedrock[Amazon Bedrock]
+    Bedrock -->|Use Model| Claude[Claude Anthropic]
+    Claude -->|Generate Inspirational Quotes| Bedrock
+    Bedrock -->|Return Quote| Lambda
 ```
 
 This section describes how to use Amazon Bedrock to enhance your serverless contact form solution with generative AI capabilities.
@@ -1115,22 +1126,34 @@ Testing the API ensures that it receives form data correctly and that the Lambda
 
 ## 6. Frontend Integration
 
-To integrate the contact form from your static site template with your serverless backend, follow these tasks:
+To complete the solution, integrate the contact form on the HTML5UP Dimensions static site template with your serverless backend by following these tasks:
 
 1. Customize the contact form in the HTML5 UP Dimensions template.
-2. Add JavaScript code for form submissions and API interaction.
-3. Connect the form to the serverless backend via API Gateway.
-4. Integrate the form with the template's navigation.
-5. Test the solution
+2. Add JavaScript code for form submissions to enable API interaction.
+3. Connect the form to the serverless backend via the API Gateway.
+4. Test the solution.
+
+```mermaid
+flowchart TD
+    A[Visitor] -->|Submits Form| B[Contact Form on Static Website]
+    B -->|JavaScript Captures Data| C[API Gateway Endpoint]
+    C -->|Routes Request| D[Lambda Function]
+    D -->|Invokes Bedrock| E[Bedrock AI Integration]
+    E -->|Generates AI Quote| D
+    D -->|Sends Data to| F[Amazon SES]
+    F -->|Sends Emails| G[Visitor and Website Owner]
+    G -->|Receives Confirmation| H[Visitor's Inbox]
+    F -->|Receives Notification| I[Website Owner's Inbox]
+```
 
 ### Task 1: Customize the Contact Form
 
 1. **Download and Prepare the Template**  
-   - Download the **HTML5 UP Dimensions** template files from the [HTML5 UP website](https://html5up.net/dimension){:target="_blank"}
+   - Download the **HTML5 UP Dimensions** template files from the [HTML5 UP website](https://html5up.net/dimension){:target="_blank"}.
    - Open the downloaded files in **Visual Studio Code** and install the **Live Server** extension to enable local testing.
 
 2. **Modify the HTML Form**  
-   - Open the **index.html** file in VS Code and locate the contact section `<article id="contact">`.
+   - Open the **index.html** file in VS Code and locate the contact section `<article id="contact">`
    - Replace the entire `<article id="contact">` element with the following updated code:
 
     ```html
@@ -1236,28 +1259,30 @@ To enable the contact form on your static website to interact with the serverles
 To connect the contact form on your static website to your serverless backend, you need to ensure that the form data is correctly sent to the API Gateway endpoint you've created.
 
 1. **Replace the API Endpoint**  
-   In the `main.js` file, replace the placeholder `'YOUR_API_ENDPOINT_HERE'` with the actual API Gateway **Invoke URL** for your contact form endpoint. 
+   - In the `main.js` file, replace the placeholder `'YOUR_API_ENDPOINT_HERE'` with the actual API Gateway **Invoke URL** for your contact form endpoint. 
 
-   To find the full invoke URL for your endpoint, go to the **Stages** section in the API Gateway console, select the **prod stage**, go to the **'contact'** resource, and click on the **POST** method. 
+   - To find the full invoke URL for your endpoint, go to the **Stages** section in the API Gateway console, select the **prod stage**, go to the **'contact'** resource, and click on the **POST** method. 
    - Copy the full URL and paste it in the JavaScript code where the API endpoint is specified.
 
-2. **Test the Integration**  
-   Save all changes and use the **Live Server** extension in Visual Studio Code to test the form submission. Fill in the contact form with test data and click **Send Message**. Verify that the form data is sent to your serverless backend, processed by Lambda, and that you receive the confirmation email with the AI-generated quote.
+### Task 4: Test the Solution
 
-> The integration you’ve completed allows users to submit forms that trigger your Lambda function, interact with your API Gateway, and receive Bedrock generated inspirational quotes via email, all while maintaining a responsive user interface.
+Now that you’ve integrated your contact form with the serverless backend, test its functionality using the Live Server extension in Visual Studio Code.
+
+1. **Save All Changes and Test Locally**  
+   - Open your HTML file with the Live Server extension to view it in your web browser.
+   - Fill out the contact form with your own name, email address, and a test message. Click **Send Message** to submit the form.
+   
+2. **Observe the Form Behavior**  
+   - Notice how the submit button becomes disabled after submission, preventing multiple submissions. After a moment, a success message should appear, indicating that the form has been submitted successfully.
+
+3. **Check Your Email Inbox**  
+   - Check your email inbox for two emails: 
+     - One containing the test message you sent.
+     - Another with a confirmation email that includes the AI-generated inspirational quote.
+
+4. **Test Error Handling**  
+   - Try submitting the form with invalid data, such as an incorrect email format, or submit an empty form to confirm that the HTML5 validation works properly.
+   - For a more thorough test, temporarily change the API endpoint to an invalid URL in the JavaScript file. This will help verify that error messages display correctly when the form submission fails. Remember to revert the URL back to the correct API endpoint after testing.
+
+> This testing ensures that your contact form is fully functional, accurately handling valid and invalid inputs, and operating as expected
 {: .prompt-info }
-
-```mermaid
-flowchart TD
-    A[Visitor] -->|Submits Form| B[Contact Form on Static Website]
-    B -->|JavaScript Captures Data| C[API Gateway Endpoint]
-    C -->|Routes Request| D[Lambda Function]
-    D -->|Invokes Bedrock| E[Bedrock AI Integration]
-    E -->|Generates AI Quote| D
-    D -->|Sends Data to| F[Amazon SES]
-    F -->|Sends Emails| G[Visitor and Website Owner]
-    G -->|Receives Confirmation| H[Visitor's Inbox]
-    F -->|Receives Notification| I[Website Owner's Inbox]
-```
-
-
