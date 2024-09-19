@@ -4,15 +4,9 @@
 
   A minimal, responsive, and feature-rich Jekyll theme for technical writing.
 
-  [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy?color=brightgreen)][gem]&nbsp;
-  [![CI](https://github.com/cotes2020/jekyll-theme-chirpy/actions/workflows/ci.yml/badge.svg?branch=master&event=push)][ci]&nbsp;
-  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e556876a3c54d5e8f2d2857c4f43894)][codacy]&nbsp;
-  [![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)][license]&nbsp;
-  [![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
+  [![Demo](https://img.shields.io/badge/Demo-Click%20Here-3aa2f1?style=for-the-badge&logo=jekyll&logoColor=white)](https://docs.digitalden.cloud)
 
-<a href="https://docs.digitalden.cloud" target="_blank" rel="noopener noreferrer"><strong>Live Demo</strong></a>
-
-<img src="assets/img/headers/jekyll.webp" alt="Devices Mockup">
+<img src="assets/img/headers/jekyll2.webp" alt="Devices Mockup">
 
 </div>
 
@@ -37,11 +31,15 @@
 - Google Analytics / GoatCounter
 - SEO & Performance Optimization
 
-## Documentation
+## Getting Started
 
-To learn how to set up this site using AWS Cloud9 IDE, refer to my <a href="https://docs.digitalden.cloud/posts/set-up-and-deploy-a-documentation-site-with-jekyll-and-chirpy-on-aws-cloud9/" target="_blank" rel="noopener noreferrer">documentation</a> or watch my <a href="https://www.youtube.com/watch?v=7cLkDE8_tCI&t=17s" target="_blank" rel="noopener noreferrer">video tutorial</a>.
+To set up and deploy your own documentation site using Jekyll and the Chirpy theme, check out these resources:
 
-In my tutorial, you'll learn how to:
+[![Setup Guide](https://img.shields.io/badge/Setup%20Guide-Read%20Here-blue?style=for-the-badge)](https://docs.digitalden.cloud/posts/set-up-and-deploy-a-documentation-site-with-jekyll-and-chirpy-on-aws-cloud9/)
+[![Video Tutorial](https://img.shields.io/badge/Video%20Tutorial-Watch%20Now-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=7cLkDE8_tCI&t=17s)
+
+
+You will learn how to:
 - Launch and prepare the AWS Cloud9 environment.
 - Set up the development environment for Jekyll with Chirpy on Cloud9.
 - Configure Git and SSH for GitHub integration.
