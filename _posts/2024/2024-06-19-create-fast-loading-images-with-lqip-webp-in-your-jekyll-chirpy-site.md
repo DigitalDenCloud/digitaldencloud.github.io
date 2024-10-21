@@ -209,7 +209,7 @@ The following command resizes the image to a small size, reduces its quality, co
 
 ```sh
 magick chirpy-fast-load.webp -resize 20x20 -strip -quality 20 tmp.webp && \
-base64 tmp.webp && \
+base64 -i tmp.webp && \
 rm tmp.webp
 ```
 {: .nolineno }
