@@ -5,7 +5,7 @@ categories: [QA Lessons]
 tags: [aws, amazon devops guru, machine learning, amazon codeguru profiler, amazon rds, serverless, aws lambda ]
 image: 
   path: /assets/img/headers/devops-guru.webp
-  lqip: data:image/webp;base64,
+  lqip: data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAwCdASoUAAwAPzmEuVOvKKWisAgB4CcJbAC7ACIal23dPQFkDgAAAP65BPtG45ll2JMX3nMz+pLRW9K9gOwM+5/oxGuJbH7s5vBYzKEO/rcOYxPbAyUoHXGRT9I2NoUVa0LtK+FIeRhC0bCwAAAA
 ---
 
 Welcome to this lesson on detecting abnormal operating patterns using Amazon DevOps Guru. 

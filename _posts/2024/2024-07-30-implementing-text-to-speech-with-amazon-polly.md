@@ -5,7 +5,7 @@ categories: [QA Lessons]
 tags: [aws, amazon polly, machine learning]
 image: 
   path: /assets/img/headers/amazon-polly.webp
-  lqip: data:image/webp;base64,
+  lqip: data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoUAAwAPzmGulOvKSWisAgB4CcJbACdAB6HufyatpDGvoAA/pDeXF6Fb10nM0fpBDmkrLKcBhEw59v8kQLMD8xWZolUtyiDmQH6aCldSWAtJproBBid/tKkaevz5UX0JW/jCvX2N7g9kA+IfXKwAA==
 ---
 
 Welcome to this lesson on leveraging Amazon Polly, a cloud-based text-to-speech service, to create more accessible, engaging, and natural-sounding speech experiences for your applications, websites, and services. 
