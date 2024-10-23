@@ -4,8 +4,8 @@ date: 2024-10-21 08:00:00 - 0500
 categories: [aws, genai]
 tags: [aws, amazon bedrock, generative ai, foundation models, aws cli, boto3, aws cloudshell, inference,]
 image: 
-  path: /assets/img/headers/amazon-bedrock.webp
-  lqip: data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoUAAwAPzmGuVOvKSWisAgB4CcJQCDALiAKbDfv3YAA/u4eSm7pZHs1/W+VWOcDzSSMvggVzP1wtw/dsMdAQSVFxXpzogAA
+  path: /assets/img/headers/amazon-bedrock2.webp
+  lqip: data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwAwCdASoUAAwAPzmGuVOvKSWisAgB4CcJZQDImBtPgh4gCEAA/udAwu7682t9feJZUv/0SeNWTlH0FKSBvQBRtusP3xfYykwAAA==
 ---
 
 In this lesson, you will explore Amazon Bedrock, a fully managed service in AWS's generative AI layer. You will learn about its core concepts, capabilities, and how to interact with it using the Bedrock Playground, AWS CLI, and SDKs.
