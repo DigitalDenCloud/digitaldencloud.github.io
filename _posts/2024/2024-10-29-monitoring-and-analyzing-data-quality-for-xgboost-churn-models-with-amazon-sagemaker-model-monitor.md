@@ -2,7 +2,7 @@
 title: "Monitoring and Analyzing Data Quality for XGBoost Churn Models With Amazon SageMaker Model Monitor"
 date: 2024-10-30 08:00:00 - 0500
 categories: [AWS, Machine Learning]
-tags: [aws, amazon sagemaker, model monitoring, XGBoost]
+tags: [QA Learning Platform, AWS, Amazon SageMaker, Amazon SageMaker Model Monitor, XGBoost]
 image: 
   path: /assets/img/headers/amazon-model-monitor.webp
   lqip: data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAwCdASoUAAwALvmczmclLy8vDwD4S2AE6coADlZdZx5DfiJpr4cAAP7ZM/HeED3mjGgOul12hToWnM4RV1/MgNfTI9fJAl5sSdNyp0fTgRtt7pOmIs5PwNAAAA==
