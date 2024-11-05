@@ -1,8 +1,8 @@
 ---
 title: "High-Performance Text Analysis with HuggingFace GPT-2 on AWS Neuron with AWS Inferentia"
 date: 2024-04-03 08:00:00 - 0500
-categories: [QA Lessons]
-tags: [aws, huggingface, neuron, pytorch, inferentia, inf2 instance, jupyter, deep learning, dlami]
+categories: [AWS, Machine Learning]
+tags: [AWS, HuggingFace, AWS Neuron, AWS Inferentia, PyTorch, Deep Learning, Jupyter Notebook, Deep Learning AMI]
 image: 
   path: /assets/img/headers/neuron.webp
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAAtFBMVEUQIEAQI08XKVAXKlEWLEoVLFAVLFIVLFMPJlENI0IRKTMNLEAILj4IKz4MLDQVMUMVMUYWMUUXM0caNDgoPj8tSUglREQlRkYnQEIwLSouLCgqKCQnJCElJiaqrK3f5ujW29/0+vyztLYwLzE3ODozMzYsLC8jJCa4uLP49/Dk4Nv///u6ubMiIhwvLignJyEkJB0fHxlVV3pwc55kaJF4eaRWWIIEBTIMDjsLDTkLDToKDDbGR/XUAAAASElEQVQIHQXBgwHAAAwAsM62bdv6/68lAAiK4QRJ0QywHC+IkqyoGuiGadmO6/kBhFGcpFlelBXUTdv1wzjNC6zbfpzX/bzfD5dLButtq3LQAAAAAElFTkSuQmCC

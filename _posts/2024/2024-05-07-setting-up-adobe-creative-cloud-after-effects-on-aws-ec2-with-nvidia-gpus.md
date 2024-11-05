@@ -2,7 +2,7 @@
 title: "Setting Up Adobe Creative Cloud and After Effects on AWS EC2 with NVIDIA GPUs"
 date: 2024-05-03 08:00:00 - 0500
 categories: [AWS, Adobe Creative Cloud]
-tags: [adobe, after effects, aws, ec2, nvidia, gpu]
+tags: [AWS, Adobe Creative Cloud, Amazon EC2, Amazon EBS, NVIDIA, Microsoft RDP]
 image:
   path: /assets/img/headers/adobe-aws-nvida-gpu.webp
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAMAAABLuo1aAAAAUVBMVEUBAQAAAAABAAAAAAEYDQAWHyUAAgYGBQMEBAUTIAANFwBDKx48YlgACxBDQD8+Pj8LDAtVcSU4ShcSFBciICEJCAcKCgoLCwsKCgsjIScZGBzwCGTZAAAANUlEQVQIHWNgYGRkYmRkZGZmYGBkYWVj52Dk5GJkYOTm4eXjFxAUAjKFRUTFxCUkpYBMOAAAIrUBeMU/YbsAAAAASUVORK5CYII=

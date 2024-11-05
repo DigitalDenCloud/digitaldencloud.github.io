@@ -2,7 +2,7 @@
 title: "Using Amazon Lex to Create Conversational AI Interfaces"
 date: 2024-10-24 08:00:00 - 0500
 categories: [AWS, Machine Learning]
-tags: [aws, amazon lex, machine learning, amazon bedrock]
+tags: [QA Learning Platform, AWS, Amazon Lex, Machine Learning, Amazon Bedrock]
 image: 
   path: /assets/img/headers/amazon-lex.webp
   lqip: data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoUAAwAPzmEuVOvKKWisAgB4CcJQBdgBDpZy5O7VBAgAAD+6MYGfuo5NnHe+BkqDetZ5L5+fJjpEYRTQ/WsD8oKJmAQ3GmUV6YJQixJG41vu3faqeAAAA==

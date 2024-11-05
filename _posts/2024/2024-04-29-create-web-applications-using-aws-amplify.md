@@ -1,8 +1,8 @@
 ---
 title: "Create Web Applications Using AWS Amplify"
 date: 2024-04-29 08:00:00 - 0500
-categories: [QA Lessons]
-tags: [aws, amplify, javascript, react, full-stack app]
+categories: [AWS, Serverless]
+tags: [AWS, AWS Amplify, JavaScript, React, Amazon S3, Amplify CLI, Amplify Studio]
 image: 
   path: /assets/img/headers/aws-amplify.webp
   lqip: data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAwCdASoUAAwAPzmEuVOvKKWisAgB4CcJZgC7ABbAVNPFhBG/IADQWBVR9bSY6/uv1roUDE86BxJWj1jPOsuLa+NYP8q9CYjIAA==

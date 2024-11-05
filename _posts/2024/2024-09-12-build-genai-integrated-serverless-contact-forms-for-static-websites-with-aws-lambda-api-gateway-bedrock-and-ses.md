@@ -2,7 +2,7 @@
 title: "Build GenAI-Integrated Serverless Contact Forms for Static Websites With AWS Lambda, API Gateway, Bedrock, and SES"
 date: 2024-09-12 08:00:00 - 0500
 categories: [AWS, Serverless]
-tags: [aws, serverless, generative ai, html, static websites, lambda, ses, bedrock, api gateway]
+tags: [AWS, Serverless, Generative AI, HTML, Static Websites, AWS Lambda, Amazon SES, Amazon Bedrock, Amazon API Gateway, Contact Forms]
 mermaid: true
 image: 
   path: /assets/img/headers/ai-serverless-contact-forms2.webp

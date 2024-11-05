@@ -1,8 +1,8 @@
 ---
 title: "Animating the Cloud: Learning Adobe After Effects for AWS Content Creation"
 date: 2024-04-11 08:00:00 - 0500
-categories: [Adobe Creative Cloud, After Effects]
-tags: [adobe, after effects, animation, creative cloud, illustrator, premiere pro]
+categories: [AWS, Adobe Creative Cloud]
+tags: [AWS, Amazon EC2, Amazon EBS, Adobe Creative Cloud, Animation, NVIDIA, Microsoft RDP]
 pin: true
 image:
   path: /assets/img/headers/ae.webp

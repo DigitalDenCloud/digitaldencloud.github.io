@@ -2,7 +2,7 @@
 title: "Particles.js Integration Tutorial for HTML5Up Dimensions Site Template"
 date: 2024-02-18 08:00:00 - 0500
 categories: [Web Development, JavaScript]
-tags: [html, css, javascript, particles.js, web development]
+tags: [HTML, JavaScript, Web Development]
 image:
   path: /assets/img/headers/particlesjs.webp
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAAilBMVEWrq6uxsbFxcXNVVVhXWFpYWVuIiIrv7+/6+vqvr69FRkkVGBwYGh4XGh4SFRlUVVjt7e2wsLBGSEsUFxodHyEcHyITFhpXWVvu7u5LTU8XGRshIyEbHSAVFxpcXmB8fXxgYWFgYWBfYF9dXl2BgoHi4uKsrKyqqqqur6+wsbGxsrKys7PKy8v4+PiZwXq7AAAARElEQVQIHWNgYGRiZmZhZWPnYGDg5OLm4eXjFwAyBYWERUTFxCWATEZJKWkZWTmQAkZ5BUUlZRVVIFNNXU1DU0tbRxcAYLkEXhdW9hoAAAAASUVORK5CYII=

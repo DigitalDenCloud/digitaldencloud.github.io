@@ -2,7 +2,7 @@
 title: "Set Up Google Analytics in Your Jekyll Chirpy Site"
 date: 2024-06-19 08:00:00 - 0500
 categories: [Web Development, Jekyll]
-tags: [jekyll, chirpy, lqip, webp]
+tags: [Jekyll, Chirpy, Google Analytics, Web Development, Website Analytics]
 image: 
   path: /assets/img/headers/google-jekyll.webp
   lqip: data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAwCdASoUAAwAPzmGulOvKSWisAgB4CcJaQAAUqcyf8QgjPAAAP3Sdf++BUC7J8gpEDjOZulNrffdweivL0HvR8CeQAAA

@@ -2,7 +2,7 @@
 title: "Setting Up Terraform Remote Backend With AWS Using A Bash Script"
 date: 2023-10-05 08:00:00 - 0500
 categories: [AWS, Terraform]
-tags: [terraform, bash script, aws, s3, dynamodb, state management]
+tags: [AWS, Terraform, Bash, Amazon S3, Amazon DynamoDB, Infrastructure as Code]
 image:
   path: /assets/img/headers/bash-script.webp
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAAmVBMVEW6wsiOnqmNnKqNnaqNnKmwucJjeIoMLkoIK0QHK0QHLEQGKkQEJ0IEJkMAIkBIXnFkeYsaOVMUNk0PMUoNMEoKLUgGKEQAIT9GXHBfdIcPM0gQNUgQM0wPMEwJK0YFJkQBI0AAID5fdIYKMEMJMUMJLkUGLUUDKEEHKEUFJ0RFW2+gq7RmeYVleYVleIVkdoZldoZjdYWNmaMIZDnWAAAAR0lEQVQIHWNgYGQCAWYWVgY2dg5OLm4eXj5+BgFBIWERUTFecQkGSSlpGVk5eQVFCQYlZRVVNXUNTUUtBm0dHV09fX0DQyMAdocFpbQkwGsAAAAASUVORK5CYII=
