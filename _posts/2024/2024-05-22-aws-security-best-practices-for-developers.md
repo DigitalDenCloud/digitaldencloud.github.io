@@ -2,7 +2,7 @@
 title: "AWS Security Best Practices For Developers"
 date: 2024-05-22 08:00:00 - 0500
 categories: [AWS, Security]
-tags: [AWS, Security, AWS Well-Architected Framework, AWS IAM]
+tags: [QA Learning Platform, AWS, Security, AWS Well-Architected Framework, AWS IAM]
 image: 
   path: /assets/img/headers/aws-well-architected.webp
   lqip: data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoUAAwAPzmMu1SvKaYjMAgB4CcJQBUeg8fSkb+pYAD+u/GyckmCUnlbOsUTfUhCViJRgbK2/29f6xQYBB75ygKpeDkwAA==
