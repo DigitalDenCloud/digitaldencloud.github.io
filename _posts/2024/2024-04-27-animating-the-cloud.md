@@ -3,7 +3,6 @@ title: "Animating the Cloud: Learning Adobe After Effects for AWS Content Creati
 date: 2024-04-11 08:00:00 - 0500
 categories: [AWS, Adobe Creative Cloud]
 tags: [AWS, Amazon EC2, Amazon EBS, Adobe Creative Cloud, Animation, NVIDIA, Microsoft RDP]
-pin: true
 image:
   path: /assets/img/headers/ae.webp
   lqip: data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAAclBMVEULACYLACULACcIACwJACsKACUbIFUVGkUQFDwMD0EfHnUVFWILDzkPFDwVGUQdH1MjPn0aNGITLFQOIlMhI3oaIG0MJE0SK1QaM2ApO3oNDDIMCzIMCzELCjEIBjMJBzILCzAMDDILAiELASELAiALASA6TukKAAAAQUlEQVQIHWNgAAJGEAGkGBmZmFmANCsDGzsHJxc3Dy8fP4OAoJCwiKiYuIQkg5S0jKycvIKMjCKDkrKysgqIUAUAQ0ADzcJuxewAAAAASUVORK5CYII=
