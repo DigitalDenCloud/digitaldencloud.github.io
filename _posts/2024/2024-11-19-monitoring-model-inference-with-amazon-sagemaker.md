@@ -22,7 +22,7 @@ In this lesson, you will explore how to effectively track and maintain the perfo
 This lesson is designed for machine learning engineers, data scientists, and DevOps professionals looking to effectively monitor and maintain machine learning models in production environments using Amazon SageMaker and related AWS services.
 
 ## Prerequisites 
-To get the most out of this lesson, you should have some basic working knowledge of machine learning concepts, AWS cloud services, and Amazon SageMaker. Experience with deploying ML models is beneficia
+To get the most out of this lesson, you should have some basic working knowledge of machine learning concepts, AWS cloud services, and Amazon SageMaker. Experience with deploying ML models is beneficial.
 
 ## Get Started
 [Monitoring Model Inference With Amazon SageMaker](https://platform.qa.com/course/optimize-machine-learning-models-for-inference-with-sagemaker-neo-1/introduction-1730928863253-1/){:target="_blank"}
