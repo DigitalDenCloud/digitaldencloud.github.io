@@ -5,7 +5,7 @@ categories: [AWS, Machine Learning]
 tags: [QA Learning Platform, AWS, Amazon SageMaker, Machine Learning, Generative AI, Foundation Models, Hyperparameter Tuning]
 image: 
   path: /assets/img/headers/training-fine-tuning-sagemaker.webp
-  lqip: data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAADQBgCdASoyABoAPsFSn0unpSKht/gIAPAYCWUA0JwSVGgbP4xkHU1Jxa3fT27Ey3LW6p0bwJHpn5142iTDLIAA/vhH3MGeyoR+snZtXrPw2GGHlkUSM0UCNdnqHhBZPc0x0yImuhDp0F39XkhJpea4WGfO+f0D28NU7zsYyAW5FAoxpGjrTEiuODCTVTjatnwbfkHusIFHRxQo3A/F3TLf1toMVVVQtey+Jrujgd8vHwSrqPtpDFAW/VaQaJTlEwkiUe3eh6te1+TQBmcWwdDbrrrjXBuZSDFzNtNTqjvoHABrOAAAAA==
+  lqip: data:image/webp;base64,UklGRhABAABXRUJQVlA4WAoAAAAQAAAAMQAAHQAAQUxQSBwAAAABH9D/iAgoaSMJ2g+vfw0ndPHBiP5PAOb82s0FVlA4IM4AAABQBgCdASoyAB4APsFSoEunpSMhs/zKqPAYCWIA0BhNs21ryM56TzwWRMZjYTAcRvKyYFaUkASUCAsIAAD++S1P4XBOZIrvKAm+CFc4dYDTKMfym3L2YjDGh/bDEbh1jcrpwK4lJRo1TDpK9AFkoeiZEsKLuVthnsuzm6u0U8qBKHApQQd6UxB9NPB3edEXRF0RcPyPfvZlQtwPCtmy/ejfv5D32z9qi8LHJEEETZd2EZRNvZnc9Db3XgOJozbR8yR0EyU7bJYoAEcUAUQAAA==
 ---
 
 In this lesson, you will learn about the training stage of the machine learning lifecycle using Amazon SageMaker.
