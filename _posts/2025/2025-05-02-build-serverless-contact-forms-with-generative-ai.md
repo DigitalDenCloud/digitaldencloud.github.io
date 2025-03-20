@@ -13,7 +13,7 @@ Learn how to create a serverless backend with generative AI integration for cont
 - Creates AI-generated content using Amazon Bedrock (like unique greetings or creative messages)
 - Sends email notifications via Amazon Simple Email Service to website owners, and form submitters
 
-> Submit a message using the contact form @[digitalden.cloud](https://digitalden.cloud/#contact){:target="_blank"} to see the solution in action
+> Submit a message using the contact form @[digitalden.cloud](https://digitalden.cloud/#contact){:target="_blank"} to test the solution
 {: .prompt-info }
 
 ## Why Amazon Bedrock?
