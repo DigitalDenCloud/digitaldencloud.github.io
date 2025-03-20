@@ -13,26 +13,27 @@ Learn how to create a serverless backend with generative AI integration for cont
 - Creates AI-generated content using Amazon Bedrock (like unique greetings or creative messages)
 - Sends email notifications via Amazon Simple Email Service to website owners, and form submitters
 
-Submit a message using the digitalden.cloud to see the solution in action
+> Submit a message using the contact form @[digitalden.cloud](https://digitalden.cloud/#contact){:target="_blank"} to see the solution in action
+{: .prompt-info }
 
 ## Why Amazon Bedrock?
 - Adds personalization to automated messages
 - Provides hands-on experience integrating generative AI with serverless architecture
-- This solution is perfect for adding dynamic, AI-powered responses to contact forms while maintaining a serverless backend.
+- This solution is perfect for adding dynamic, AI-powered responses to contact forms while maintaining a serverless backend
 
 ## Solution Overivew
 {% include embed/youtube.html id='X_QzZ1mSCZM' %}
 
 ## Intended Audience
-Ideal for developers seeking to leverage serverless technologies and generative AI in real-world cloud applications.
+This hands-on lesson is ideal for developers seeking to leverage serverless technologies and generative AI in real-world cloud applications.
 
 ## Prerequisites
 To follow along, you will need Amazon SES already configured. If you have not set that up, please see the video here: [Setting Up Amazon Simple Email Service (SES) for Contact Forms](https://www.youtube.com/watch?v=VzmPzokOLfQ&t=33s&ab_channel=Hands-OnWithDigitalDen){:target="_blank"}
 
 ## GitHub
-You can find the Lambda function Code & related resources [here](https://github.com/DigitalDenCloud/build-genai-aws-serverless-contact-forms){:target="_blank"}
+You can find the Lambda function code & related resources for the lesson [here](https://github.com/DigitalDenCloud/build-genai-aws-serverless-contact-forms){:target="_blank"}
 
-> 5 FREE AWS Credits ($20 each) - Redemption codes revealed in the video. If the redemption codes are expired, reach out to me for more.
+> 5 FREE AWS Credits ($20 each) - Redemption codes revealed in the video. If the codes are expired please reach out for more.
 {: .prompt-tip }
 
 ## Get Started
