@@ -12,15 +12,15 @@ I'm Deniz, an AWS Community Builder and Content Creator with 7 active AWS certif
 As an AWS Community Builder, I'm part of a select program that supports technical enthusiasts and emerging thought leaders who are passionate about sharing AWS knowledge. The program provides mentorship, technical resources, and networking opportunities to help amplify community voices. You can find my profile in the [AWS Community Builders Directory](https://aws.amazon.com/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=Deniz%2BYilmaz&cb-cards.q_operator=AND){:target="_blank"}
 
 ## What I Create
-My heads in the cloud, splitting my time between:
+When in the cloud, I'm splitting my time between:
 
-- `QA (Formerly Cloud Academy)` - My full-time role where I create professional AWS educational content reaching 10,000+ learners → All my lessons on the [QA Learning Platform](https://docs.digitalden.cloud/tags/qa-learning-platform/){:target="_blank"} are tagged.
-- `Hands-On with Digital Den (YouTube)` - My passion project that I develop outside working hours, creating AWS solutions and lessons for over 1,000 subscribers with 25K+ monthly views
+- `QA (Formerly Cloud Academy)` - My full-time role where I create professional AWS educational content reaching 10,000+ learners → All my lessons on the [QA Learning Platform](https://docs.digitalden.cloud/tags/qa-learning-platform/){:target="_blank"} are tagged
+- `Hands-On with Digital Den (YouTube)` - My passion project that I develop outside working hours, creating AWS solutions for over 1,000 subscribers with 25K+ monthly views
 
 ## Certifications
-I have achieved 7 AWS Certification, and while I aim to pass all 12 eventually, I don't want to rush the process. I believe in taking time to build real-world solutions between certifications. Otherwise, where's the fun in that?
+So far I have 7 AWS Certification within 2 years, and while I aim to pass all 12, I don't want to rush the process. I believe in taking time to build real-world solutions between certifications. Otherwise, where's the fun in that?
 
-I highly recommend [AWS Cloud Quest](https://aws.amazon.com/training/digital/aws-cloud-quest/){:target="_blank"} to anyone looking to build hands-on skills across various AWS topics. It's a fun way to gaining practical experience before sitting exams.
+I highly recommend [AWS Cloud Quest](https://aws.amazon.com/training/digital/aws-cloud-quest/){:target="_blank"} to anyone looking to get started. It's a fun way to gain hands-on experience before sitting exams.
 
 - AWS Certified Machine Learning Engineer Associate
 - AWS Certified AI Practitioner
