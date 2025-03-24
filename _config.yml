@@ -16,7 +16,7 @@ timezone: Europe/London
 
 title: Deniz Yilmaz # the main title
 
-tagline: AWS Community Builder & Content Creator  # it will display as the sub-title
+tagline: I build on AWS and create content on it.  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
  AWS Documentation and More
@@ -76,7 +76,7 @@ theme_mode: dark # [light | dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: assets/img/headers/digitalden2.webp
+avatar: assets/img/headers/DigitalDenCloud2.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
