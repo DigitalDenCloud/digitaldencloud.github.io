@@ -2,7 +2,7 @@
 title: "Build Serverless Contact Forms With Generative AI"
 date: 2025-02-05 08:00:00 - 0500
 categories: [AWS, Generative AI]
-Tags: [AWS, AWS Lambda, Amazon Bedrock, Amazon SES, Contact Forms, Serverless, Generative AI]
+tags: [AWS, AWS Lambda, Amazon Bedrock, Amazon SES, Contact Forms, Serverless, Generative AI]
 image: 
   path: /assets/img/headers/build-serveless-contact-forms.webp
   lqip: data:image/webp;base64,UklGRhgBAABXRUJQVlA4WAoAAAAQAAAAMQAAGwAAQUxQSBwAAAABH9D/iAgoaSMJ2g+vfw0ndPHBiP5PAOY8FG4uVlA4INYAAACQBQCdASoyABwAPsVSoUunpKMht/VYAPAYiWYAtkQdA7TYzXVIYlcELNrJibxeaC/vkAehpAD++l+jgT/doat9XQ55gN9QXL8NdQ8wgCP9XPbqGPb+nP4v9XjyISXFry0m3oB4/0oF/4bHHSnHdWboUq7B2EcAudx8qUuAMypa6lPynQ9LYu7C9nLiAiEJpIji1pR7mKAu5rR4mdqUlpjfzVZoH9F3A50xiw1b/z+Xikngf8Y9CGBpDBeYjJz76iADZ3BD++dPDCyWEmrIytDzHkRuAAAA
