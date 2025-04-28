@@ -2,7 +2,7 @@
 title: "Deployment Orchestration With AWS Elastic Beanstalk"
 date: 2025-04-23 08:00:00 - 0500
 categories: [AWS, Compute]
-Tags: [QA Learning Platform, AWS, AWS Elastic Beanstalk, AWS CloudShell, Python]
+tags: [QA Learning Platform, AWS, AWS Elastic Beanstalk, AWS CloudShell, Python]
 image: 
   path: /assets/img/headers/elastic-beanstalk.webp
   lqip: data:image/webp;base64,UklGRhgBAABXRUJQVlA4WAoAAAAQAAAAMQAAGwAAQUxQSBwAAAABH9D/iAgoaSMJ2g+vfw0ndPHBiP5PAOY8FG4uVlA4INYAAACQBQCdASoyABwAPsVSoUunpKMht/VYAPAYiWYAtkQdA7TYzXVIYlcELNrJibxeaC/vkAehpAD++l+jgT/doat9XQ55gN9QXL8NdQ8wgCP9XPbqGPb+nP4v9XjyISXFry0m3oB4/0oF/4bHHSnHdWboUq7B2EcAudx8qUuAMypa6lPynQ9LYu7C9nLiAiEJpIji1pR7mKAu5rR4mdqUlpjfzVZoH9F3A50xiw1b/z+Xikngf8Y9CGBpDBeYjJz76iADZ3BD++dPDCyWEmrIytDzHkRuAAAA
