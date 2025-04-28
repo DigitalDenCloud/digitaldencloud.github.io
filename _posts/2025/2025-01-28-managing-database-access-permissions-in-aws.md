@@ -2,7 +2,7 @@
 title: "Managing Database Access Permissions in AWS"
 date: 2025-01-28 08:00:00 - 0500
 categories: [AWS, Databases]
-Tags: [QA Learning Platform, Amazon RDS, Amazon Aurora, Amazon DynamoDB, AWS IAM, AWS CloudTrail, Amazon CloudWatch]
+Tags: [QA Learning Platform, Amazon RDS, Amazon Aurora, Amazon DynamoDB, AWS IAM]
 image: 
   path: /assets/img/headers/managing-database-access-permissions-aws.webp
   lqip: data:image/webp;base64,UklGRowBAABXRUJQVlA4WAoAAAAQAAAAMQAAGwAAQUxQSBkAAAABD3D//4iIoLZtG8bl/5udNmeO6H/i9xwDAFZQOCBMAQAAsAcAnQEqMgAcAD7JVJ1Lp6SiobAMAPAZCWIAxq9vL/4tqlksmW8Se7w9wSrJF/rbNGcY3UH5yLtaP//ydjv5zyT7NJWQTAD+9YxDtuiBLeJb4p1pholOGDvPZy2RtAEsdyOHDr9Jm30w5wJ3OTfKX9mmRHELuNCdC8xEoknjKLIJnUwHhNUA2m0Uy6Z/wTx6RJMmj9/WrNcWghRGmPDIEozr4K/xRb3rMlHkoPMBynzAF89US9XN/jmH3ILyt3TH9Teyy+nVefSteIfQBK5AuBzWhih7AVLF6GBL+8hh28ifR6G10x0YmkEDtHi9AKQcuwDXmDnVQPUNsdvRgWvzXf1ypgPf2yYuHPaJ7GgrRDhs6X6A/2ByipGpTmdQFTHUdqpnmNMyhFcnuGrFF4jTAb9s8BHeAet075htAJnF7kET1+zxSLfwtQ8gAAA=
