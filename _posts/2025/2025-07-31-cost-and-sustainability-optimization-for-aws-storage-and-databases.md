@@ -1,7 +1,7 @@
 ---
 title: "Cost and Sustainability Optimization for AWS Storage and Databases"
 date: 2025-07-31 08:00:00 - 0500
-categories: [AWS, Databases]
+categories: [AWS, FinOps]
 tags: [QA Learning Platform, AWS, Amazon S3, Amazon EBS, Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon Redshift, AWS Glue, Amazon Athena, Sustainability]
 image: 
   path: /assets/img/headers/cost-and-sustainability-optimization.webp
