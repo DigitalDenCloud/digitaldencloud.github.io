@@ -43,7 +43,11 @@ copyright:
 meta: Powered by :PLATFORM with :THEME theme
 
 not_found:
+<<<<<<< HEAD
   statment: Вибачте, це посилання вказує на ресурс, що не існує.
+=======
+  statement: Вибачте, це посилання вказує на ресурс, що не існує.
+>>>>>>> v7.4.1
 
 notification:
   update_found: Доступна нова версія вмісту.

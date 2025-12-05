@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CDNs
 
 cdns:
@@ -30,11 +31,41 @@ toc:
 
 fontawesome:
   css: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css
+=======
+# Resource Hints
+resource_hints:
+  - url: https://fonts.googleapis.com
+    links:
+      - rel: preconnect
+      - rel: dns-prefetch
+  - url: https://fonts.gstatic.com
+    links:
+      - rel: preconnect
+        opts: [crossorigin]
+      - rel: dns-prefetch
+  - url: https://cdn.jsdelivr.net
+    links:
+      - rel: preconnect
+      - rel: dns-prefetch
+
+# Web Fonts
+webfonts: https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap
+
+# Libraries
+
+toc:
+  css: https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.css
+  js: https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.js
+
+fontawesome:
+  css: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css
+>>>>>>> v7.4.1
 
 search:
   js: https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js
 
 mermaid:
+<<<<<<< HEAD
   js: https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js
 
 dayjs:
@@ -47,6 +78,20 @@ dayjs:
 magnific-popup:
   css: https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css
   js: https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js
+=======
+  js: https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js
+
+dayjs:
+  js:
+    common: https://cdn.jsdelivr.net/npm/dayjs@1.11.18/dayjs.min.js
+    locale: https://cdn.jsdelivr.net/npm/dayjs@1.11.18/locale/:LOCALE.js
+    relativeTime: https://cdn.jsdelivr.net/npm/dayjs@1.11.18/plugin/relativeTime.js
+    localizedFormat: https://cdn.jsdelivr.net/npm/dayjs@1.11.18/plugin/localizedFormat.js
+
+glightbox:
+  css: https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css
+  js: https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js
+>>>>>>> v7.4.1
 
 lazy-polyfill:
   css: https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css

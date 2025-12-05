@@ -43,7 +43,11 @@ copyright:
 meta: Feito com :PLATFORM usando o tema :THEME
 
 not_found:
+<<<<<<< HEAD
   statment: Desculpe, a página não foi encontrada.
+=======
+  statement: Desculpe, a página não foi encontrada.
+>>>>>>> v7.4.1
 
 notification:
   update_found: Uma nova versão do conteúdo está disponível.

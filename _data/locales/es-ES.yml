@@ -43,7 +43,11 @@ copyright:
 meta: Hecho con :PLATFORM usando el tema :THEME
 
 not_found:
+<<<<<<< HEAD
   statment: Lo sentimos, hemos perdido esa URL o apunta a algo que no existe.
+=======
+  statement: Lo sentimos, hemos perdido esa URL o apunta a algo que no existe.
+>>>>>>> v7.4.1
 
 notification:
   update_found: Hay una nueva versión de contenido disponible.

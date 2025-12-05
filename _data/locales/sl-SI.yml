@@ -43,7 +43,11 @@ copyright:
 meta: Uporabljena :PLATFORM tema :THEME #Using the :PLATFORM theme :THEME
 
 not_found:
+<<<<<<< HEAD
   statment: Oprostite, hiperpovezava je neustrezna ali vsebina ne obstajata. #Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
+=======
+  statement: Oprostite, hiperpovezava je neustrezna ali vsebina ne obstajata. #Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
+>>>>>>> v7.4.1
 
 notification:
   update_found: Novejša različica vsebine je na voljo. #A new version of content is available.

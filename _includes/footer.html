@@ -8,9 +8,21 @@
   "
 >
   <p>
+<<<<<<< HEAD
     {{ '©' }}
     <time>{{ 'now' | date: '%Y' }}</time>
     <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+=======
+    {{- '©' }}
+    <time>{{ 'now' | date: '%Y' }}</time>
+
+    {% if site.social.links %}
+      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+    {% else %}
+      <em class="fst-normal">{{ site.social.name }}</em>.
+    {% endif %}
+
+>>>>>>> v7.4.1
     {% if site.data.locales[include.lang].copyright.brief %}
       <span
         data-bs-toggle="tooltip"
@@ -22,6 +34,27 @@
     {% endif %}
   </p>
 
+<<<<<<< HEAD
   <!-- Custom Link to Digital Den -->
   <p><a href="https://digitalden.cloud" target="_blank" rel="noopener">https://digitalden.cloud</a></p>
+=======
+  <p>
+    {%- capture _platform -%}
+      <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
+    {%- endcapture -%}
+
+    {%- capture _theme -%}
+      <a
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="v{{ theme.version }}"
+        href="https://github.com/cotes2020/jekyll-theme-chirpy"
+        target="_blank"
+        rel="noopener"
+      >Chirpy</a>
+    {%- endcapture -%}
+
+    {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
+  </p>
+>>>>>>> v7.4.1
 </footer>

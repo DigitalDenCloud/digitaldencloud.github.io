@@ -43,7 +43,11 @@ copyright:
 meta: Byggd med :PLATFORM och temat :THEME
 
 not_found:
+<<<<<<< HEAD
   statment: Ursäkta, vi har tappat bort den här webbadressen eller så pekar den på något som inte längre finns.
+=======
+  statement: Ursäkta, vi har tappat bort den här webbadressen eller så pekar den på något som inte längre finns.
+>>>>>>> v7.4.1
 
 notification:
   update_found: Det finns en ny version av innehållet.

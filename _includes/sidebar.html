@@ -5,15 +5,23 @@
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
       {%- if site.avatar != empty and site.avatar -%}
         {%- capture avatar_url -%}
+<<<<<<< HEAD
           {% include img-url.html src=site.avatar %}
+=======
+          {% include media-url.html src=site.avatar %}
+>>>>>>> v7.4.1
         {%- endcapture -%}
         <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
       {%- endif -%}
     </a>
 
+<<<<<<< HEAD
     <h1 class="site-title">
       <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
     </h1>
+=======
+    <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+>>>>>>> v7.4.1
     <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
   </header>
   <!-- .profile-wrapper -->
@@ -44,7 +52,11 @@
 
   <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
     {% unless site.theme_mode %}
+<<<<<<< HEAD
       <button type="button" class="mode-toggle btn" aria-label="Switch Mode">
+=======
+      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+>>>>>>> v7.4.1
         <i class="fas fa-adjust"></i>
       </button>
 
@@ -54,13 +66,30 @@
     {% endunless %}
 
     {% for entry in site.data.contact %}
+<<<<<<< HEAD
       {% case entry.type %}
         {% when 'github', 'twitter' %}
+=======
+      {%- assign url = null -%}
+
+      {% case entry.type %}
+        {% when 'github', 'twitter' %}
+          {%- unless site[entry.type].username -%}
+            {%- continue -%}
+          {%- endunless -%}
+>>>>>>> v7.4.1
           {%- capture url -%}
             https://{{ entry.type }}.com/{{ site[entry.type].username }}
           {%- endcapture -%}
         {% when 'email' %}
+<<<<<<< HEAD
           {% assign email = site.social.email | split: '@' %}
+=======
+          {%- unless site.social.email -%}
+            {%- continue -%}
+          {%- endunless -%}
+          {%- assign email = site.social.email | split: '@' -%}
+>>>>>>> v7.4.1
           {%- capture url -%}
             javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
           {%- endcapture -%}

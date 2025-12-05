@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import 'colors/typography-light';
 @import 'colors/typography-dark';
 @import 'addon/variables';
@@ -11,3 +12,9 @@
 @import 'layout/archives';
 @import 'layout/categories';
 @import 'layout/category-tag';
+=======
+@forward 'base';
+@forward 'components';
+@forward 'layout';
+@forward 'pages';
+>>>>>>> v7.4.1

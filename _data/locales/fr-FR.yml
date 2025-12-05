@@ -14,7 +14,11 @@ tabs:
   categories: Catégories
   tags: Tags
   archives: Archives
+<<<<<<< HEAD
   about: A propos de
+=======
+  about: À propos
+>>>>>>> v7.4.1
 
 # the text displayed in the search bar & search results
 search:
@@ -32,18 +36,30 @@ copyright:
   license:
     template: Cet article est sous licence :LICENSE_NAME par l'auteur.
     name: CC BY 4.0
+<<<<<<< HEAD
     link: https://creativecommons.org/licenses/by/4.0/
+=======
+    link: https://creativecommons.org/licenses/by/4.0/deed.fr
+>>>>>>> v7.4.1
 
   # Displayed in the footer
   brief: Certains droits réservés.
   verbose: >-
+<<<<<<< HEAD
     Sauf mention contraire, les articles de ce site sont publiés sous licence
+=======
+    Sauf mention contraire, les articles de ce site sont publiés
+>>>>>>> v7.4.1
     sous la licence Creative Commons Attribution 4.0 International (CC BY 4.0) par l'auteur.
 
 meta: Propulsé par :PLATFORM avec le thème :THEME
 
 not_found:
+<<<<<<< HEAD
   statment: Désolé, nous avons égaré cette URL ou elle pointe vers quelque chose qui n'existe pas.
+=======
+  statement: Désolé, nous avons égaré cette URL ou elle pointe vers quelque chose qui n'existe pas.
+>>>>>>> v7.4.1
 
 notification:
   update_found: Une nouvelle version du contenu est disponible.

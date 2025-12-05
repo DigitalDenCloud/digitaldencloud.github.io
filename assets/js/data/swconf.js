@@ -22,6 +22,7 @@ const swconf = {
       {% endfor %}
     ],
 
+<<<<<<< HEAD
     {%- comment -%} The request url with below domain will be cached. {%- endcomment -%}
     allowHosts: [
       {% if site.img_cdn and site.img_cdn contains '//' %}
@@ -44,6 +45,26 @@ const swconf = {
         {% endunless  %}
       {% endfor %}
     ],
+=======
+    interceptor: {
+      {%- comment -%} URLs containing the following paths will not be cached. {%- endcomment -%}
+      paths: [
+        {% for path in site.pwa.cache.deny_paths %}
+          {% unless path == empty %}
+            '{{ path | relative_url }}'{%- unless forloop.last -%},{%- endunless -%}
+          {% endunless  %}
+        {% endfor %}
+      ],
+
+      {%- comment -%} URLs containing the following prefixes will not be cached. {%- endcomment -%}
+      urlPrefixes: [
+        {% if site.analytics.goatcounter.id != nil and site.pageviews.provider == 'goatcounter' %}
+          'https://{{ site.analytics.goatcounter.id }}.goatcounter.com/counter/'
+        {% endif %}
+      ]
+    },
+
+>>>>>>> v7.4.1
     purge: false
   {% else %}
     purge: true

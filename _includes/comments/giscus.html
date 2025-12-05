@@ -1,4 +1,5 @@
 <!-- https://giscus.app/ -->
+<<<<<<< HEAD
 <script type="text/javascript">
   (function () {
     const origin = 'https://giscus.app';
@@ -16,6 +17,17 @@
         window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
       initTheme = darkTheme;
+=======
+<script>
+  (function () {
+    const themeMapper = Theme.getThemeMapper('light', 'dark_dimmed');
+    const initTheme = themeMapper[Theme.visualState];
+
+    let lang = '{{ site.comments.giscus.lang | default: lang }}';
+    {%- comment -%} https://github.com/giscus/giscus/tree/main/locales {%- endcomment -%}
+    if (lang.length > 2 && !lang.startsWith('zh')) {
+      lang = lang.slice(0, 2);
+>>>>>>> v7.4.1
     }
 
     let giscusAttributes = {
@@ -25,16 +37,25 @@
       'data-category': '{{ site.comments.giscus.category }}',
       'data-category-id': '{{ site.comments.giscus.category_id }}',
       'data-mapping': '{{ site.comments.giscus.mapping | default: 'pathname' }}',
+<<<<<<< HEAD
+=======
+      'data-strict' : '{{ site.comments.giscus.strict | default: '0' }}',
+>>>>>>> v7.4.1
       'data-reactions-enabled': '{{ site.comments.giscus.reactions_enabled | default: '1' }}',
       'data-emit-metadata': '0',
       'data-theme': initTheme,
       'data-input-position': '{{ site.comments.giscus.input_position | default: 'bottom' }}',
+<<<<<<< HEAD
       'data-lang': '{{ site.comments.giscus.lang | default: lang }}',
+=======
+      'data-lang': lang,
+>>>>>>> v7.4.1
       'data-loading': 'lazy',
       crossorigin: 'anonymous',
       async: ''
     };
 
+<<<<<<< HEAD
     let giscusScript = document.createElement('script');
     Object.entries(giscusAttributes).forEach(([key, value]) =>
       giscusScript.setAttribute(key, value)
@@ -59,6 +80,29 @@
 
         const giscus = document.querySelector(iframe).contentWindow;
         giscus.postMessage({ giscus: message }, origin);
+=======
+    let giscusNode = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusNode.setAttribute(key, value)
+    );
+
+    const $footer = document.querySelector('footer');
+    $footer.insertAdjacentElement("beforebegin", giscusNode);
+
+    addEventListener('message', (event) => {
+      if (event.source === window && event.data && event.data.id === Theme.ID) {
+        const newTheme = themeMapper[Theme.visualState];
+
+        const message = {
+          setConfig: {
+            theme: newTheme
+          }
+        };
+
+        const giscus =
+          document.getElementsByClassName('giscus-frame')[0].contentWindow;
+        giscus.postMessage({ giscus: message }, 'https://giscus.app');
+>>>>>>> v7.4.1
       }
     });
   })();

@@ -42,7 +42,11 @@ copyright:
 meta: Использует тему :THEME для :PLATFORM
 
 not_found:
+<<<<<<< HEAD
   statment: Извините, мы перепутали URL-адрес или он указывает на что-то несуществующее.
+=======
+  statement: Извините, мы перепутали URL-адрес или он указывает на что-то несуществующее.
+>>>>>>> v7.4.1
 
 notification:
   update_found: Доступна новая версия контента.
@@ -76,7 +80,11 @@ df:
   post:
     strftime: "%d.%m.%Y"
     dayjs: "DD.MM.YYYY"
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> v7.4.1
 # categories page
 categories:
   category_measure:

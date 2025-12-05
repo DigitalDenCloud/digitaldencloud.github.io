@@ -42,7 +42,11 @@ copyright:
 meta: Käytetään :PLATFORM iä Teema :THEME
 
 not_found:
+<<<<<<< HEAD
   statment: Valitettavasti tällä URL-osoitteella ei ole saatavilla sisältöä.
+=======
+  statement: Valitettavasti tällä URL-osoitteella ei ole saatavilla sisältöä.
+>>>>>>> v7.4.1
 
 notification:
   update_found: Uusi versio sisällöstä on saatavilla.

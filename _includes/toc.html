@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% assign enable_toc = false %}
 {% if site.toc and page.toc %}
   {% if page.content contains '<h2' or page.content contains '<h3' %}
@@ -8,6 +9,14 @@
 {% if enable_toc %}
   <section id="toc-wrapper" class="ps-0 pe-4">
     <h2 class="panel-heading ps-3 pt-2 mb-2">{{- site.data.locales[include.lang].panel.toc -}}</h2>
+=======
+{% include toc-status.html %}
+
+{% if enable_toc %}
+  <div class="toc-border-cover z-3"></div>
+  <section id="toc-wrapper" class="invisible position-sticky ps-0 pe-4 pb-4">
+    <h2 class="panel-heading ps-3 pb-2 mb-0">{{- site.data.locales[include.lang].panel.toc -}}</h2>
+>>>>>>> v7.4.1
     <nav id="toc"></nav>
   </section>
 {% endif %}

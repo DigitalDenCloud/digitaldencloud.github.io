@@ -42,7 +42,11 @@ copyright:
 meta: Trang web này được tạo bởi :PLATFORM với chủ đề :THEME
 
 not_found:
+<<<<<<< HEAD
   statment: Xin lỗi, chúng tôi đã đặt nhầm URL hoặc đường dẫn trỏ đến một trang nào đó không tồn tại.
+=======
+  statement: Xin lỗi, chúng tôi đã đặt nhầm URL hoặc đường dẫn trỏ đến một trang nào đó không tồn tại.
+>>>>>>> v7.4.1
 
 notification:
   update_found: Đã có phiên bản mới của nội dung.
