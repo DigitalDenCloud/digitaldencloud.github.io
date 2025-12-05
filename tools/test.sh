@@ -61,10 +61,9 @@ main() {
     -d "$SITE_DIR$_baseurl" -c "$_config"
 
   # test
-  # FINAL FIX: Consolidating the command to a single line to prevent shell parsing errors
-  # from the multi-line backslash (\) continuation. This should force the flags to be
-  # correctly passed to htmlproofer.
-  bundle exec htmlproofer "$SITE_DIR" --disable-external --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,/assets\/js\/dist\/theme\.min\.js/,/app\.min\.js\?/"
+  # FORCE FIX: We explicitly pass '--disable-external true' because the config file 
+  # is being ignored in CI. We also pass the regex ignores for local IPs and theme scripts.
+  bundle exec htmlproofer "$SITE_DIR" --disable-external true --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,/assets\/js\/dist\/theme\.min\.js/,/app\.min\.js\?/"
 }
 
 while (($#)); do
