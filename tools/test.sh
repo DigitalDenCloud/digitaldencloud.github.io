@@ -61,11 +61,10 @@ main() {
     -d "$SITE_DIR$_baseurl" -c "$_config"
 
   # test
-  # Re-introducing explicit flags to bypass potential .htmlproofer.yml configuration
-  # issues and explicitly ignore all known problematic internal scripts and local URLs.
-  bundle exec htmlproofer "$SITE_DIR" \
-    --disable-external \
-    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,/assets\/js\/dist\/theme\.min\.js/,/app\.min\.js\?/"
+  # FINAL FIX: Consolidating the command to a single line to prevent shell parsing errors
+  # from the multi-line backslash (\) continuation. This should force the flags to be
+  # correctly passed to htmlproofer.
+  bundle exec htmlproofer "$SITE_DIR" --disable-external --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,/assets\/js\/dist\/theme\.min\.js/,/app\.min\.js\?/"
 }
 
 while (($#)); do
