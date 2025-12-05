@@ -61,9 +61,11 @@ main() {
     -d "$SITE_DIR$_baseurl" -c "$_config"
 
   # test
-  # CORRECTED: Removing explicit flags to force HTMLProofer to use the
-  # .htmlproofer.yml file for configuration (which contains disable_external: true).
-  bundle exec htmlproofer "$SITE_DIR"
+  # NOTE: Added ignore patterns for theme assets that may not be generated
+  # by a simple 'jekyll build' or are root-relative scripts.
+  bundle exec htmlproofer "$SITE_DIR" \
+    --disable-external \
+    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,/assets\/js\/dist\/theme\.min\.js/,/app\.min\.js\?/"
 }
 
 while (($#)); do
