@@ -4,9 +4,8 @@ icon: fas fa-info-circle
 order: 4
 title: About
 ---
-<script>
-  // Redirect to your main website immediately
-  window.location.href = "https://digitalden.cloud"; 
-</script>
 
-<p>You are being redirected to our main site at digitalden.cloud...</p>
+<meta http-equiv="refresh" content="0; url=https://digitalden.cloud">
+<script>window.location.href = "https://digitalden.cloud";</script>
+
+Redirecting to [digitalden.cloud](https://digitalden.cloud)...
