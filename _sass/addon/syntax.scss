@@ -61,7 +61,7 @@ html {
     margin-bottom: 0;
     font-size: $code-font-size;
     line-height: 1.4rem;
-    word-wrap: normal; /* Fixed Safari overflow-x */
+    overflow-wrap: normal; /* Fixed Safari overflow-x */
   }
 
   table {
@@ -103,7 +103,8 @@ code {
   &.highlighter-rouge {
     font-size: $code-font-size;
     padding: 3px 5px;
-    word-break: break-word;
+    word-break: normal;
+    overflow-wrap: break-word; /* This is the modern, correct way to achieve the old 'break-word' effect */
     border-radius: 4px;
     background-color: var(--inline-code-bg);
   }
@@ -247,7 +248,7 @@ div {
     }
 
     &:not([timeout]):hover {
-      background-color: rgba(128, 128, 128, 0.37);
+      background-color: rgb(128 128 128 / 37%);
 
       i {
         color: white;

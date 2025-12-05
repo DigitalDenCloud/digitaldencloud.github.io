@@ -1,12 +1,12 @@
-#  The contact options.
+# The contact options.
 
 - type: youtube
   icon: "fab fa-youtube"
   url: "https://www.youtube.com/@DigitalDenCloud"
-  
+
 - type: linkedin
   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-  url:  'https://www.linkedin.com/in/digitalden/'  # Fill with your Linkedin homepage
+  url: 'https://www.linkedin.com/in/digitalden/'  # Fill with your Linkedin homepage
 
 - type: github
   icon: "fab fa-github"
@@ -15,12 +15,16 @@
   url: "https://digitalden.cloud/#contact"
   icon: "fas fa-envelope"
 
-#- type: twitter
-#  icon: "fa-brands fa-x-twitter"
+- type: twitter
+  icon: "fa-brands fa-x-twitter" # This is the X icon for Twitter
+  # Uncomment the 'url' line below if you want to link your Twitter/X profile
+  # url: 'https://twitter.com/your-username'
 
-# - type: email
-#   icon: "fas fa-envelope"
-#   noblank: true # open link in current tab
+- type: email
+  icon: "fas fa-envelope"
+  noblank: true # open link in current tab
+  # Uncomment the 'url' line below if you want to link a specific email address
+  # url: 'mailto:your-email@example.com'
 
 - type: rss
   icon: "fas fa-rss"
@@ -29,9 +33,21 @@
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
-#   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
-#   url:  ''                  # Fill with your Mastodon account page, rel="me" will be applied for verification
-
+#   icon: 'fab fa-mastodon'
+#   url:  ''
+#
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'
-#   url:  ''                  # Fill with your stackoverflow homepage
+#   url:  ''
+#
+# - type: bluesky
+#   icon: 'fa-brands fa-bluesky'
+#   url: ''
+#
+# - type: reddit
+#   icon: 'fa-brands fa-reddit'
+#   url: ''
+#
+# - type: threads
+#   icon: 'fa-brands fa-threads'
+#   url: ''

@@ -13,12 +13,9 @@ layout: compress
 {% endif %}
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
-<html lang="{{ site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
+<html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
   {% include head.html %}
-    {% if jekyll.environment == 'production' and site.google_analytics %}
-      {% include analytics.html %}
-  {% endif %}
-</head>
+
   <body>
     {% include sidebar.html lang=lang %}
 
@@ -28,7 +25,7 @@ layout: compress
 
         <div class="row flex-grow-1">
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
-            {% if layout.refactor or layout.layout == 'default' %}
+            {% if layout.layout == 'default' %}
               {% include refactor-content.html content=content lang=lang %}
             {% else %}
               {{ content }}
@@ -36,7 +33,7 @@ layout: compress
           </main>
 
           <!-- panel -->
-          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
             <div class="access">
               {% include_cached update-list.html lang=lang %}
               {% include_cached trending-tags.html lang=lang %}
@@ -71,20 +68,19 @@ layout: compress
       </aside>
     </div>
 
-    <div id="mask"></div>
+    <div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div>
 
     {% if site.pwa.enabled %}
       {% include_cached notification.html lang=lang %}
     {% endif %}
 
-    <!-- JavaScripts -->
+    <!-- Embedded scripts -->
 
-    {% include js-selector.html %}
+    {% for _include in layout.script_includes %}
+      {% assign _include_path = _include | append: '.html' %}
+      {% include {{ _include_path }} %}
+    {% endfor %}
 
-    {% if page.mermaid %}
-      {% include mermaid.html %}
-    {% endif %}
-
-    {% include_cached search-loader.html %}
+    {% include_cached search-loader.html lang=lang %}
   </body>
 </html>

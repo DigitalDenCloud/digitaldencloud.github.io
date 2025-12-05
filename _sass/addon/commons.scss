@@ -279,7 +279,7 @@ sup {
     border-spacing: 0;
 
     thead {
-      border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+      border-bottom: solid 2px rgb(210 215 217 / 75%);
 
       th {
         @extend %table-cell;
@@ -625,7 +625,7 @@ main {
 }
 
 .disabled {
-  color: rgb(206, 196, 196);
+  color: rgb(206 196 196);
   pointer-events: auto;
   cursor: not-allowed;
 }
@@ -1205,7 +1205,7 @@ search {
       border-radius: 0.5rem;
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgb(255 255 255 / 50%);
       color: #1b1b1eba;
       position: fixed;
       left: 50%;
