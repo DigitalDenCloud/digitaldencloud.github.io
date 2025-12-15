@@ -44,7 +44,7 @@
     "@semantic-release/git": "^10.0.1",
     "concurrently": "^9.2.1",
     "conventional-changelog-conventionalcommits": "^9.1.0",
-    "eslint": "^9.38.0",
+    "eslint": "^9.39.2",
     "globals": "^16.4.0",
     "husky": "^9.1.7",
     "purgecss": "^7.0.2",
