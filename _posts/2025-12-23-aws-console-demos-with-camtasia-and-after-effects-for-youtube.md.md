@@ -3,15 +3,17 @@ title: "AWS Console Demos with Camtasia and After Effects for YouTube"
 date: 2025-12-23 18:00:00 +0000
 categories: [After Effects, Video Production]
 tags: [Camtasia, After Effects, Screen Recording, YouTube, Video Production]
-description: "A workflow for recording AWS Console demos and exporting 4K video for YouTube. Covers display settings, Camtasia configuration, After Effects composition, and Media Encoder export settings."
+description: "A workflow for recording AWS Console demos and exporting 4K video for YouTube. Compares Dell 4K and Apple Studio Display setups."
 image:
   path: /assets/img/headers/awsconsole.webp
-  lqip: data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACQAwCdASoUAAsAPzmGulQvKSWjMAgB4CcJZgCdAB5pdswaGsAAAP6vjUaN0i/Pg3Ony42DQTbz01kQ412qdos7+cdtuzQLhn5izoZWLrtOOiACL6tbozWUE8LnMhAA
+  lqip: data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABwAwCdASoUAAsAPzmGulOvKSWisAgB4CcJZgCdAB5pdsnWaAAA/q+NRo3SL8+Dc6fLjYNBNvPTWRDjXap5IDGd7MunZLMTt4PTx2HeAraXysrF1a3RmsoJ4XLuAAAA
 ---
 
 ## Overview
 
-This post documents a practical workflow for recording AWS Console screen captures and exporting them as high-quality 4K video for YouTube. The workflow uses Camtasia for capture, After Effects for compositing, and Adobe Media Encoder for final export. The goal is sharp, readable UI text, both at full screen and when footage is scaled inside device frame mockups.
+This post documents a workflow for recording AWS Console screen captures and exporting them as high-quality 4K video for YouTube. The workflow uses Camtasia for capture, After Effects for compositing, and Adobe Media Encoder for final export.
+
+I have access to two monitors: a Dell U2723QE 27" (4K) and an Apple Studio Display 27" (5K). After testing both, I'm happy with the results from either. This post documents both workflows so I can reference the correct settings depending on which monitor I'm using.
 
 ### Problem
 
@@ -19,137 +21,98 @@ Recording AWS Console walkthroughs at 1920×1080 generally looked fine during ca
 
 ### Solution
 
-After testing several resolutions on my 5K display, I initially settled on 2560×1440 as a good compromise. Anything higher made the AWS Console feel cramped and forced me to rely too heavily on browser zoom, while 1080p didn't leave enough resolution headroom for compositing.
+Record at the highest practical resolution for your monitor, edit in a 4K After Effects composition, and export at 4K. The Dell offers native 4K recording, which matches the composition size exactly and requires no upscaling. The Apple Studio Display doesn't offer a native 4K option, so 3200×1800 is the highest resolution below 5K.
 
-At 1440p, the UI remains comfortable to work with, the capture retains significantly more detail than 1080p, and scaling to a 4K timeline stays clean and predictable.
+## Display Comparison
 
-Why 2560×1440 works:
+| | Dell U2723QE | Apple Studio Display |
+|--|--------------|---------------------|
+| Screen Size | 27" | 27" |
+| Panel Resolution | 3840×2160 (4K) | 5120×2880 (5K) |
+| Recording Resolution | 3840×2160 | 3200×1800 |
+| Chrome Zoom | 200% | 175% |
+| AE Full Screen Scale | 100% | 120% |
+| AE Device Frame Scale | ~60% | ~70% |
+| Upscaling Required | No | Yes (1.2×) |
 
-- **Higher than 1440p** — UI becomes uncomfortably small during recording, even with browser zoom
-- **1080p** — insufficient resolution headroom; text softness becomes obvious when scaling
-- **1440p** — nearly 80% more pixels than 1080p, providing enough detail for compositing and a clean 1.5× upscale to 4K
+The Dell records at native 4K, which matches the After Effects composition exactly—no upscaling required. The footage sits at 100% scale in the timeline.
 
-### Pushing Further: 3200×1800
+The Apple Studio Display jumps from 3200×1800 directly to 5120×2880 (5K), which exceeds the 4K composition size. Recording at 5K would require scaling down to fit the timeline, which offers no advantage. This makes 3200×1800 the practical ceiling on the Studio Display, requiring a 120% upscale to fill the 4K frame.
 
-After working with 1440p, I tested whether a higher capture resolution could improve device frame quality. The Apple Studio Display offers 3200×1800 (QHD+) as an intermediate step before jumping to 5K.
+### Available Resolutions
 
-| Resolution | Chrome Zoom | AE Full Screen Scale | AE Device Frame Scale |
-|------------|-------------|----------------------|----------------------|
-| 2560×1440 | 125% | 150% | ~85% |
-| 3200×1800 | 175% | 120% | ~70% |
+| Dell U2723QE | Apple Studio Display |
+|--------------|---------------------|
+| 3840×2160 | 5120×2880 |
+| 3360×1890 | 3200×1800 |
+| 3200×1800 | 2880×1620 |
+| 3008×1692 | 2560×1440 (Default) |
+| 2560×1440 | 2048×1152 |
+| 2304×1296 | 1920×1080 |
+| 2048×1152 | 1600×900 |
+| 1920×1080 (Default) | 1440×810 |
+| | 1280×720 |
 
-At 3200×1800 with 175% Chrome zoom, the UI remained comfortable and the additional pixels produced noticeably sharper results when scaling down for device frames. The gentler 120% upscale for full-screen shots also meant less reliance on sharpening in post.
+### Device Frame Quality
 
-I now use 3200×1800 as my default capture resolution.
+When scaling footage to fit inside a device mockup, more source pixels produce a sharper result:
 
-The next step up on the Studio Display is 5120×2880, but this exceeds the 4K composition size. Recording at 5K would require scaling *down* to fit the timeline, which defeats the purpose of capturing extra pixels for flexibility. After testing various scale percentages in After Effects, 3200×1800 is the practical ceiling for this workflow on the Studio Display.
+| Source | Device Frame Scale | Effective Resolution |
+|--------|-------------------|----------------------|
+| 3840×2160 (Dell) | 60% | 2304×1296 |
+| 3200×1800 (Mac) | 70% | 2240×1260 |
 
-### Display Resolution Comparison
-
-I have access to both an Apple Studio Display (5K) and a Dell U2723QE (4K). Here are the available resolutions on each:
-
-| Apple Studio Display | Dell U2723QE |
-|---------------------|--------------|
-| 5120×2880 | 3840×2160 |
-| 3200×1800 | 3360×1890 |
-| 2880×1620 | 3200×1800 |
-| 2560×1440 (Default) | 3008×1692 |
-| 2048×1152 | 2560×1440 |
-| 1920×1080 | 2304×1296 |
-| 1600×900 | 2048×1152 |
-| 1440×810 | 1920×1080 (Default) |
-| 1280×720 | |
-
-The Dell offers 3360×1890 and native 3840×2160, which could theoretically provide even more headroom. However, these require 185-200% browser zoom, making the console cramped during recording. The marginal quality gains are unlikely to be worth the discomfort.
+The difference in effective resolution is minimal. Both produce sharp results in device frame compositions.
 
 ### Why 4K Export?
 
-The recording resolution and export resolution are intentionally different.
+YouTube applies better compression codecs (VP9 or AV1) to 4K uploads, so a 4K upload looks sharper at 1080p playback than a native 1080p upload. Both workflows export at 4K to take advantage of this.
 
-**1440p (2560×1440)** or **QHD+ (3200×1800)** is the capture resolution. Both keep the AWS Console UI readable during recording. **4K (3840×2160)** is the export resolution. The footage scales up to fill the 4K frame—150% for 1440p, 120% for 3200×1800.
+---
 
-The reason for exporting at 4K comes down to how YouTube processes uploads. YouTube applies better compression codecs (VP9 or AV1) to 4K uploads, so a 4K upload looks sharper at 1080p playback than a native 1080p upload. This workflow takes advantage of that encoding pipeline.
+## Dell U2723QE Workflow (4K)
 
-Both source resolutions provide flexibility for device frame compositions. When scaling footage down to fit inside a laptop or monitor mockup, starting with more pixels produces a cleaner result. The 3200×1800 source has a clear advantage here, offering more pixels to discard when scaling down.
+Recording resolution matches the 4K composition exactly, so no upscaling is required in After Effects.
 
-## Display Configuration
+### Display Configuration
 
-Open **System Settings → Displays** and set the resolution.
+Open **System Settings → Displays** and set the resolution to **3840 × 2160**.
 
-For the baseline workflow, use **2560 × 1440**. For improved device frame quality, use **3200 × 1800**.
-
-| Resolution | Name | Best For |
-|------------|------|----------|
-| 2560×1440 | QHD | Balanced workflow, comfortable UI |
-| 3200×1800 | QHD+ | Sharper device frames, still workable UI |
-
-### Browser Zoom
-
-Chrome zoom compensates for the higher resolution by scaling web content to a comfortable size. The zoom setting affects only the browser and does not reduce recording quality.
-
-Open Chrome and navigate to **Settings → Appearance → Page zoom**.
-
-| Display Resolution | Chrome Zoom |
-|-------------------|-------------|
-| 2560×1440 | 125% |
-| 3200×1800 | 175% |
-
-At these zoom levels, the AWS Console appears similar to how it would look at 1080p, but the recording captures more pixel data for scaling operations in After Effects.
+Set Chrome zoom to **200%** in **Settings → Appearance → Page zoom**.
 
 > Chrome zoom only affects browser content. It does not reduce recording quality or change the capture resolution.
 {: .prompt-info }
 
-## Camtasia Configuration
+### Camtasia Configuration
 
-Camtasia handles screen recording only. All compositing and effects happen in After Effects.
+Open **Camtasia → Settings → Project** and set **Canvas Dimensions** to **4K UHD (3840×2160)**.
 
-### Project Settings
-
-Open **Camtasia → Settings → Project** and set **Canvas Dimensions** to match your display resolution.
-
-| Display Resolution | Camtasia Canvas |
-|-------------------|-----------------|
-| 2560×1440 | QHD (2560x1440) |
-| 3200×1800 | Custom: 3200x1800 |
-
-For 3200×1800, Camtasia doesn't have a preset. Select **Custom** and enter the dimensions manually.
-
-The default "Maximum 1080p HD" would downsample the recording before export, discarding pixel data useful for After Effects.
-
-### Recording Settings
-
-Open **Camtasia → Settings → Recording** and verify the following:
+Open **Camtasia → Settings → Recording** and verify:
 
 | Setting | Value |
 |---------|-------|
 | Target Capture Frame Rate | Full-motion (30 fps) |
 | Camera Encoding | h264 |
 
-### Export Settings
+### Camtasia Export
 
 Select **File → Export** and open **Advanced Export Options**.
 
 | Setting | Value |
 |---------|-------|
-| Dimensions | Current (match your recording resolution) |
+| Dimensions | Current (3840×2160) |
 | Data Rate | Custom: 20,000 kbits/sec |
 | Compression Type | H.264 |
 | Keyframe Rate | 30 frames |
 | Profile | High |
 | Entropy | CABAC |
 
-> The default Camtasia bitrate is often too low for screen recordings with text. Compression artifacts around text edges become more visible after scaling and re-encoding. A higher bitrate here prevents quality loss downstream.
+> The default Camtasia bitrate is often too low for screen recordings with text. A higher bitrate prevents quality loss downstream.
 {: .prompt-tip }
 
-Audio settings are not relevant for this workflow because I record audio separately and add it in After Effects.
+### After Effects
 
-## After Effects Composition
-
-After Effects handles compositing, including scaling footage for full-screen shots or positioning it within device frame mockups.
-
-### Composition Setup
-
-Create a new composition:
+Create a 4K composition:
 
 | Setting | Value |
 |---------|-------|
@@ -159,57 +122,98 @@ Create a new composition:
 | Frame Rate | 30 fps |
 | Resolution | Full |
 
-### Importing Footage
+Import the Camtasia export. The footage sits at **100%** scale—no adjustment needed for full-screen shots.
 
-Import the Camtasia export and drag it into the composition.
+For device frame mockups, scale to approximately **60%**.
 
-The footage appears at 100% scale within the 3840×2160 composition, with black bars visible around it. After Effects scale percentages are relative to the source footage dimensions, not the composition size.
+Enable **Bicubic Sampling** on the footage layer. No sharpening is required.
 
-> When you import footage into a larger composition, After Effects does not automatically scale it to fit. This is different from how some other editing applications handle imported media.
+---
+
+## Apple Studio Display Workflow (3200×1800)
+
+The Studio Display doesn't offer a native 4K resolution option. 3200×1800 is the highest available resolution below 5K, requiring a 120% upscale to fill the 4K composition.
+
+### Display Configuration
+
+Open **System Settings → Displays** and set the resolution to **3200 × 1800**.
+
+Set Chrome zoom to **175%** in **Settings → Appearance → Page zoom**.
+
+> Chrome zoom only affects browser content. It does not reduce recording quality or change the capture resolution.
 {: .prompt-info }
 
-### Scaling
+### Camtasia Configuration
 
-For full-screen shots, scale the footage to fill the 4K frame:
+Open **Camtasia → Settings → Project** and set **Canvas Dimensions** to **Custom: 3200×1800**.
 
-| Source Resolution | Full Screen Scale |
-|-------------------|-------------------|
-| 2560×1440 | 150% |
-| 3200×1800 | 120% |
+Camtasia doesn't have a preset for this resolution. Select **Custom** and enter the dimensions manually.
 
-For device frame mockups, use clean percentages where possible:
+Open **Camtasia → Settings → Recording** and verify:
 
-| Scale | Use Case |
-|-------|----------|
-| 100% | Original size, black bars visible |
-| 85% | Large device frame (1440p source) |
-| 80% | Medium device frame |
-| 70% | Large device frame (3200×1800 source) |
-| 50% | Half size |
+| Setting | Value |
+|---------|-------|
+| Target Capture Frame Rate | Full-motion (30 fps) |
+| Camera Encoding | h264 |
 
-### Quality Settings
+### Camtasia Export
 
-Select the footage layer and set the quality to **Best**.
+Select **File → Export** and open **Advanced Export Options**.
 
-Enable **Bicubic Sampling** by clicking the layer switch in the timeline panel (the icon resembles a curved line). Bicubic sampling produces smoother results than the default bilinear sampling when scaling.
+| Setting | Value |
+|---------|-------|
+| Dimensions | Current (3200×1800) |
+| Data Rate | Custom: 20,000 kbits/sec |
+| Compression Type | H.264 |
+| Keyframe Rate | 30 frames |
+| Profile | High |
+| Entropy | CABAC |
 
-### Sharpening
+> The default Camtasia bitrate is often too low for screen recordings with text. A higher bitrate prevents quality loss downstream.
+{: .prompt-tip }
 
-Scaling footage up introduces slight softness. A subtle sharpening effect compensates for this and helps text survive YouTube compression.
+### After Effects
 
-Apply **Effect → Blur & Sharpen → Unsharp Mask**:
+Create a 4K composition:
 
-| Source Resolution | Amount | Radius | Threshold |
-|-------------------|--------|--------|-----------|
-| 2560×1440 | 50 | 1.0 | 0 |
-| 3200×1800 | 25-30 | 1.0 | 0 |
+| Setting | Value |
+|---------|-------|
+| Width | 3840 px |
+| Height | 2160 px |
+| Pixel Aspect Ratio | Square Pixels |
+| Frame Rate | 30 fps |
+| Resolution | Full |
 
-The 150% upscale from 1440p benefits more from sharpening than the gentler 120% upscale from 3200×1800. Preview at 100% zoom before committing. If the footage looks sharp without the effect, skip it. Over-sharpening is worse than slight softness.
+Import the Camtasia export. The footage appears at 100% scale with black bars around it.
+
+For full-screen shots, scale to **120%**.
+
+For device frame mockups, scale to approximately **70%**.
+
+Enable **Bicubic Sampling** on the footage layer.
+
+#### Optional Sharpening
+
+The 120% upscale is gentle and may not require sharpening. If you notice slight softness and want to compensate, apply a light Unsharp Mask:
+
+**Effect → Blur & Sharpen → Unsharp Mask**
+
+| Parameter | Value |
+|-----------|-------|
+| Amount | 25-30 |
+| Radius | 1.0 |
+| Threshold | 0 |
+
+Preview at 100% zoom before committing. If the footage already looks sharp, skip this step.
 
 > To preview at 100% zoom, select **View → Resolution → Full** and use the scroll wheel to view at actual pixel size.
 {: .prompt-tip }
 
+---
+
 ## Export Configuration
+
+Both workflows use the same export settings.
 
 Select **File → Export → Add to Adobe Media Encoder Queue**.
 
@@ -219,8 +223,6 @@ Select **File → Export → Add to Adobe Media Encoder Queue**.
 |---------|-------|
 | Format | H.264 |
 | Preset | Match Source - High Bitrate |
-
-The "Match Source - High Bitrate" preset inherits the composition resolution and frame rate while allowing manual bitrate configuration.
 
 ### Video Settings
 
@@ -245,44 +247,50 @@ Under **Encoding Settings**:
 > Selecting VBR 2-pass automatically switches Performance from Hardware Encoding to Software Encoding. This is expected behaviour—2-pass encoding requires software processing.
 {: .prompt-info }
 
-VBR 2-pass encoding analyses the video twice to allocate bitrate more efficiently, producing better quality than single-pass at the cost of longer render times.
-
 ### Render Quality
 
 At the bottom of the export settings panel, enable **Use Maximum Render Quality**.
 
 Leave "Render at Maximum Depth" disabled—it increases render time without visible benefit for screen recordings.
 
+---
+
 ## Summary
 
-### Baseline Workflow (1440p)
+### Dell U2723QE (4K)
 
-| Stage | Setting | Rationale |
-|-------|---------|-----------|
-| Display | 2560×1440 | Clean scaling to 4K, comfortable UI |
-| Browser | 125% zoom | Readable UI without reducing capture quality |
-| Camtasia | QHD, 20,000 kbps | Preserves text detail in intermediate file |
-| After Effects | 4K composition | YouTube uses better codec for 4K uploads |
-| After Effects | 150% scale (full screen) | Fills 4K frame |
-| After Effects | Bicubic + Unsharp Mask 50/1/0 | Compensates for upscale softness |
-| Media Encoder | VBR 2-pass, 40/60 Mbps | Maximum quality source for YouTube |
+| Stage | Setting |
+|-------|---------|
+| Display | 3840×2160 |
+| Chrome | 200% zoom |
+| Camtasia | 4K UHD, 20,000 kbps |
+| After Effects | 100% scale (full screen), 60% (device frame) |
+| After Effects | Bicubic sampling |
+| Media Encoder | VBR 2-pass, 40/60 Mbps |
 
-### Upgraded Workflow (3200×1800)
+### Apple Studio Display (3200×1800)
 
-| Stage | Setting | Rationale |
-|-------|---------|-----------|
-| Display | 3200×1800 | More pixels for device frame scaling |
-| Browser | 175% zoom | Readable UI at higher resolution |
-| Camtasia | Custom 3200×1800, 20,000 kbps | Captures full resolution |
-| After Effects | 4K composition | YouTube uses better codec for 4K uploads |
-| After Effects | 120% scale (full screen) | Gentler upscale, sharper result |
-| After Effects | Bicubic + Unsharp Mask 25-30/1/0 | Light sharpening if needed |
-| Media Encoder | VBR 2-pass, 40/60 Mbps | Maximum quality source for YouTube |
+| Stage | Setting |
+|-------|---------|
+| Display | 3200×1800 |
+| Chrome | 175% zoom |
+| Camtasia | Custom 3200×1800, 20,000 kbps |
+| After Effects | 120% scale (full screen), 70% (device frame) |
+| After Effects | Bicubic sampling, optional Unsharp Mask 25-30/1/0 |
+| Media Encoder | VBR 2-pass, 40/60 Mbps |
 
 ### Which to Choose?
 
-The 1440p workflow is simpler and produces good results for most use cases. The 3200×1800 workflow provides noticeably sharper device frame compositions at the cost of a more cramped UI during recording.
+Both workflows produce results I'm happy with.
 
-For videos that are primarily full-screen console walkthroughs, 1440p is sufficient. For videos that feature device frame mockups prominently, 3200×1800 is worth the tradeoff.
+The **Dell** records at native 4K, matching the composition exactly. No upscaling is required.
 
-Recording beyond 3200×1800 on the Studio Display means jumping to 5120×2880, which exceeds the 4K composition size and provides no benefit. On a 4K display like the Dell U2723QE, resolutions of 3360×1890 or 3840×2160 are available but require 185-200% browser zoom, making the console increasingly difficult to work with. The marginal quality gains are unlikely to be worth the discomfort during recording.
+The **Studio Display** records at 3200×1800, requiring a 120% upscale to fill the 4K frame. This is a gentle scale that maintains sharpness.
+
+Choose based on which monitor is available. If both are available, the Dell workflow is simpler since it skips the upscaling step.
+
+### What About 5K Recording?
+
+The Studio Display can record at 5120×2880, but this exceeds the 4K composition size. Recording at 5K would mean scaling *down* to fit the timeline—capturing extra pixels just to discard them. No quality benefit, larger files, more processing.
+
+5K recording would only make sense for compositions larger than 4K, such as 5K or 8K timelines. For a 4K YouTube workflow, 3200×1800 is the practical ceiling on the Studio Display.
