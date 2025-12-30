@@ -1,6 +1,6 @@
 ---
 title: "Fixing RSS Feed Limits in Jekyll Chirpy"
-date: 2025-12-16 08:00:00 - 0500
+date: 2025-12-12 08:00:00 - 0500
 categories: [Jekyll, Chirpy]
 tags: [Jekyll, Chirpy, RSS]
 description: "How to customize the RSS feed in Jekyll Chirpy. The theme limits feeds to 5 posts and truncates summaries to 400 characters by default, which works for typical blogs but not for AI agents or integrations that need full content. The solution: override the feed template and use the description field in front matter for full control."
