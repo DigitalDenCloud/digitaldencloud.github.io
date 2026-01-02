@@ -2,7 +2,7 @@
 title: "Building a Bedrock Agent With AWS News Search"
 date: 2025-12-30 08:00:00 -0500
 categories: [AWS, Generative AI]
-tags: [AWS, Generative AI, Serverless, AWS Lambda, Amazon Bedrock]
+tags: [AWS, Generative AI, Bedrock Agents, Serverless, AWS Lambda, Amazon Bedrock]
 mermaid: true
 description: "Build an Amazon Bedrock agent that queries the AWS News Blog RSS feed and answers questions about recent AWS announcements. Use Lambda action groups to fetch and parse the feed, expose the agent through Amazon API Gateway, and provide a terminal-style web UI."
 image:
