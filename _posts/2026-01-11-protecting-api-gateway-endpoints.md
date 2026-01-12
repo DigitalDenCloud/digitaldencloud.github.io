@@ -3,10 +3,10 @@ title: "Adding Cost Protection to My Bedrock Agent"
 date: 2026-01-11 08:00:00 -0500
 categories: [AWS, Generative AI]
 tags: [AWS, Generative AI, Bedrock Agents, Serverless, Amazon Bedrock, Amazon API Gateway, Cost Optimization, Security]
-description: "Protect public API Gateway endpoints from abuse using usage plans, AWS WAF, and budget alerts. This post covers practical strategies to limit requests, block abusive IPs, and monitor costs."
+description: "Protect public API Gateway endpoints from abuse using usage plans and budget alerts. This post covers practical strategies to limit requests, monitor costs, and explores when AWS WAF or authentication might be needed."
 image:
   path: /assets/img/headers/api-gateway-protection.webp
-  lqip: data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAwCdASoUABQAPxF8r1M/p66iqA1T8CIJQBdgAsfFtAAA/u3lv/a7AlxMdwFS+QkFo9cRFpMNfRsRU66XLgAA
+  lqip: data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwBACdASoUABQAPxFws1MsJaSisBgIAYAiCWUAx+WJ/hgaqYDjjc56pwAA/uwSHwgMm1AcEzHDjbMnpu7bX4NYC9pe4/bUTIZAlO21u4NTx+HG+Ch80AAA
 ---
 
 ## The Problem
@@ -193,7 +193,7 @@ Cost allocation tags must be activated before they appear in Budgets:
 3. Find your `Project` tag under **User-defined cost allocation tags**
 4. Select the tag and select **Activate**
 
-> Cost allocation tags can take up to 24 hours to appear in Budgets after activation.
+> Tags can take up to 24 hours to appear in cost allocation tags after tagging resources, and another 24 hours to appear in Budgets after activation. This is because AWS processes billing data in batches rather than real-time. Plan for up to 48 hours from tagging resources to being able to filter by tag in Budgets.
 {: .prompt-info }
 
 #### Create the Budget
@@ -203,25 +203,32 @@ Cost allocation tags must be activated before they appear in Budgets:
 3. Select **Customize (advanced)**
 4. Select **Cost budget** and select **Next**
 5. Enter a budget name (e.g. `aws-news-agent-budget`)
-6. Set the budgeted amount (e.g. `$10`)
-7. Under **Budget scope**, select **Filter specific AWS cost dimensions**
-8. Select **Tag** from the dimension dropdown
-9. Select your `Project` tag and the value `aws-news-agent`
-10. Select **Next**
-11. Set an alert threshold (e.g. 80% of budget)
-12. Enter your email for notifications
-13. Select **Create budget**
+6. For **Period**, select **Monthly**
+7. For **Budget renewal type**, select **Recurring budget**
+8. Set the budgeted amount (e.g. `$10`)
+9. Under **Budget scope**, select **Filter specific AWS cost dimensions**
+10. Select **Tag** from the dimension dropdown
+11. Select your `Project` tag and the value `aws-news-agent`
+12. Select **Next**
+13. Set an alert threshold (e.g. 80% of budget)
+14. Enter your email for notifications
+15. Select **Create budget**
 
 This tracks only the costs from resources tagged with this project, separate from your other AWS usage.
-
-## Implementation
-
-For this demo agent, I configured a usage plan with a daily quota of 500 requests. The endpoint remains public, but there is a ceiling on how many requests can be made. Combined with a budget alert, any unusual activity triggers a notification.
-
-For production APIs with higher traffic or stricter requirements, AWS WAF provides additional protection by rate limiting individual IP addresses.
 
 ## Summary
 
 Hiding API endpoints in videos or source code does not provide real protection. The endpoint is visible in browser network requests.
 
-Usage plans cap total requests. AWS WAF blocks abusive IPs. AWS Budgets notifies you when costs increase. For a demo project, usage plans and budget alerts provide sufficient protection without adding unnecessary complexity.
+For this demo agent, I configured a usage plan with a daily quota of 100 requests and a budget alert filtered by project tag. The endpoint remains public, but abuse is limited and any unusual spending triggers a notification.
+
+I explored AWS WAF as an option for rate limiting individual IP addresses, but for a low-traffic demo already protected by usage plans, the additional cost did not justify the benefit.
+
+The protections covered in this post - usage plans, WAF, and budget alerts - limit and monitor requests but do not restrict who can access the API. For production APIs handling sensitive data, consider adding authentication:
+
+- **Amazon Cognito** - Users sign in and receive a token. API Gateway validates the token before allowing requests.
+- **IAM Authorization** - Requests must be signed with AWS credentials. Only users or roles you explicitly grant can call the API.
+- **Lambda Authorizers** - Custom authentication logic to validate tokens from your own auth system.
+- **Private APIs** - API Gateway can be configured as private, accessible only from within a VPC.
+
+Usage plans and budget alerts provide sufficient protection for a demo. Authentication ensures only authorized users can access the API at all.
