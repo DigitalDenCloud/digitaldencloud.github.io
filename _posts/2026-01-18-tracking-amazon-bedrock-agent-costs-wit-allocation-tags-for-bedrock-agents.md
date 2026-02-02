@@ -358,7 +358,7 @@ After costs appear in Cost Explorer for the `Project` tag, create an AWS Budget.
 
 1. Open the **AWS Budgets** console  
 2. Select **Create budget**, then choose **Customize** and **Cost budget**  
-3. Specify the budget amount and time period  
+3. Specify the budget amount and time period  `
 4. Under **Budget scope**, select **Filter specific AWS cost dimensions**  
 5. Select **Tag**, then choose **Project = aws-news-agent**  
 6. Configure alert thresholds and notification recipients  
@@ -469,7 +469,5 @@ Cost allocation for Amazon Bedrock Agents requires treating model invocation cha
 The configuration requires AWS CLI commands and IAM updates to create and reference an inference profile. Once in place, model usage costs appear under the project tag in Cost Explorer and can be monitored using AWS Budgets.
 
 This configuration follows AWS cost management practices and provides clear visibility into generative AI costs at the project level.
-
-*Documented January 2026.*
 
 ---
