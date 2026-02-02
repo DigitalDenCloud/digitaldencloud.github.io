@@ -587,7 +587,3 @@ curl -X OPTIONS https://YOUR_API_ID.execute-api.us-east-1.amazonaws.com/prod/age
 - [ ] Deploy API to stage
 - [ ] Update frontend with API endpoint
 - [ ] Test end-to-end flow
-
-
-> For detailed step-by-step instructions including CLI commands, IAM policies, and verification steps, see [Cost Allocation Tags for Amazon Bedrock Agents](/posts/cost-allocation-tags-bedrock-agents/).
-{: .prompt-info }
