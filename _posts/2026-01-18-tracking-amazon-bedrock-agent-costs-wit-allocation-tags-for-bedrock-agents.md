@@ -358,7 +358,7 @@ After costs appear in Cost Explorer for the `Project` tag, create an AWS Budget.
 
 1. Open the **AWS Budgets** console  
 2. Select **Create budget**, then choose **Customize** and **Cost budget**  
-3. Specify the budget amount and time period  `
+3. Specify the budget amount and time period
 4. Under **Budget scope**, select **Filter specific AWS cost dimensions**  
 5. Select **Tag**, then choose **Project = aws-news-agent**  
 6. Configure alert thresholds and notification recipients  

@@ -215,9 +215,6 @@ Implementation requires:
 3. Update the agent to use the inference profile ARN instead of the model ID
 4. Update the agent alias to apply the configuration
 
-> For detailed step-by-step instructions including CLI commands, IAM policies, and verification steps, see [Cost Allocation Tags for Amazon Bedrock Agents](/posts/cost-allocation-tags-bedrock-agents/).
-{: .prompt-info }
-
 ## Creating the Budget
 
 Once costs appear in Cost Explorer under your tag (allow 24-48 hours after invoking the agent), create your budget.
