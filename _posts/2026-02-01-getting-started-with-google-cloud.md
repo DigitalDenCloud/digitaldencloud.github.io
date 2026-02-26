@@ -5,6 +5,9 @@ categories: [Google Cloud]
 tags: [Google Cloud, IAM, Resource Hierarchy, Cloud Identity, Vertex AI]
 description: After 40+ AWS lessons and 7 certifications, I'm creating my first Google Cloud course. This post documents everything I learned setting up my Google Cloud environment, from account creation to IAM configuration, through the lens of an AWS engineer discovering a new cloud.
 mermaid: true
+image:
+  path: assets/img/headers/google-coud.webp
+  lqip: data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAgCdASoUABQAPxGCuVWsKKWjKAgBgCIJZwAARXDkAAD+76WnFzDd6BdM+ITJ6biLy0JoHAAAAA==
 ---
 
 ## A New Cloud
