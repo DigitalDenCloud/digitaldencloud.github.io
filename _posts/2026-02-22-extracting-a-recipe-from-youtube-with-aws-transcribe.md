@@ -31,6 +31,7 @@ graph LR
     C -->|start-transcription-job| D[Amazon Transcribe]
     D -->|JSON output| C
     C -->|python3 extract| E[transcript.txt]
+    E -->|paste into Claude| F[Refined Recipe]
 ```
 
 | Step | Tool | Action |
