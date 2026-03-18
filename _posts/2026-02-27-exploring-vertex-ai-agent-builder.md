@@ -10,7 +10,7 @@ image:
   lqip: data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAABwAwCdASoUABQAPxGCuVWsKKWjKAgBgCIJZwDNhBEcyPaJrAAA/u5yLgtZWvbSA4AAAA==
 ---
 
-## Picking Up Where I Left Off
+## Continuing from the Previous Post
 
 In [Part 1](https://docs.digitalden.cloud/posts/getting-started-with-google-cloud/){:target="_blank"}, I documented setting up my Google Cloud account for the first time. The project, the IAM roles, the 180 organisation policies, the 22 pre-enabled APIs. Foundation work.
 
