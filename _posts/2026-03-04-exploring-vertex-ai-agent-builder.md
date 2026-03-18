@@ -1,6 +1,6 @@
 ---
 title: Exploring Vertex AI Agent Builder. Writing My First Google Cloud Lecture
-date: 2026-02-23 08:00:00 +0000
+date: 2026-03-04 08:00:00 +0000
 categories: [Google Cloud]
 tags: [Google Cloud, Vertex AI, Agent Builder, Gemini, Grounding, ADK]
 description: With my Google Cloud environment set up, I started exploring Vertex AI Agent Builder while writing Lecture 2 of my first Google Cloud course. This post documents what I found in Model Garden, Vertex AI Studio, grounding with Google Search, and the services that make up the agent building stack.
