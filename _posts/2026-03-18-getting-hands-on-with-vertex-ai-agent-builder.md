@@ -1,6 +1,6 @@
 ---
 title: Getting Hands-On With Vertex AI Agent Builder
-date: 2026-03-04 08:00:00 +0000
+date: 2026-03-18 08:00:00 +0000
 categories: [Google Cloud]
 tags: [Google Cloud, Vertex AI, Agent Builder, ADK, Agent Garden, MCP]
 description: After writing five lectures on Vertex AI Agent Builder, I went into the console to get hands-on with everything I'd been teaching. This post documents what I found, what I learned, and what I'm building next.
