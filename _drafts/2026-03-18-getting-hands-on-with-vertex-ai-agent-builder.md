@@ -4,6 +4,9 @@ date: 2026-03-18 08:00:00 +0000
 categories: [Google Cloud]
 tags: [Google Cloud, Vertex AI, Agent Builder, ADK, Agent Garden, MCP]
 description: After writing five lectures on Vertex AI Agent Builder, I went into the console to get hands-on with everything I'd been teaching. This post documents what I found, what I learned, and what I'm building next.
+image:
+  path: /assets/img/headers/vertex-ai.webp
+  lqip: data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAABwAwCdASoUABQAPxGCuVWsKKWjKAgBgCIJZwDNhBEcyPaJrAAA/u5yLgtZWvbSA4AAAA==
 ---
 
 ## Theory First, Then Hands-On
