@@ -10,7 +10,7 @@ image:
   lqip: data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQAwCdASoUABQAPxF8tVOsJ6UiqAqpgCIJZQDM0BEczt7Di/IAAP7uc5irZvANy1u1bHyaNeu3BBOb6PooXybyNDLCOF2YlRih70rIVO9zNUlAAAA=
 ---
 
-I watched a [DW Food video](https://www.youtube.com/watch?v=57HYrItZiKc){:target="_blank"} about Finnish blueberries and wanted to extract a recipe mentioned midway through. The recipe was buried in 10 minutes of footage with no timestamp and no pinned comment. Rather than rewinding and writing it down, I built a bash script that pulls the audio, sends it through Amazon Transcribe, and outputs a clean text file. The recipe itself — a Finnish blueberry pie adapted for UK ingredients — is documented on [notes.digitalden.cloud](https://notes.digitalden.cloud/posts/finnish-blueberry-pie/){:target="_blank"}.
+I watched a [DW Food video](https://www.youtube.com/watch?v=57HYrItZiKc){:target="_blank"} about Finnish blueberries and wanted to extract a recipe mentioned midway through. The recipe was buried in 10 minutes of footage with no timestamp and no pinned comment. Rather than rewinding and writing it down, I built a bash script that pulls the audio, sends it through Amazon Transcribe, and outputs a clean text file. The recipe itself — a Finnish blueberry pie adapted for UK ingredients — is documented on [denizyilmaz.cloud](https://denizyilmaz.cloud/posts/finnish-blueberry-pie/){:target="_blank"}.
 
 <!--more-->
 

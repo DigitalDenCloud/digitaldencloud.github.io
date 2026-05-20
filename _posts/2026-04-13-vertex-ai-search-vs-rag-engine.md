@@ -86,6 +86,7 @@ I added exclude patterns for pages that are auto-generated navigation rather tha
 denizyilmaz.cloud/tags/*
 denizyilmaz.cloud/categories/*
 denizyilmaz.cloud/archives/*
+denizyilmaz.cloud/page*
 ```
 
 I also added my sitemap URL so Vertex AI Search knew exactly where all the posts lived rather than relying solely on crawl discovery.
@@ -104,18 +105,53 @@ After adding the record, Google Search Console shows "Processing data, please ch
 
 My domain was already verified from a previous project, so this step cleared automatically.
 
+### The CloudFront and Jekyll Crawler Trap
+
+I expected indexing to begin, but instead, the crawler failed almost instantly. The document count stayed at zero. Retrying the sync or recreating the data store resulted in the exact same silent failure. 
+
+The problem was a collision between how AWS handles security and how my Jekyll theme handles SEO.
+
+When Vertex AI crawls a site, the very first thing it requests is `robots.txt`. When my site was hosted on GitHub Pages, if that file was missing, GitHub returned a `404 Not Found`. The crawler assumed there were no rules and proceeded to crawl the site. But on an AWS S3 bucket secured by CloudFront with Origin Access Control (OAC), asking for a file that doesn't exist does not return a 404. It returns a `403 Forbidden`. 
+
+When Vertex AI hit my CloudFront distribution and received a 403 at the front door, it assumed it was completely blocked from the server and instantly aborted the job.
+
+The fix seemed simple: manually add a `robots.txt` to the root folder. But that revealed a second issue. The Jekyll Chirpy theme automatically generates its own hidden `robots.txt` in the `assets/` folder during the build process. If you build the site locally without specifying the production environment, Chirpy intelligently outputs `Disallow: /` to prevent Google from indexing your half-finished local tests. That development file had inadvertently made it to my S3 bucket.
+
+The solution required forcing a production build, syncing it to S3, and explicitly invalidating the CloudFront cache so the edge servers would drop the old file and serve the new `Allow: /` rule to Google.
+
+```bash
+# 1. Force a production build so Chirpy generates "Allow: /"
+JEKYLL_ENV=production bundle exec jekyll build
+
+# 2. Sync to the S3 bucket
+aws s3 sync _site/ s3://denizyilmaz.cloud --delete
+
+# 3. Clear the CloudFront cache so the crawler sees it immediately
+aws cloudfront create-invalidation --distribution-id YOUR_DIST_ID --paths "/*"
+```
+
+To prove the fix worked, I impersonated Googlebot in the terminal to ensure CloudFront was returning an HTTP 200 instead of a 403:
+
+```bash
+curl -I -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" https://denizyilmaz.cloud/robots.txt
+```
+
+> **Lesson learned**  
+> If Vertex AI Search instantly fails to index a static site behind CloudFront, use `curl` to check your `robots.txt` as Googlebot. If AWS is returning a `403 Forbidden` or your static site generator is outputting `Disallow: /`, the Google crawler will silently abort the entire indexing job. Vertex caches this failure aggressively, so you must delete and recreate the data store after fixing the issue.
+{: .prompt-warning }
+
 ### Waiting for Indexing
 
-Indexing took approximately 24 hours. The data store UI showed "Initial index in progress" with a document count of zero for most of that time. There was no progress indicator, no estimated completion time, and no way to tell whether it was working or stuck.
+With the `robots.txt` fixed and the CloudFront cache cleared, I deleted the failed data store and created a fresh one. This time, Vertex AI walked right through the front door, found the sitemap, and successfully began processing the 158 URLs on my site.
 
-After 24 hours, the document count updated to 32. That covered all of my blog posts plus a handful of site pages like the homepage and gallery. The data store size was 15.63 MiB.
+Indexing took approximately 24 hours. The data store UI showed "Initial index in progress" for most of that time. There was no progress indicator, no estimated completion time, and no way to tell whether it was working or stuck.
+
+After 24 hours, the document count updated successfully. That covered all of my blog posts plus the handful of site pages like the homepage and gallery.
 
 | Detail | Value |
 |--------|-------|
-| Data store ID | denizyilmaz-docs_1775886563827 |
 | Type | Website (Advanced) |
 | Region | Global |
-| Documents indexed | 32 |
 | Time to index | ~24 hours |
 | Automatic refresh | Enabled |
 
@@ -139,7 +175,7 @@ Vertex AI Search handled the synthesis perfectly. It stitched my personal baking
 
 Vertex AI Search worked, but I had no visibility into how it worked. I could not see how it chunked my pages, which embedding model it used, or how it ranked the results. When I published new posts, I had no way to trigger an immediate re-crawl from the console UI. Automatic refresh was enabled, but Google does not tell you the crawl frequency. It could be daily, weekly, or longer.
 
-Two new posts I published did appear in the data store roughly 12 hours later, bringing the count from 32 to 34. The timing was unpredictable.
+Two new posts I published did appear in the data store roughly 12 hours later. The timing was unpredictable.
 
 ---
 
@@ -164,7 +200,7 @@ gsutil cp denizyilmaz.cloud/_posts/*.md gs://digitalden-ai-posts/
 
 Google recommended using `gcloud storage` instead of `gsutil` in the output. That is a CLI migration happening on the Google Cloud side. The AWS equivalent is `aws s3 cp` for single copies or `aws s3 sync` for incremental updates.
 
-All 28 files uploaded in seconds. Total size was 722 KiB.
+All files uploaded in seconds. Total size was 722 KiB.
 
 ### Choosing a Deployment Mode
 
@@ -206,7 +242,7 @@ I then created the corpus through the console with the following settings.
 > That is Google's recommended default. A 1,024 token chunk is roughly 750-800 words. For blog posts with clear heading structure, a better strategy would be chunking on headings so each chunk contains a complete section about one topic. The Layout Parser option in the console was designed for this, but it failed to initialise in my project. Fixed-size chunking with the default parser worked, but it splits content based on token count rather than document structure. Some chunks end up containing parts of two different sections, which weakens the semantic match during retrieval.
 {: .prompt-info }
 
-The Vector Search API needed enabling first. After that, all 28 files imported in under 10 seconds. Compare that to 24 hours for Vertex AI Search to crawl and index 32 pages from the live website. The speed difference between uploading files directly and waiting for a web crawler is significant.
+The Vector Search API needed enabling first. After that, all files imported in under 10 seconds. Compare that to 24 hours for Vertex AI Search to crawl and index from the live website. The speed difference between uploading files directly and waiting for a web crawler is significant.
 
 I configured grounding in Vertex AI Studio, pointed it at the RAG Engine corpus, and asked "What is DenMotion?"
 
@@ -233,7 +269,7 @@ I decided to switch from Serverless to Spanner Basic tier for a stable backend. 
 
 Switching to Spanner mode in `us-central1` failed with a different error. New projects in `us-central1`, `us-east1`, and `us-east4` require an allowlist for Spanner mode.
 
-I switched to `europe-west2` (London) instead. Spanner Basic provisioned successfully. I created a new corpus with the same settings, imported the 28 files from the GCS bucket, and tested.
+I switched to `europe-west2` (London) instead. Spanner Basic provisioned successfully. I created a new corpus with the same settings, imported the files from the GCS bucket, and tested.
 
 Every query worked. No QPS errors. No intermittent failures. The answers were consistent and grounded in the correct source files.
 
