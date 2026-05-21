@@ -1,7 +1,0 @@
-User-agent: Google-CloudVertexBot
-Allow: /
-
-User-agent: *
-Disallow: /norobots/
-
-Sitemap: https://docs.digitalden.cloud/sitemap.xml
