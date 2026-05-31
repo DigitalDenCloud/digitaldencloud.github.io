@@ -10,7 +10,7 @@ image:
 ---
  Build a serverless backend with generative AI capabilities for handling contact forms on static websites. This documentation covers the complete end-to-end solution, covering backend development with AWS services like API Gateway, Lambda, Bedrock, and Simple Email Service, as well as frontend integration with the contact form of a static website. 
 
- > Submit a message using the [Contact Form](https://digitalden.cloud/#contact){:target="_blank"} at digitalden.cloud to see the solution in action.
+ > Submit a message using the [Contact Form](https://digitalden.cloud/about){:target="_blank"} at digitalden.cloud to see the solution in action.
 {: .prompt-tip }
 
 ## 1. Introduction

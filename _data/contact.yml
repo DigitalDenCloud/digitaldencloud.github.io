@@ -1,33 +1,25 @@
 # The contact options.
 
+- type: home
+  icon: 'fas fa-arrow-left'
+  url: 'https://denizyilmaz.cloud'
+  noblank: true
+
 - type: youtube
   icon: "fab fa-youtube"
-  url: "https://www.youtube.com/@DigitalDenCloud"
+  url: "https://www.youtube.com/@denizyilmazcloud"
 
 - type: linkedin
-  icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-  url: 'https://www.linkedin.com/in/digitalden/'  # Fill with your Linkedin homepage
+  icon: 'fab fa-linkedin'
+  url: 'https://www.linkedin.com/in/digitalden/'
 
 - type: github
   icon: "fab fa-github"
+  url: "https://github.com/digitaldencloud"
 
-- title: "Contact"
-  url: "https://digitalden.cloud/#contact"
+- type: contact
   icon: "fas fa-envelope"
-
-- type: twitter
-  icon: "fa-brands fa-x-twitter" # This is the X icon for Twitter
-  # Uncomment the 'url' line below if you want to link your Twitter/X profile
-  # url: 'https://twitter.com/your-username'
-
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
-  # Uncomment the 'url' line below if you want to link a specific email address
-  # url: 'mailto:your-email@example.com'
-
-- type: rss
-  icon: "fas fa-rss"
+  url: "https://digitalden.cloud/about/"
   noblank: true
 
 # Uncomment and complete the url below to enable more contact options
@@ -51,3 +43,7 @@
 # - type: threads
 #   icon: 'fa-brands fa-threads'
 #   url: ''
+# 
+# - type: rss
+#  icon: "fas fa-rss"
+#  noblank: true
