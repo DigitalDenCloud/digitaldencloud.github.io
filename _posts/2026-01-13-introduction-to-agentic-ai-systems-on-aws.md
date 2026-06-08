@@ -2,7 +2,7 @@
 title: "Introduction to Agentic AI Systems on AWS"
 date: 2026-01-13 08:00:00 -0500
 categories: [AWS, Generative AI]
-tags: [AWS, Generative AI, Agentic AI, Amazon Bedrock, Bedrock Agents, Serverless, AWS Lambda, AWS Step Functions, Amazon DynamoDB, Amazon S3, Cloud Architecture]
+tags: [QA Learning Platform, AWS, Generative AI, Agentic AI, Amazon Bedrock, Bedrock Agents, Serverless, AWS Lambda, AWS Step Functions, Amazon DynamoDB, Amazon S3, Cloud Architecture]
 description: "Learn what makes AI systems agentic and how to design autonomous AI architectures on AWS using Amazon Bedrock, Lambda, Step Functions, and persistent memory services."
 image:
   path: /assets/img/headers/agentic-ai-aws.webp
