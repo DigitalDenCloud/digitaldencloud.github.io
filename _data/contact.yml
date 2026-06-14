@@ -19,7 +19,7 @@
 
 - type: contact
   icon: "fas fa-envelope"
-  url: "https://digitalden.cloud/about/"
+  url: "/about/"
   noblank: true
 
 # Uncomment and complete the url below to enable more contact options

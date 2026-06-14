@@ -1,4 +1,4 @@
-// Contact form handler for digitalden.cloud /about/
+// Contact form handler for the About pages.
 // Posts to the existing API Gateway endpoint that fronts the Lambda + SES pipeline.
 // No jQuery, no page refresh on success.
 
@@ -20,8 +20,7 @@
 
       // Honeypot — if the hidden field has a value, it's a bot. Drop silently.
       if (honeypot && honeypot.value) {
-        setStatus('Message sent.', 'success');
-        form.reset();
+        markSent();
         return;
       }
 
@@ -53,17 +52,23 @@
           return res.json();
         })
         .then(function () {
-          setStatus('Message sent.', 'success');
-          form.reset();
+          markSent();
         })
         .catch(function (err) {
           console.error('Contact form error:', err);
           setStatus('Something went wrong. Please try again.', 'error');
-        })
-        .finally(function () {
           submit.disabled = false;
         });
     });
+
+    // Success state. The form acknowledges and recedes, no colour, no toast.
+    function markSent() {
+      submit.textContent = '✓ Sent';
+      submit.disabled = true;
+      form.reset();
+      form.classList.add('sent');
+      setStatus('', '');
+    }
 
     function setStatus(text, className) {
       status.textContent = text;
