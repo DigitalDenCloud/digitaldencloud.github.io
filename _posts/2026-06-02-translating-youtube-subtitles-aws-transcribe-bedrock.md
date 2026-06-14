@@ -1,7 +1,7 @@
 ---
 title: "Generating Translated Subtitles with Amazon Transcribe and Claude on Bedrock"
 date: 2026-06-02 18:00:00 +0100
-categories: [AWS, Amazon Transcribe]
+categories: [Builds]
 tags: [AWS, Amazon Transcribe, Amazon Bedrock, S3, Bash, ffmpeg, yt-dlp, Subtitles]
 mermaid: true
 description: "Transcribing audio to a synced SRT with Amazon Transcribe, then translating it to Turkish with Claude on Bedrock, with a local ffmpeg step to burn the result into the video."

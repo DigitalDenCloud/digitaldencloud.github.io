@@ -1,7 +1,7 @@
 ---
 title: "Extracting a Recipe from YouTube with AWS Transcribe"
 date: 2026-02-21 18:00:00 +0000
-categories: [AWS, Amazon Transcribe]
+categories: [Builds]
 tags: [AWS, Amazon Transcribe, S3, Bash, Automation, yt-dlp]
 mermaid: true
 description: "A bash script that downloads audio from YouTube, uploads it to S3, runs an Amazon Transcribe job, and outputs a plain text transcript."

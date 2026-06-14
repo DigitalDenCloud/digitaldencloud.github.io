@@ -1,7 +1,7 @@
 ---
 title: "Scaling GPUs with EC2 UltraClusters"
 date: 2024-05-10 08:00:00 - 0500
-categories: [AWS, High-Performance Computing]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon EC2, Amazon EC2 UltraClusters, AWS Trainium, AWS Inferentia, High-Performance Computing, Machine Learning]
 image: 
   path: /assets/img/headers/ec2-ultraclusters.webp

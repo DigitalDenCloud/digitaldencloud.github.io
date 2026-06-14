@@ -1,7 +1,7 @@
 ---
 title: "Managing Database Access Permissions in AWS"
 date: 2025-01-28 08:00:00 - 0500
-categories: [AWS, Databases]
+categories: [Lessons]
 tags: [QA Learning Platform, Amazon RDS, Amazon Aurora, Amazon DynamoDB, AWS IAM]
 image: 
   path: /assets/img/headers/managing-database-access-permissions-aws.webp

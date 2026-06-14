@@ -1,7 +1,7 @@
 ---
 title: "Setting Up Terraform Remote Backend With AWS Using A Bash Script"
 date: 2023-10-05 08:00:00 - 0500
-categories: [AWS, Terraform]
+categories: [Guides]
 tags: [AWS, Terraform, Bash, Amazon S3, Amazon DynamoDB, Infrastructure as Code]
 image:
   path: /assets/img/headers/bash-script.webp

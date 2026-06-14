@@ -1,8 +1,8 @@
 ---
 title: "One Site, Two Clouds"
 date: 2026-06-12 21:00:00 +0100
-categories: [AWS, Google Cloud]
-tags: [AWS Lambda, Amazon API Gateway, Workload Identity Federation, Agent Search, Gemini, Serverless, Jekyll, Frontend, Generative AI]
+categories: [Builds]
+tags: [Google Cloud, AWS Lambda, Amazon API Gateway, Workload Identity Federation, Agent Search, Gemini, Serverless, Jekyll, Frontend, Generative AI]
 mermaid: true
 description: "The full build of denizyilmaz.cloud. A hybrid HTML5UP and Jekyll frontend, an AI agent grounded in my own writing, and a request path that crosses AWS and Google Cloud with no stored credentials anywhere."
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Optimize Machine Learning Models for Inference With SageMaker Neo"
 date: 2024-11-12 08:00:00 - 0500
-categories: [AWS, Machine Learning]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon SageMaker, Machine Learning, ResNet50, SageMaker Neo]
 image: 
   path: /assets/img/headers/amazon-sagemaker-neo.webp

@@ -1,7 +1,7 @@
 ---
 title: "Speed Up Any Jekyll Site (Including Chirpy) Using Fast-Loading Images With LQIP and WebP"
 date: 2024-06-19 08:00:00 - 0500
-categories: [Web Development, Jekyll]
+categories: [Guides]
 tags: [Jekyll, Chirpy, LQIP, WebP, Site Performance]
 image: 
   path: /assets/img/headers/chirpy-fast-load.webp

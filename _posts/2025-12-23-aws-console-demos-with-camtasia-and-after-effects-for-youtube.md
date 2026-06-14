@@ -1,7 +1,7 @@
 ---
 title: "AWS Console Demos with Camtasia and After Effects for YouTube"
 date: 2025-12-23 18:00:00 +0000
-categories: [After Effects, Video Production]
+categories: [Guides]
 tags: [Camtasia, After Effects, Screen Recording, YouTube, Video Production]
 description: "A workflow for recording AWS Console demos and exporting 4K video for YouTube. Compares Dell 4K and Apple Studio Display setups."
 image:

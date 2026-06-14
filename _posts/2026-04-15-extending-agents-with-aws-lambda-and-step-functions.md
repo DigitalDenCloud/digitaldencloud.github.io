@@ -2,7 +2,7 @@
 
 title: "Extending Agents with AWS Lambda and Step Functions"
 date: 2026-04-15 08:00:00 -0500
-categories: [AWS, Generative AI]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Generative AI, Agentic AI, Amazon Bedrock, AWS Lambda, AWS Step Functions, Tool Calling, Agentic Workflows, Cloud Architecture]
 description: "Learn how to extend AI agents with AWS Lambda and Step Functions to perform real-world actions, integrate external systems, and orchestrate complex workflows."
 image:

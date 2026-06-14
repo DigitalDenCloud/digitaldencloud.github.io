@@ -1,7 +1,7 @@
 ---
 title: "Extracting Text, Handwriting, and Layout Elements Using Amazon Textract"
 date: 2024-10-30 08:00:00 - 0500
-categories: [AWS, Machine Learning]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon Textract, Machine Learning]
 image: 
   path: /assets/img/headers/amazon-textract.webp

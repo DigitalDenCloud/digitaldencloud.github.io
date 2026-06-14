@@ -1,7 +1,7 @@
 ---
 title: "A Cinematic Portfolio on Infrastructure I Own"
 date: 2026-06-13 10:00:00 +0100
-categories: [AWS, Builds]
+categories: [Builds]
 tags: [AWS, S3, CloudFront, CloudFront Functions, Route 53, GitHub Actions, IAM, Jekyll, Serverless]
 mermaid: true
 description: "The architecture behind denmotion.com. Three independent layout engines in one Jekyll repo, self-hosted zero-compression video delivery, and a branded share system, all on a single S3 bucket fronted by CloudFront."

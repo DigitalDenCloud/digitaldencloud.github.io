@@ -1,7 +1,7 @@
 ---
 title: "Adding Observability to My Bedrock Agent"
 date: 2026-01-02 12:00:00 - 0500
-categories: [AWS, Generative AI]
+categories: [Builds]
 tags: [AWS, Generative AI, Bedrock Agents, Serverless, AWS Lambda, Amazon Bedrock, Amazon API Gateway, Amazon DynamoDB, Amazon CloudWatch]
 mermaid: true
 description: "After launching my first Bedrock agent, I wanted to add proper observability. This post documents how I added API Gateway access logs, CloudWatch Logs Insights, and DynamoDB for conversation storage to debug issues, monitor performance, and understand usage patterns."

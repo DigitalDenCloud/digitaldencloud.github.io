@@ -1,7 +1,7 @@
 ---
 title: "Creating a Terraform Module for S3 Remote Backend with DynamoDB State Locking"
 date: 2024-01-28 08:00:00 - 0500
-categories: [AWS, Terraform]
+categories: [Guides]
 tags: [Terraform, AWS, Amazon S3, Amazon DynamoDB, Infrastructure as Code]
 image:
   path: /assets/img/headers/terraform-module-backend.webp

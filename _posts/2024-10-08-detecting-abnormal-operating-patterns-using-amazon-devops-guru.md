@@ -1,7 +1,7 @@
 ---
 title: "Detecting Abnormal Operating Patterns Using Amazon DevOps Guru"
 date: 2024-10-08 08:00:00 - 0500
-categories: [AWS, Machine Learning]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon DevOps Guru, Machine Learning, Amazon CodeGuru Profiler, Amazon RDS, Serverless, AWS Lambda]
 image: 
   path: /assets/img/headers/devops-guru.webp

@@ -1,7 +1,7 @@
 ---
 title: "Working With Amazon Rekognition for Video and Image Analysis"
 date: 2024-09-07 08:00:00 - 0500
-categories: [AWS, Machine Learning]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon Rekognition, Machine Learning, Serverless, AWS Lambda, Amazon S3, Amazon Comprehend, Amazon SNS]
 image: 
   path: /assets/img/headers/rekognition2.webp

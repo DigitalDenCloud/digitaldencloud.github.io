@@ -1,7 +1,7 @@
 ---
 title: "Running Deep Learning Workloads with the AWS Neuron SDK"
 date: 2024-07-16 08:00:00 - 0500
-categories: [AWS, Machine Learning]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Deep Learning, Neuron SDK, AWS Inferentia, AWS Trainium, Machine Learning]
 image: 
   path: /assets/img/headers/aws-neuron-sdk.webp

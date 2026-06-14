@@ -1,7 +1,7 @@
 ---
 title: "Vertex AI Search vs RAG Engine: Grounding Gemini with My Own Data"
 date: 2026-04-13
-categories: [Google Cloud, Generative AI]
+categories: [Builds]
 tags: [Vertex AI, RAG Engine, Vertex AI Search, Gemini, Grounding, Google Cloud]
 description: "Comparing three grounding methods on Google Cloud using my own blog posts. Vertex AI Search, RAG Engine, and Google Search grounding. What worked, what broke, and what surprised me."
 image:

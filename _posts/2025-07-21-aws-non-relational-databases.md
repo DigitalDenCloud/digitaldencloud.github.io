@@ -1,7 +1,7 @@
 ---
 title: "AWS Non-Relational Databases"
 date: 2025-07-21 08:00:00 - 0500
-categories: [AWS, Databases]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon DynamoDB, Amazon DocumentDB, Amazon ElastiCache]
 image: 
   path: /assets/img/headers/aws-non-relational-databases.webp

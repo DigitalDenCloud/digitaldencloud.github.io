@@ -1,7 +1,7 @@
 ---
 title: "Configuring and Launching Hyperparameter Tuning Jobs With Amazon SageMaker AMT"
 date: 2024-11-22 08:00:00 - 0500
-categories: [AWS, Machine Learning]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon SageMaker, Machine Learning, SageMaker AMT, Hyperparameter Tuning]
 image: 
   path: /assets/img/headers/sagemaker_amt.webp

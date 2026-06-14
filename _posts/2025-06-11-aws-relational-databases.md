@@ -1,7 +1,7 @@
 ---
 title: "AWS Relational Databases"
 date: 2025-06-11 08:00:00 - 0500
-categories: [AWS, Databases]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon RDS, Amazon Aurora]
 image: 
   path: /assets/img/headers/aws-relational-databases.webp

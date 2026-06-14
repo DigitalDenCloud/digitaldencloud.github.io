@@ -1,7 +1,7 @@
 ---
 title: "Getting Started With Amazon Bedrock"
 date: 2024-10-21 08:00:00 - 0500
-categories: [AWS, Generative AI]
+categories: [Lessons]
 tags: [AWS, Amazon Bedrock, Generative AI, Foundation Models, AWS CLI, Boto3, AWS CloudShell, Model Invocation, Inference]
 image: 
   path: /assets/img/headers/amazon-bedrock2.webp

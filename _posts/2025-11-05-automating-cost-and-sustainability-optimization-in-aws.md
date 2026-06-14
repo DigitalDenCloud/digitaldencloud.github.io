@@ -1,7 +1,7 @@
 ---
 title: "Automating Cost and Sustainability Optimization in AWS"
 date: 2025-11-05 08:00:00 - 0500
-categories: [AWS, FinOps]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS Compute Optimizer, Trusted Advisor, AWS Budgets, AWS Lambda, Systems Manager Automation, AWS Sustainability Dashboard, Customer Carbon Footprint Tool, FinOps Cost Optimization]
 image: 
   path: /assets/img/headers/automating-cost-sustainability-optimization.webp

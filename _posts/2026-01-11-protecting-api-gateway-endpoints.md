@@ -1,7 +1,7 @@
 ---
 title: "Adding Cost Protection to My Bedrock Agent"
 date: 2026-01-11 08:00:00 -0500
-categories: [AWS, Generative AI]
+categories: [Builds]
 tags: [AWS, Generative AI, Bedrock Agents, Serverless, Amazon Bedrock, AWS Lambda, Amazon API Gateway, Cost Optimization, Security]
 description: "Protect public API Gateway endpoints from abuse using usage plans and budget alerts. This post covers practical strategies to limit requests, monitor costs, and explores when AWS WAF or authentication might be needed."
 image:

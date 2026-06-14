@@ -1,7 +1,7 @@
 ---
 title: Getting Started With Google Cloud. An AWS Engineer's Perspective
 date: 2026-02-10 08:00:00 +0000
-categories: [Google Cloud]
+categories: [Guides]
 tags: [Google Cloud, IAM, Resource Hierarchy, Cloud Identity, Vertex AI]
 description: After 40+ AWS lessons and 7 certifications, I'm creating my first Google Cloud course. This post documents everything I learned setting up my Google Cloud environment, from account creation to IAM configuration, through the lens of an AWS engineer discovering a new cloud.
 mermaid: true

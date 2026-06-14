@@ -1,7 +1,7 @@
 ---
 title: "Implementing Text-to-Speech with Amazon Polly"
 date: 2024-07-30 08:00:00 - 0500
-categories: [AWS, Machine Learning]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon Polly, Machine Learning]
 image: 
   path: /assets/img/headers/amazon-polly.webp

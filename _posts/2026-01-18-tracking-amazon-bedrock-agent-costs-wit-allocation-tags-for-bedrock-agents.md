@@ -1,7 +1,7 @@
 ---
 title: "Tracking Bedrock Agent Costs With Cost Allocation Tags"
 date: 2026-01-18 10:00:00 +0000
-categories: [AWS, Generative AI]
+categories: [Builds]
 tags: [AWS, Amazon Bedrock, Cost Management, Budgets, Inference Profiles, Lambda, API Gateway]
 mermaid: true
 description: "How to track project costs for Bedrock Agents using AWS Budgets. Covers the limitation with on-demand model tagging and the solution using Application Inference Profiles."

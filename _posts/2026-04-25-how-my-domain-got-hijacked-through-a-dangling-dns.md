@@ -1,7 +1,7 @@
 ---
 title: "How My Domain Got Hijacked Through a Dangling DNS"
 date: 2026-04-25
-categories: [Cloud, Security]
+categories: [Architecture]
 tags: [DNS, Route 53, GitHub Pages, Security, Subdomain Takeover, Search Console]
 description: "I made a GitHub repo private and within 12 hours an automated bot took over my domain and was serving gambling spam to Google's crawler. Here is how dangling DNS works, what the attacker actually did, and the cleanup playbook I ran to shut it down."
 ---

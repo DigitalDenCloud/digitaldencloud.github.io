@@ -1,7 +1,7 @@
 ---
 title: "Training and Fine-Tuning Machine Learning and Foundation Models With Amazon SageMaker"
 date: 2025-01-16 08:00:00 - 0500
-categories: [AWS, Machine Learning]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon SageMaker, Machine Learning, Generative AI, Foundation Models, Hyperparameter Tuning]
 image: 
   path: /assets/img/headers/training-fine-tuning-sagemaker.webp

@@ -1,7 +1,7 @@
 ---
 title: "Building and Running Serverless Applications Using the SAM CLI"
 date: 2024-02-21 08:00:00 - 0500
-categories: [AWS, Serverless]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS SAM, Serverless]
 image: 
   path: /assets/img/headers/aws-sam.webp

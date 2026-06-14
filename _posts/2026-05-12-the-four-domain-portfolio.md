@@ -1,7 +1,7 @@
 ---
 title: "Domain Portfolio Architecture"
 date: 2026-05-11
-categories: [Architecture, Branding]
+categories: [Architecture]
 tags: [AWS, CloudFront, Jekyll, DNS, Infrastructure]
 description: "Restructuring my fragmented digital footprint into a strict four domain portfolio that separates cloud engineering, personal logs, recipe builds, and cinematic media."
 mermaid: true

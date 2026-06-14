@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Model Inference With Amazon SageMaker"
 date: 2024-11-19 08:00:00 - 0500
-categories: [AWS, Machine Learning]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon SageMaker, Machine Learning, Amazon SageMaker Model Monitor, Amazon SageMaker Model Dashboard, Amazon SageMaker Endpoints, Amazon CloudWatch]
 image: 
   path: /assets/img/headers/model-inference.webp

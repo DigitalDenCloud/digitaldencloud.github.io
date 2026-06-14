@@ -1,7 +1,7 @@
 ---
 title: "Amazon SageMaker: Machine Learning Workflows"
 date: 2024-06-14 08:00:00 - 0500
-categories: [AWS, Machine Learning]
+categories: [Lessons]
 tags: [QA Learning Platform, AWS, Amazon SageMaker, Amazon SageMaker Studio, Amazon SageMaker Debugger, Amazon SageMaker Model Monitor, Amazon SageMaker Pipelines, SageMaker Projects, SageMaker Operators for Kubernetes, SageMaker Components for Kubeflow Pipelines, MLOps, Machine Learning]
 image: 
   path: /assets/img/headers/sagemaker.webp
