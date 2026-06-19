@@ -5,6 +5,9 @@ categories: [Builds]
 tags: [Google Cloud, AWS Lambda, Amazon API Gateway, Workload Identity Federation, Agent Search, Gemini, Serverless, Jekyll, Frontend, Generative AI]
 mermaid: true
 description: "The full build of denizyilmaz.cloud. A hybrid HTML5UP and Jekyll frontend, an AI agent grounded in my own writing, and a request path that crosses AWS and Google Cloud with no stored credentials anywhere."
+image:
+  path: /assets/img/headers/one-site-two-clouds.webp
+  lqip: data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBQCdASoUABQAPwVsr1ArpiSisAwBcCCJagDFCoADC5GqbVFBaKVVDWitNGnjd+qAAP7w3RL6+zjR90Z850P2kFLXzkEVrVis7C8bc4FnVooVT5rlrZgTAu1QoYBrCn8EExhvcw4YE1cf+Sd/DBoFDGf5yf5wgEPunj61ghocyLMTP/thvMb98Bp4AA==
 ---
 
 There is a terminal on the landing page of [denizyilmaz.cloud](https://denizyilmaz.cloud){:target="_blank"}. Gold particles drift behind it. A visitor types a question about me, the request leaves the browser, enters AWS in London, crosses into Google Cloud, retrieves from a search index built over everything I have published, and a Gemini model writes an answer grounded entirely in my own posts, citations attached. Follow-up questions work because the conversation holds a session. If I have not written about something, the agent says so instead of inventing.
