@@ -5,7 +5,6 @@ categories: [Builds]
 tags: [AWS, Serverless, ETL, AWS Lambda, Amazon Data Firehose, Amazon S3, AWS Glue, Amazon Aurora, AWS Secrets Manager, VPC Endpoints, Amazon EventBridge, Amazon Athena]
 mermaid: true
 description: "Build a serverless weather ETL pipeline on AWS. Lambda ingests OpenWeatherMap data, Kinesis Data Firehose partitions it into an S3 data lake, Glue catalogs and transforms it, and Aurora Serverless v2 stores the result. EventBridge schedules the whole thing."
-pin: true
 image:
   path: /assets/img/headers/serverless-etl.webp
   lqip: data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwAwCdASoUABQAPxF4tVOsJyUiqAqpgCIJYgDMHBmUXII/j8AA/u7jdfibeAlp8hL5nBDPobSF+vDxvFlN3ZEotUV1W1hf3519JugCltSqAQJitXtTja3szJE8YHrrFSYNFQlNOMV8gksAAAA=

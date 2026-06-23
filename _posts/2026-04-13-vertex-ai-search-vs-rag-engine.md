@@ -5,8 +5,8 @@ categories: [Builds]
 tags: [Vertex AI, RAG Engine, Vertex AI Search, Gemini, Grounding, Google Cloud]
 description: "Comparing three grounding methods on Google Cloud using my own blog posts. Vertex AI Search, RAG Engine, and Google Search grounding. What worked, what broke, and what surprised me."
 image:
-  path: /assets/img/headers/vertex-ai.webp
-  lqip: data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAABwAwCdASoUABQAPxGCuVWsKKWjKAgBgCIJZwDNhBEcyPaJrAAA/u5yLgtZWvbSA4AAAA==
+  path: /assets/img/headers/vertex-ai-2.webp
+  lqip: data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABwBACdASoUABQAPxGAuFWsKCUjKAgBgCIJZQAAKdn9ZcgPWmkeVoek2RVF5AD+6PkGS1pLfkZ7ngimNrHhJGpOHJwbKiQf+9Cy8yqJhEDbGDiP3xIIspTAAAA=
 ---
 
 I write a lot. I have blog posts about training, photography, travel, tech builds, recipes, and personal reflections. All of it lives on one of my Jekyll Chirpy sites. I wanted to ground a language model against my own writing so I could ask questions about my life and get answers pulled directly from my posts. For example, I wanted to ask what my strongest lifts were in the creatine study and have it pull the actual numbers. I also wanted to ask what lens I should get next, and have it already know I was looking at the Sigma 18-50mm for low light gym filming based on my gear post. Then I wanted to follow up and ask what it actually thought of that choice. I wanted the model to use its general knowledge about photography to give me real advice, but I needed it grounded entirely in my personal context. I basically wanted my raw data as the foundation and the AI's own knowledge filling in the gaps on top. That is exactly why I built it.

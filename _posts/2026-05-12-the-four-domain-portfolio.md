@@ -5,6 +5,9 @@ categories: [Architecture]
 tags: [AWS, CloudFront, Jekyll, DNS, Infrastructure]
 description: "Restructuring my fragmented digital footprint into a strict four domain portfolio that separates cloud engineering, personal logs, recipe builds, and cinematic media."
 mermaid: true
+image:
+  path: /assets/img/headers/domain-portfolio-architecture.webp
+  lqip: data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAwCdASoUABQAPxGAuFWsKCUjKAgBgCIJYx9ACWsEABN3MiiIGCYAAP7sROy6Luz7hdBzs/ZsSM2TNgw5SUbxqUebPmqj/OY0pZq2H9cKpNtYW2Lghofu/7AAAA==
 ---
 
 I started with cloud engineering. Cloud is my primary focus and I have always loved it. `digitalden.cloud` was the first domain I bought when I started learning AWS. As a result it naturally became the homepage for my entire portfolio. I routed traffic to `docs.digitalden.cloud` to document my AWS architectures and share the solutions I engineered. It acted as my main hub for a long time and helped me become an AWS Community Builder.

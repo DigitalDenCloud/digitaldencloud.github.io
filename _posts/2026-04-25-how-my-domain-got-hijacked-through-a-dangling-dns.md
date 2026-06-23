@@ -4,6 +4,9 @@ date: 2026-04-25
 categories: [Architecture]
 tags: [DNS, Route 53, GitHub Pages, Security, Subdomain Takeover, Search Console]
 description: "I made a GitHub repo private and within 12 hours an automated bot took over my domain and was serving gambling spam to Google's crawler. Here is how dangling DNS works, what the attacker actually did, and the cleanup playbook I ran to shut it down."
+image:
+  path: /assets/img/headers/dangling-dns-domain-hijack.webp
+  lqip: data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoUABQAPxF6tlOsJ6UiqAqpgCIJYwDCgBEvAKz8vu2zAgAA/uxEY3OOHziI7A1WHhiaoGQCEa0Tf7C3vkcsjxGi7mWdGOx8pZZjwfPIHfxvhGfJA+lDYrGTda7AAA==
 ---
 
 I have a personal journal site that I keep separate from this blog. It runs on Jekyll Chirpy, hosted on GitHub Pages, with the domain registered through AWS Route 53. Standard architecture. I have used the same kind of setup across several of my sites for over a year without issue.

@@ -5,6 +5,9 @@ categories: [Builds]
 tags: [AWS, S3, CloudFront, CloudFront Functions, Route 53, GitHub Actions, IAM, Jekyll, Serverless]
 mermaid: true
 description: "The architecture behind denmotion.com. Three independent layout engines in one Jekyll repo, self-hosted zero-compression video delivery, and a branded share system, all on a single S3 bucket fronted by CloudFront."
+image:
+  path: /assets/img/headers/cinematic-portfolio-infrastructure.webp
+  lqip: data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAwCdASoUABQAPxGAuFWsKCUjKAgBgCIJZ2tPABu44AAA/u++0Hp6Op/7ZTcc8E2l5R34ygrHfDOaJpX9yeL7J8oY0wl7YAAAAA==
 ---
 
 I shoot film and photography under a brand called DenMotion. The work is hosted on infrastructure I built and own, no Squarespace, no Vimeo, no YouTube embeds. A visitor lands on a dark particle animation, picks Films or Photos, and drops into an edge-to-edge cinematic grid where video thumbnails play on hover. Clicking one opens a full-screen player streaming the master file at the exact quality it left Premiere Pro. The whole thing runs on a single S3 bucket and CloudFront, costs under a pound a month, and deploys from a private repo on `git push`.
