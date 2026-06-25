@@ -10,7 +10,7 @@ image:
   lqip: data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBQCdASoUABQAPwVsr1ArpiSisAwBcCCJagDFCoADC5GqbVFBaKVVDWitNGnjd+qAAP7w3RL6+zjR90Z850P2kFLXzkEVrVis7C8bc4FnVooVT5rlrZgTAu1QoYBrCn8EExhvcw4YE1cf+Sd/DBoFDGf5yf5wgEPunj61ghocyLMTP/thvMb98Bp4AA==
 ---
 
-There is a terminal on the landing page of [denizyilmaz.cloud](https://denizyilmaz.cloud){:target="_blank"}. Gold particles drift behind it. A visitor types a question about me, the request leaves the browser, enters AWS in London, crosses into Google Cloud, retrieves from a search index built over everything I have published, and a Gemini model writes an answer grounded entirely in my own posts, citations attached. Follow-up questions work because the conversation holds a session. If I have not written about something, the agent says so instead of inventing.
+There is an interactive terminal on the About page of [denizyilmaz.cloud](https://denizyilmaz.cloud){:target="_blank"}. Gold particles drift behind it. A visitor types a question about me, the request leaves the browser, enters AWS in London, crosses into Google Cloud, retrieves from a search index built over everything I have published, and a Gemini model writes an answer grounded entirely in my own posts, citations attached. Follow-up questions work because the conversation holds a session. If I have not written about something, the agent says so instead of inventing.
 
 This post is the complete system in one place. The frontend architecture, the cross-cloud request path, the identity design, and the production guardrails. Two companion posts on my personal blog hold the full build logs with every command and every bug, linked at the end. This one covers what was designed and why.
 
